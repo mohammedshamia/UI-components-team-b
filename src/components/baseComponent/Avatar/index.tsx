@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from 'react'
 
-interface indexProps {
+// interface indexProps {
 
-}
+// }
 
-export const index: React.FC<indexProps> = ({ }) => {
-    return ();
-}
+// export const index: React.FC<indexProps> = ({ }) => {
+//     return ();
+// }
