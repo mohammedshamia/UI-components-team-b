@@ -1,9 +1,7 @@
-// import React from 'react'
+import React from 'react';
+import Component from './style';
+import IAvatarProps from './interface';
 
-// interface indexProps {
+const Avatar: React.FC<IAvatarProps> = Component;
 
-// }
-
-// export const index: React.FC<indexProps> = ({ }) => {
-//     return ();
-// }
+export default Avatar;
