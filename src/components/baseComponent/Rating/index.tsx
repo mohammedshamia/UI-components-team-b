@@ -9,6 +9,9 @@ interface Props {
   className?: string;
   style?: CSSProperties;
   size?: TSize;
+  defaultValue?: number;
+  value?: number;
+  count?: number;
 }
 
 const getMyWidth = (size: TSize) => {
@@ -54,11 +57,11 @@ const ImagesTART = ({ colorFill = 'none', size }: IImagesTART) => {
     </div>
   );
 };
-const Rating = ({ isRow, ...props }: Props) => {
+const Rating = ({ isRow, count = 5, ...props }: Props) => {
   return (
     <div>
       <WrapperParent FD={isRow ? 'row' : 'column'}>
-        {Array(5)
+        {Array(count)
           .fill(0)
           .map(x => (
             <ImagesTART size="medium" />
