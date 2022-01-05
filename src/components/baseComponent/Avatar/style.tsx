@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import IImageProps from './interface';
+import styled, { css } from 'styled-components';
+import { IAvatarProps, IAvatarGroupProps } from './interface';
 
-const getSize = (size: IImageProps['size']) => {
+const getSize = (size: IAvatarProps['size']) => {
   switch (size) {
     case 'small':
       return '32px';
@@ -16,14 +16,50 @@ const getSize = (size: IImageProps['size']) => {
   }
 };
 
-const Avatar = styled.img<IImageProps>`
+const createCSS = (total: number) => {
+  let styles = '';
+  for (let i = 0; i < total; i += 1) {
+    styles += `
+      &:nth-child(${i}) {
+        z-index: ${20 - i};
+        overflow: hidden;
+        right: i++;
+
+      }
+     `;
+  }
+
+  return css`
+    ${styles}
+  `;
+};
+
+export const AvatarComponent = styled.img<IAvatarProps>`
   width: ${props => getSize(props.size)};
   height: ${props => getSize(props.size)};
-  border-radius: 50%;
-  border: ${props => (props.border ? '1px solid #ccc' : 'none')};
+  border-radius: ${props => (props.variant === 'square' ? '10%' : '50%')};
+  border: ${props => (props.border ? '2px solid #00000' : 'none')};
+  padding:1
   border-width: ${props => (props.border ? '1px' : '0')};
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+  background-color: #ffffff;
+  font-size: ${props => (props.size === 'xlarge' ? '30px' : '20px')};
   box-shadow: ${props =>
-    props.shadow ? '0px 2px 5px rgba(0, 0, 0, 0.25)' : 'none'};
+    props.shadow ? '0px 1px 3px rgba(0, 0, 0, 0.25)' : 'none'};
 `;
 
-export default Avatar;
+export const AvatarGroupComponent = styled.div<IAvatarGroupProps>`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  & > ${AvatarComponent} {
+    ${(props: IAvatarGroupProps) => createCSS(props.total || 10)}
+    margin: 0 0 0 -5px;
+  }
+`;
