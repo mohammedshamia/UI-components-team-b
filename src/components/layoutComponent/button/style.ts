@@ -11,7 +11,12 @@ export const Button = styled.button<ButtonProps>`
   height: ${props => props.height || '50px'};
   font-weight: ${props => (props?.bold ? 700 : 400)};
   font-size: ${props => props.fontSize || '15px'};
+  cursor: pointer;
   .fas {
     margin-left: 15px;
+  }
+  &:hover {
+    /* background-color: '#0059b2'; */
+    background-color: #0059b2;
   }
 `;
