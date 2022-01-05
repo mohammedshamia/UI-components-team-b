@@ -1,4 +1,4 @@
-type ISize = 'small' | 'medium' | 'large';
+type ISize = 'small' | 'medium' | 'large' | 'xlarge';
 
 interface IAvatarProps {
   src?: string;

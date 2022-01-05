@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface ButtonProps {
-  border?: string;
+  border?: string | boolean;
   color?: string;
   children?: string | React.ReactNode;
   height: string;
@@ -10,4 +10,5 @@ export interface ButtonProps {
   bold: boolean;
   backgroundColor?: string;
   fontSize?: string;
+  hover?: boolean;
 }
