@@ -1,5 +1,10 @@
-import React from 'react';
+import { Button } from './style';
+import { ButtonProps } from './interface';
 
-export default function Button(children: any) {
-  return <button type="button">{children}</button>;
+export default function Btn({ children, ...props }: ButtonProps) {
+  return (
+    <Button type="button" {...props}>
+      {children}
+    </Button>
+  );
 }
