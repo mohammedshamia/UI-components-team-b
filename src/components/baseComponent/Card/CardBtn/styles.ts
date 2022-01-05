@@ -12,10 +12,10 @@ const CardBtn = styled.button<IProps>`
     props.size === 'small'
       ? '0.5em'
       : props.size === 'medium'
-      ? '1em'
-      : props.size === 'large'
-      ? '1.25em'
-      : '1em'};
+        ? '1em'
+        : props.size === 'large'
+          ? '1.25em'
+          : '1em'};
   font-weight: 400;
   line-height: 1.5;
   color: ${props => (props.color ? props.color : '#212529')};

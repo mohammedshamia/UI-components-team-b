@@ -1,13 +1,12 @@
 import React from 'react';
 import Img from './styles';
 
-interface IProps extends React.HTMLAttributes<HTMLElement> {
+interface IProps extends React.HTMLAttributes<HTMLImageElement> {
   src?: string;
 }
 
 function CardImg(props: IProps) {
-  const { src } = props;
-  return <Img {...props} src={src} />;
+  return <Img {...props} />;
 }
 
 export default CardImg;

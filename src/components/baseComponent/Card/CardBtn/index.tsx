@@ -9,12 +9,7 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 function index(props: IProps) {
-  const { children, bgColor, color, size } = props;
-  return (
-    <CardBtn bgColor={bgColor} color={color} size={size} {...props}>
-      {children}
-    </CardBtn>
-  );
+  return <CardBtn {...props} />;
 }
 
 export default index;
