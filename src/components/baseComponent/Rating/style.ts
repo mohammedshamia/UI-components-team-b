@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 interface IDivWrapper {
   display?: 'flex' | 'grid' | 'block';
@@ -23,6 +23,47 @@ interface IDivWrapper {
     | 'end';
 }
 
+export const AnimationSpan = keyframes`
+
+  0% {
+    transform: rotate(0deg) scale(1);
+    background: 'red';
+  }
+  50% {
+    transform: rotate(180deg) scale(0.5);
+
+  }
+  
+  100% {
+    transform: rotate(360deg) scale(1);
+  
+}
+`;
+
+interface IWrapperParentStart {
+  readonly?: boolean;
+}
+
+export const WrapperParentStart = styled('div')<IWrapperParentStart>`
+  cursor: pointer;
+  /* background: red; */
+  margin-left: 10px;
+  opacity: 1;
+  ${props =>
+    props.readonly === true &&
+    css`
+      cursor: auto;
+      opacity: 0.4;
+    `};
+  &:hover {
+    padding: 0px 4px;
+    transition-property: all;
+    transition-duration: 100ms;
+    transition-delay: 100ms;
+    animation: ${AnimationSpan} 0.8s;
+  }
+`;
+
 const WrapperParent = styled('div')<IDivWrapper>`
   display: ${props => props.display};
   align-items: ${props => props.item};
@@ -32,6 +73,8 @@ const WrapperParent = styled('div')<IDivWrapper>`
 
 WrapperParent.defaultProps = {
   display: 'flex',
+  JC: 'space-between',
+  FD: 'row',
 };
 
 export default WrapperParent;
