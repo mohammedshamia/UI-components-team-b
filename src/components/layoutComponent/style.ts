@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MainLayout = styled('div')`
-  background: red;
+  /* background: red; */
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -12,7 +12,7 @@ const MainLayout = styled('div')`
 export default MainLayout;
 
 export const LeftSide = styled('div')`
-  background: green;
+  background: #f2f2f2;
   grid-column: span 1 / span 1;
   border-right-width: 2px;
   & + div {
@@ -23,11 +23,12 @@ export const LeftSide = styled('div')`
   }
 `;
 export const ContentSide = styled('div')`
-  background: green;
+  background: white;
   grid-column: span 3 / span 3;
   border-left-width: 2px;
 `;
 export const RightSide = styled('div')`
   grid-column: span 1 / span 1;
   border-left-width: 2px;
+  background: #f2f2f2;
 `;

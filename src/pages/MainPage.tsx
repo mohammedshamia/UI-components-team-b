@@ -4,7 +4,6 @@ import Layout from '../components/layoutComponent';
 const MainPage = () => {
   return (
     <div>
-      MainPage
       <Layout />
     </div>
   );

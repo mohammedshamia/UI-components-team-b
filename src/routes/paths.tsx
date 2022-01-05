@@ -2,14 +2,14 @@
 import { lazy } from 'react';
 import Loadable from './Loading';
 
-const Rating = Loadable(lazy(() => import('../pages/Rating')));
+const RatingPage = Loadable(lazy(() => import('../pages/Rating')));
 const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
   {
     name: 'rating',
     subPath: ['#tag1', '#tag2'],
-    element: <Rating />,
+    element: <RatingPage />,
   },
   {
     name: 'typography',
@@ -19,7 +19,7 @@ const paths = [
   {
     name: 'card',
     subPath: ['#tag1', '#tag2'],
-    element: () => <p>rating</p>,
+    element: <p>rating</p>,
   },
   {
     name: 'avatars',
@@ -29,7 +29,7 @@ const paths = [
   {
     name: 'autocomplete',
     subPath: ['#tag1', '#tag2'],
-    element: () => <p>rating</p>,
+    element: <p>autocomplete</p>,
   },
 ];
 
