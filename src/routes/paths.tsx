@@ -7,27 +7,27 @@ const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
   {
-    name: 'rating',
+    path: 'rating',
     subPath: ['#tag1', '#tag2'],
     element: <RatingPage />,
   },
   {
-    name: 'typography',
+    path: 'typography',
     subPath: ['#tag1', '#tag2'],
     element: <TypographyPage />,
   },
   {
-    name: 'card',
+    path: 'card',
     subPath: ['#tag1', '#tag2'],
     element: <p>rating</p>,
   },
   {
-    name: 'avatars',
+    path: 'avatars',
     subPath: ['#tag1', '#tag2'],
     element: () => <p>rating</p>,
   },
   {
-    name: 'autocomplete',
+    path: 'autocomplete',
     subPath: ['#tag1', '#tag2'],
     element: <p>autocomplete</p>,
   },

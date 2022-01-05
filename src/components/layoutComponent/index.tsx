@@ -11,8 +11,8 @@ const Layout = () => {
       <ContentSide>
         <Routes>
           <Route index element={() => <p>1111</p>} />
-          {paths.map(x => (
-            <Route path={x.name} element={x.element} />
+          {paths.map(path => (
+            <Route {...path} />
           ))}
         </Routes>
       </ContentSide>
