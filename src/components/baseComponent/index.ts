@@ -1,1 +1,2 @@
-export default 10;
+export { default as Avatar } from './Avatar';
+export { default as Typography } from './Typography';

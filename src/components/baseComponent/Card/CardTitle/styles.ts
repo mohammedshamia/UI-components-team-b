@@ -7,7 +7,9 @@ interface IProps {
 }
 
 const CardTitle = styled.h3<IProps>`
-  color: ${props => (props.color ? props.color : '#212529')};
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   font-size: ${props =>
     props.size === 'small'
       ? '18px'
@@ -15,8 +17,11 @@ const CardTitle = styled.h3<IProps>`
       ? '24px'
       : props.size === 'large'
       ? '32px'
-      : '24px'};
-  margin-bottom: 0.5rem;
+      : '1.5rem'};
+  line-height: 1.334;
+  letter-spacing: 0em;
+  margin-bottom: 0.35em;
+  color: ${props => (props.color ? props.color : '#212529')};
   text-align: ${props => (props.align ? props.align : 'left')};
 `;
 

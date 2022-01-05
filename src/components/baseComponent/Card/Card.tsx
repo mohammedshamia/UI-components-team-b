@@ -5,6 +5,7 @@ import CardImg from './CardImg';
 import CardTitle from './CardTitle';
 import CardDesc from './CardDesc';
 import CardBtn from './CardBtn';
+import CardHeader from './CardHeader';
 
 interface IProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
@@ -14,4 +15,4 @@ const Card = (props: IProps) => {
   return <CardSection {...props}>{children}</CardSection>;
 };
 
-export { Card, CardContent, CardImg, CardTitle, CardDesc, CardBtn };
+export { Card, CardContent, CardImg, CardTitle, CardDesc, CardBtn, CardHeader };

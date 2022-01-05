@@ -1,2 +1,7 @@
-const x = 0;
-export default x;
+import React from 'react';
+import Component from './style';
+import IAvatarProps from './interface';
+
+const Avatar: React.FC<IAvatarProps> = props => <Component {...props} />;
+
+export default Avatar;

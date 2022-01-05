@@ -1,2 +1,14 @@
-const x = 0;
-export default x;
+import Wrapper from './style';
+import { IPropTypography } from './interface';
+
+const Typography: React.FC<IPropTypography> = ({
+  variant = 'p',
+  ...props
+}: IPropTypography) => {
+  return (
+    <Wrapper as={variant} {...props}>
+      {props.children}
+    </Wrapper>
+  );
+};
+export default Typography;

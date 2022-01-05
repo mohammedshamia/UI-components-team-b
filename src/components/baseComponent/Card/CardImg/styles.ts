@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 interface IProps {
-  src?: string;
   width?: string;
   height?: string;
 }
