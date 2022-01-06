@@ -1,22 +1,19 @@
 /* eslint-disable no-empty */
 import React, { memo, useRef, useState } from 'react';
-import { ChoicesWrapper, StyledAutoComplete, Wrapper, Icon } from './styled';
+import {
+  ChoicesWrapper,
+  StyledAutoComplete,
+  Wrapper,
+  Icon,
+  ArrowIcon,
+  Button,
+  TextError,
+} from './styled';
 import { ReactComponent as CloseIcon } from '../../../assets/Icons/x.svg';
+import { ReactComponent as ArrowUp } from '../../../assets/Icons/chevron-up.svg';
+import { ReactComponent as ArrowDown } from '../../../assets/Icons/chevron-down.svg';
+import { IProps } from './interface';
 
-interface IState {
-  id: number;
-  title: string;
-  year: number;
-}
-interface IProps {
-  option: any[];
-  value: string;
-  onChange: (e: any) => void;
-  name: string;
-  placeholder?: string;
-  width?: string;
-  alignItem?: string;
-}
 function SelectInput({
   option,
   value,
@@ -25,16 +22,21 @@ function SelectInput({
   onChange,
   width = '100%',
   alignItem = 'left',
+  freeSolo,
+  fontSize = '1rem',
+  ...others
 }: IProps) {
   const [state, setstate] = useState<string>(value);
   const [openChoices, setOpenChoices] = useState<boolean>(false);
   const [Choices, setChoices] = useState<any>([...option]);
-
   const ref = useRef<HTMLDivElement>(null);
 
   const handleClickChoice = (item: string) => {
+    onChange(item);
     setstate(item);
-    setOpenChoices(false);
+    if (!others.disableCloseOnSelect || false) {
+      setOpenChoices(false);
+    }
   };
 
   const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,39 +62,62 @@ function SelectInput({
 
   document.addEventListener('mousedown', checkIfClickedOutside);
   const handleClearInput = () => {
+    onChange('');
     setstate('');
   };
   return (
-    <Wrapper width={width} ref={ref}>
+    <Wrapper disabled={others.disabled || false} width={width} ref={ref}>
       <div>
         <StyledAutoComplete
+          autoComplete="false"
+          error={others.error || ''}
+          disabled={others.disabled || false}
           onChange={handleChangeInput}
           value={state}
           placeholder={placeholder}
           onFocus={handleFocusInput}
           name={name}
+          fontSize={fontSize}
         />
-        {state && (
+        {state && !others.disableClearable && (
           <Icon onClick={handleClearInput}>
             <CloseIcon />
           </Icon>
         )}
+        {!freeSolo && (
+          <ArrowIcon
+            onClick={() => {
+              setOpenChoices(!openChoices);
+            }}
+          >
+            {openChoices ? <ArrowUp /> : <ArrowDown />}
+          </ArrowIcon>
+        )}
       </div>
-      {Choices.length > 0 && (
+
+      {!others.renderOption && Choices.length > 0 && (
         <ChoicesWrapper alignItem={alignItem} openChoices={openChoices}>
-          {Choices.map((item: IState) => (
-            <button
+          {Choices.map((item: string, index: number) => (
+            <Button
+              fontSize={fontSize}
+              isActive={state === item}
               type="button"
-              key={item.id}
+              key={index}
               onClick={() => {
-                handleClickChoice(item.title);
+                handleClickChoice(item);
               }}
             >
-              {item.title}
-            </button>
+              {item}
+            </Button>
           ))}
         </ChoicesWrapper>
       )}
+      {others.renderOption && (
+        <ChoicesWrapper alignItem={alignItem} openChoices={openChoices}>
+          {others.renderOption}
+        </ChoicesWrapper>
+      )}
+      <TextError error={others.error}>{others.error || ''}</TextError>
     </Wrapper>
   );
 }
