@@ -1,13 +1,14 @@
 import AllRoutes from './routes';
 import WelcomeScreen from './pages/WelcomeScreen';
+import { Navbar } from './components/layoutComponent';
 
 function App() {
   return (
-    <div className="App">
-      <WelcomeScreen />
-      <h1>React UI library</h1>
+    <>
+      <Navbar />
+      {/* <WelcomeScreen /> */}
       <AllRoutes />
-    </div>
+    </>
   );
 }
 
