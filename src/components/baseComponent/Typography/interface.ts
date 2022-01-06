@@ -7,6 +7,8 @@ export interface IPropTypography {
   fontSize?: string;
   style?: CSSProperties;
   bold?: boolean | string;
+  Robot?: boolean;
+  className?: string;
 }
 
 type variantMapping = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';

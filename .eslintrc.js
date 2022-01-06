@@ -57,5 +57,6 @@ module.exports = {
     'class-methods-use-this': 0,
     'import/prefer-default-export': 0,
     'react/react-in-jsx-scope': 0,
+    'react/no-array-index-key': 0,
   },
 };

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import paths from '../../routes/paths';
+import paths from '../../../routes/paths';
 import MainLayout, { ContentSide, LeftSide, RightSide } from './style';
 
 const Layout = () => {
