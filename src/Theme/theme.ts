@@ -24,6 +24,12 @@ export const lightTheme: DefaultTheme = {
     dark: '#1565c0',
     contrastText: '#ffffff',
   },
+  secondary: {
+    main: '#9c27b0',
+    light: '#ba68c8',
+    dark: '#7b1fa2',
+    contrastText: '#ffffff',
+  },
   error: {
     main: '#d32f2f',
     light: '#ef5350',
@@ -50,6 +56,12 @@ export const darkTheme: DefaultTheme = {
     light: '#e3f2fd',
     dark: '#42a5f5',
     contrastText: 'rgba(0,0,0,0.87)',
+  },
+  secondary: {
+    main: '#ce93d8',
+    light: '#f3e5f5',
+    dark: '#ab47bc',
+    contrastText: '#ffffff',
   },
   error: {
     main: '#f44336',
