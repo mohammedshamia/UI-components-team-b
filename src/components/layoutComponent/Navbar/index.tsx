@@ -10,9 +10,15 @@ import { Avatar } from '../../baseComponent';
 import logo from '../../../assets/logo.png';
 // interface INavbar {}
 
-const Navbar: React.FC<any> = () => {
+const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const handleChangeTheme = () => {
-    // console.log('change theme');
+    if (theme.theme === 'light') {
+      setTheme({ theme: 'dark' });
+      window.localStorage.setItem('theme', 'dark');
+    } else {
+      setTheme({ theme: 'light' });
+      window.localStorage.setItem('theme', 'light');
+    }
   };
 
   return (
@@ -25,7 +31,10 @@ const Navbar: React.FC<any> = () => {
         <NavbarSearchInput as="input" placeholder="Search" />
         <NavbarSearchIcon className="fas fa-search" />
       </NavbarSearchContainer>
-      <NavbarLinksIcon className="fas fa-moon" onClick={handleChangeTheme} />
+      <NavbarLinksIcon
+        className={theme.theme === 'light' ? 'fas fa-moon' : 'fas fa-sun'}
+        onClick={handleChangeTheme}
+      />
     </NavbarComponent>
   );
 };

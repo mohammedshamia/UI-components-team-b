@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const NavbarComponent = styled.div`
-  // background: red;
   width: 100%;
   margin: 0 auto;
   height: 64px;
@@ -9,11 +8,11 @@ export const NavbarComponent = styled.div`
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
   padding: 0 10%;
-  // background: #000;
+  background: ${props => props.theme.background.default};
 `;
 
 export const NavbarLink = styled.li`
-  color: #3e5060;
+  color: ${props => props.theme.text.primary};
   padding: 10px;
   border-radius: 10px;
   list-style: none;
@@ -25,7 +24,7 @@ export const NavbarLink = styled.li`
   cursor: pointer;
   &:hover {
     background: #f3f6f9;
-  }
+    color: ${props => props.theme.common.black}
 `;
 
 export const NavbarSearchInput = styled.input`
