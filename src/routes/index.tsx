@@ -11,7 +11,7 @@ const AllRoutes = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/components/*" element={<MainPage />} />
-        <Route path="*" element={<div>page not founs 404 </div>} />
+        <Route path="*" element={<div>page not found 404 </div>} />
       </Routes>
     </BrowserRouter>
   );
