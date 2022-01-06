@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from './pages/WelcomeScreen';
+// import Welcome from './pages/WelcomeScreen';
 import AllRoutes from './routes';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1> React UI library</h1>
       {/* <AllRoutes /> */}
-      <Welcome />
+      {/* <Welcome /> */}
     </div>
   );
 }
