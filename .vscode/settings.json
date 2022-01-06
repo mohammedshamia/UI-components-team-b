@@ -16,4 +16,7 @@
         "source.fixAll": true
     },
     "editor.tabCompletion": "on",
+    "cSpell.words": [
+        "xlarge"
+    ],
 }
