@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import AllRoutes from './routes';
-import WelcomeScreen from './pages/WelcomeScreen';
 import { Navbar } from './components/layoutComponent';
 import { GlobalStyle } from './Theme';
 import { lightTheme, darkTheme } from './Theme/theme';
