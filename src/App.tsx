@@ -25,7 +25,7 @@ function App() {
         <GlobalStyle />
         <Navbar theme={state} setTheme={setState} />
         <WelcomeScreen />
-        {/* <AllRoutes /> */}
+        <AllRoutes />
       </ThemeProvider>
     </>
   );
