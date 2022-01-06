@@ -53,8 +53,8 @@ export const darkTheme: DefaultTheme = {
   ...commonTheme,
   primary: {
     main: '#90caf9',
-    light: '#e3f2fd',
-    dark: '#42a5f5',
+    light: '#fafafa',
+    dark: '#040404',
     contrastText: 'rgba(0,0,0,0.87)',
   },
   secondary: {

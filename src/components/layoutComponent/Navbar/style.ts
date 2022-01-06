@@ -7,7 +7,7 @@ export const NavbarComponent = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  padding: 0 10%;
+  padding: 1rem 9.3%;
   background: ${props => props.theme.background.default};
 `;
 
