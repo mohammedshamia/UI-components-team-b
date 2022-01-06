@@ -2,32 +2,35 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  /* background-color: pink;
-  width: 100%; */
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  height: 92vh;
+  background: ${props => props.theme.background.default};
+  overflow: hidden;
   @media (max-width: 888px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: auto;
   }
 `;
+
 export const Content = styled.div`
-  /* background-color: black; */
-  display: flex;
-  flex-direction: column;
-  padding: 0px 30px;
-  /* flex-wrap: wrap; */
-  margin: 30px 0px;
-  word-wrap: break-word;
-  /* align-items: center; */
-  /* justify-content: center; */
+  padding: 9% 0 0 9.2%;
+  align-items: center;
 `;
+
+export const ImageContainer = styled.div`
+  width: 50%;
+  overflow: scroll;
+  height: 100%;
+  border-bottom-left-radius: 1rem;
+`;
+
 export const ContainerImg = styled.img`
-  width: 100%;
   @media (max-width: 888px) {
-    /* flex-direction: column; */
     display: none;
   }
+  height: 130%;
+  width: 100%;
 `;
 export const ContainerButton = styled.div`
   display: flex;
@@ -38,3 +41,14 @@ export const ContainerButton = styled.div`
     align-items: center;
   }
 `;
+
+export const contentStyle = {
+  'font-size': '1rem',
+  'line-height': 1.6,
+  'letter-spacing': 0,
+  'font-family': 'IBM Plex Sans',
+  'font-weight': 400,
+  color: '#3E5060',
+  margin: '1em 0 2em 0',
+  'max-width': '500px',
+};
