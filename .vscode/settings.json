@@ -1,7 +1,7 @@
 {
     "typescript.tsdk": "node_modules/typescript/lib",
     // These are all my auto-save configs
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     // turn it off for JS and JSX, we will do this via eslint
     "[javascript]": {
         "editor.formatOnSave": true
@@ -16,4 +16,7 @@
         "source.fixAll": true
     },
     "editor.tabCompletion": "on",
+    "cSpell.words": [
+        "xlarge"
+    ],
 }
