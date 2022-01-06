@@ -17,9 +17,8 @@ export default function Welcome() {
         <Typography
           variant="h1"
           bold
-          fontSize="64px"
-          Robot
-          // fontSize="clamp(2.625rem, 1.2857rem + 3.5714vw, 3.2rem)"
+          // fontSize="64px"
+          fontSize="clamp(2.625rem, 1.2857rem + 3.5714vw, 3rem)"
           color=" #0A1929"
           style={{
             marginTop: '20px',
@@ -28,6 +27,7 @@ export default function Welcome() {
             flexDirection: 'column',
             flexWrap: 'wrap',
             lineHeight: '.9',
+            fontFamily: 'Robot',
           }}
           children={
             <>
@@ -36,9 +36,9 @@ export default function Welcome() {
               <Typography
                 variant="span"
                 color="blue"
-                fontSize="64px"
+                // fontSize="64px"
                 className="ui"
-                // fontSize="clamp(2.625rem, 1.2857rem + 3.5714vw, 3rem)"
+                fontSize="clamp(2.625rem, 1.2857rem + 3.5714vw, 3rem)"
                 bold
               >
                 UI library
@@ -51,8 +51,9 @@ export default function Welcome() {
         <Typography
           variant="p"
           children={data.paragraph}
+          fontSize="clamp(.625rem, .2857rem + 3.5714vw, 1rem)"
           color="#3e5060"
-          fontSize="16px"
+          // fontSize="16px"
           style={{
             lineHeight: '24px',
           }}

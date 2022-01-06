@@ -16,8 +16,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 30px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 30px 0px;
+  word-wrap: break-word;
   /* align-items: center; */
   /* justify-content: center; */
 `;
