@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Btn from '../../components/layoutComponent/button';
+import { useState } from 'react';
+import ButtonUi from '../../components/layoutComponent/button';
 import Typography from '../../components/baseComponent/Typography';
 import gray from '../../assets/gray.jpg';
 import { Wrapper, Content, ContainerImg, ContainerButton } from './style';
@@ -59,8 +59,7 @@ export default function Welcome() {
           }}
         />
         <ContainerButton>
-          <Btn
-            // children="Get Started"
+          <ButtonUi
             hover
             bold
             width="150px"
@@ -72,8 +71,7 @@ export default function Welcome() {
               </>
             }
           />
-          <Btn
-            // children="Get Started"
+          <ButtonUi
             border
             bold
             color="#2D3843"
@@ -95,9 +93,7 @@ export default function Welcome() {
           />
         </ContainerButton>
       </Content>
-      {/* <ContainerImg> */}
       <ContainerImg src={gray} alt="pictures" />
-      {/* </ContainerImg> */}
     </Wrapper>
   );
 }
