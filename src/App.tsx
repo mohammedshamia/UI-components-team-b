@@ -1,5 +1,5 @@
-import React from 'react';
 import AllRoutes from './routes';
+import { Avatar } from './components/baseComponent';
 
 function App() {
   return (
