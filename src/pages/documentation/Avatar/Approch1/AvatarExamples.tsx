@@ -1,4 +1,4 @@
-import { Avatar } from '../../../components/baseComponent';
+import { Avatar } from '../../../../components/baseComponent';
 
 export const AvatarExample = () => (
   <Avatar src="https://avatars.githubusercontent.com/u/44713857?v=4" />

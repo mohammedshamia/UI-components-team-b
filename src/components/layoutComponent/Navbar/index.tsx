@@ -8,7 +8,6 @@ import {
 } from './style';
 import { Avatar } from '../../baseComponent';
 import logo from '../../../assets/logo.png';
-// interface INavbar {}
 
 const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const handleChangeTheme = () => {

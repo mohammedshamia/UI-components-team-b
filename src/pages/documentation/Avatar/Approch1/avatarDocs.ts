@@ -1,4 +1,3 @@
-import React from 'react';
 import { AvatarExample, LetterAvatar } from './AvatarExamples';
 
 const paragraphStyle: React.CSSProperties = {
