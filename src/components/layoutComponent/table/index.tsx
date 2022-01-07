@@ -1,35 +1,37 @@
 import React from 'react';
 import { Data } from './Data';
+import { Table, TBody, Th, Tr, Td, Container } from './style';
+import Typography from '../../baseComponent/Typography';
 
 const tableHeader = () => {
   const head = Object.keys(Data[0]);
-  return head.map((key: string, index) => {
-    return <th key={index}> {key} </th>;
+  return head.slice(1).map((key: string, index) => {
+    return <Th key={index}> {key} </Th>;
   });
 };
 const bodyTable = () => {
   return Data.map(item => {
     const { Name, Type, Default, Description } = item;
     return (
-      <tr key={item.id}>
-        <td> {Name} </td>
-        <td> {Type} </td>
-        <td> {Default} </td>
-        <td> {Description} </td>
-      </tr>
+      <Tr key={item.id}>
+        <Td> {Name} </Td>
+        <Td> {Type} </Td>
+        <Td> {Default} </Td>
+        <Td> {Description} </Td>
+      </Tr>
     );
   });
 };
 export default function TableProps() {
   return (
-    <div>
-      <h1> component name</h1>
-      <table>
-        <tbody>
-          <tr>{tableHeader()}</tr>
+    <Container>
+      <Typography variant="h2" children="API Props" bold />
+      <Table>
+        <TBody>
+          <Tr>{tableHeader()}</Tr>
           {bodyTable()}
-        </tbody>
-      </table>
-    </div>
+        </TBody>
+      </Table>
+    </Container>
   );
 }

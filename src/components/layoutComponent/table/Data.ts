@@ -1,4 +1,6 @@
-export const Data = [
+import { IPropTable } from './interface';
+
+export const Data: IPropTable[] = [
   {
     id: '1',
     Name: 'children',
@@ -8,22 +10,22 @@ export const Data = [
   },
   {
     id: '2',
-    Name: 'children',
-    Type: 'node',
+    Name: 'readonly',
+    Type: 'boolean',
     Default: 'primary',
     Description: 'The content of the component.',
   },
   {
     id: '3',
-    Name: 'children',
-    Type: 'node',
+    Name: 'max',
+    Type: 'number',
     Default: 'primary',
     Description: 'The content of the component.',
   },
   {
     id: '4',
-    Name: 'children',
-    Type: 'node',
+    Name: 'value',
+    Type: 'string',
     Default: 'primary',
     Description: 'The content of the component.',
   },

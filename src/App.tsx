@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import AllRoutes from './routes';
 import { ThemeProvider } from 'styled-components';
-import TableProps from './components/layoutComponent/table';
-
-import AllRoutes from './routes';
+// import AllRoutes from './routes';
 import { Navbar } from './components/layoutComponent';
 import WelcomeScreen from './pages/WelcomeScreen';
 import { GlobalStyle } from './Theme';
@@ -30,7 +27,7 @@ function App() {
         <Navbar theme={state} setTheme={setState} />
         {/* <Main /> */}
         <WelcomeScreen />
-        <AllRoutes />
+        {/* <AllRoutes /> */}
       </ThemeProvider>
     </>
   );
