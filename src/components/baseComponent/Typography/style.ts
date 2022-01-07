@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { IPropTypography } from './interface';
-
 const getTypographySize = (variant: string) => {
   switch (variant) {
     case 'h1':

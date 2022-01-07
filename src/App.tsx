@@ -5,6 +5,7 @@ import { Navbar } from './components/layoutComponent';
 import WelcomeScreen from './pages/WelcomeScreen';
 import { GlobalStyle } from './Theme';
 import { lightTheme, darkTheme } from './Theme/theme';
+import Main from './pages/MainPage';
 
 interface IState {
   theme: string;
@@ -24,8 +25,10 @@ function App() {
       <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
         <Navbar theme={state} setTheme={setState} />
-        <WelcomeScreen />
-        <AllRoutes />
+        <Main />
+        {/* <WelcomeScreen /> */}
+
+        {/* <AllRoutes /> */}
       </ThemeProvider>
     </>
   );
