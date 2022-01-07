@@ -6,4 +6,3 @@ export {
   EmbedCode,
   ScriptCodeContainer,
 } from './Container';
-export { default as Markdown } from './Markdown';

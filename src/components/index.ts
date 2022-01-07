@@ -6,5 +6,4 @@ export {
   Navbar,
   SideBar,
   ScriptCodeContainer,
-  Markdown,
 } from './layoutComponent';

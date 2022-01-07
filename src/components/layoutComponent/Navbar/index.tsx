@@ -13,10 +13,10 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const handleChangeTheme = () => {
     if (theme.theme === 'light') {
       setTheme({ theme: 'dark' });
-      window.localStorage.setItem('theme', 'dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       setTheme({ theme: 'light' });
-      window.localStorage.setItem('theme', 'light');
+      localStorage.setItem('theme', 'light');
     }
   };
 

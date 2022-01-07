@@ -5,8 +5,9 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 // @ts-ignore
 import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import React from 'react';
 import { Typography } from '../../../components';
-import { Container } from '..';
+import Loadable from '../../../routes/Loading';
 
 const ConvertTypography = [
   'h1',
@@ -22,7 +23,7 @@ const ConvertTypography = [
   return acc;
 }, {});
 
-const Docs: React.FC<MarkdownProps> = ({ content, examples }) => {
+const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
   return (
     <ReactMarkdown
       children={content}
@@ -35,7 +36,7 @@ const Docs: React.FC<MarkdownProps> = ({ content, examples }) => {
               children={String(children).replace(/\n$/, '')}
               style={vs2015}
               language={match[1]}
-              PreTag={Container}
+              PreTag="dev"
               {...props}
             />
           ) : (
@@ -51,4 +52,4 @@ const Docs: React.FC<MarkdownProps> = ({ content, examples }) => {
   );
 };
 
-export default Docs;
+export default Loadable(React.lazy(Markdown as any));

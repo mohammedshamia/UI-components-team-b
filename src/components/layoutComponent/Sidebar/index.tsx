@@ -11,7 +11,6 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
-import AvatarDoc from '../../../pages/documentation/Avatar';
 
 const Layout = () => {
   const location = useLocation();
@@ -26,7 +25,6 @@ const Layout = () => {
       <LeftSide>left side</LeftSide>
       <ContentSide>
         <Container>
-          <AvatarDoc />
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (

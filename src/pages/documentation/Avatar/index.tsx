@@ -1,5 +1,6 @@
 import React from 'react';
-import { Markdown } from '../../../components';
+import Markdown from '../../../components/layoutComponent/Markdown';
+import Loadable from '../../../routes/Loading';
 import { AvatarExample, LetterAvatar } from './AvatarExamples';
 
 import avatarDoc from './doc';
@@ -16,4 +17,4 @@ const Docs: React.FC<any> = () => {
   );
 };
 
-export default Docs;
+export default Loadable(React.lazy(Docs as any));

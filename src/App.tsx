@@ -19,13 +19,11 @@ function App() {
     });
   }, []);
   return (
-    <>
-      <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
-        <GlobalStyle />
-        <Navbar theme={state} setTheme={setState} />
-        <AllRoutes />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <Navbar theme={state} setTheme={setState} />
+      <AllRoutes />
+    </ThemeProvider>
   );
 }
 
