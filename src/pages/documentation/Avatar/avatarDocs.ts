@@ -13,6 +13,7 @@ const avatarDocs: DocsProps[] = [
     variant: 'h3',
     children: 'Avatar',
     bold: true,
+    id: '#avatar-title',
   },
   {
     type: 'Typography',
@@ -36,7 +37,7 @@ const avatarDocs: DocsProps[] = [
   },
   {
     type: 'InfoContainer',
-    children: Array.from(Array(3).keys()).map(() => AvatarExample()),
+    children: Array.from(Array(4).keys()).map(() => AvatarExample()),
   },
   {
     type: 'Typography',
@@ -57,6 +58,12 @@ const avatarDocs: DocsProps[] = [
   {
     type: 'InfoContainer',
     children: Array.from(Array(3).keys()).map(() => LetterAvatar()),
+  },
+  {
+    type: 'Typography',
+    children: 'Sizes',
+    variant: 'h3',
+    bold: true,
   },
 ];
 

@@ -5,4 +5,5 @@ export {
   InfoContainer,
   Navbar,
   SideBar,
+  ScriptCodeContainer,
 } from './layoutComponent';

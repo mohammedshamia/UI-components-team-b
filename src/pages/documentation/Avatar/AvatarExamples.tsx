@@ -5,5 +5,5 @@ export const AvatarExample = () => (
 );
 
 export const LetterAvatar = () => (
-  <Avatar src="https://ui-avatars.com/api/?name=Ahmad+Salah&background=0D8ABC&color=fff" />
+  <Avatar src="https://ui-avatars.com/api/?name=m+m&background=0D8ABC&color=fff" />
 );
