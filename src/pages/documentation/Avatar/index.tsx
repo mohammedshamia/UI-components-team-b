@@ -2,11 +2,7 @@ import React from 'react';
 import docs from './avatarDocs';
 import * as Components from '../../../components';
 
-interface IAvatarDocsProps {
-  [key: string]: any;
-}
-
-export const AvatarDocs: React.FC<IAvatarDocsProps> = () => {
+export const AvatarDocs: React.FC<any> = () => {
   return (
     <>
       {docs.map(({ type, ...props }: DocsProps, index) =>

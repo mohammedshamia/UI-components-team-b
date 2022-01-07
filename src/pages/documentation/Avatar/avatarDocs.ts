@@ -1,5 +1,5 @@
 import React from 'react';
-import { AvatarExample } from './AvatarExamples';
+import { AvatarExample, LetterAvatar } from './AvatarExamples';
 
 const paragraphStyle: React.CSSProperties = {
   fontSize: '16px',
@@ -10,7 +10,7 @@ const paragraphStyle: React.CSSProperties = {
 const avatarDocs: DocsProps[] = [
   {
     type: 'Typography',
-    variant: 'h2',
+    variant: 'h3',
     children: 'Avatar',
     bold: true,
   },
@@ -23,7 +23,7 @@ const avatarDocs: DocsProps[] = [
   },
   {
     type: 'Typography',
-    variant: 'h2',
+    variant: 'h3',
     children: 'Image avatars',
     bold: true,
   },
@@ -37,6 +37,26 @@ const avatarDocs: DocsProps[] = [
   {
     type: 'InfoContainer',
     children: Array.from(Array(3).keys()).map(() => AvatarExample()),
+  },
+  {
+    type: 'Typography',
+    variant: 'h3',
+    children: 'Later avatars',
+    style: {
+      marginTop: '2rem',
+    },
+    bold: true,
+  },
+  {
+    type: 'Typography',
+    variant: 'p',
+    style: paragraphStyle,
+    children:
+      'Image avatars can be created by passing standard img props src or srcSet to the component.',
+  },
+  {
+    type: 'InfoContainer',
+    children: Array.from(Array(3).keys()).map(() => LetterAvatar()),
   },
 ];
 
