@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ButtonUi from '../../components/layoutComponent/button';
 import Typography from '../../components/baseComponent/Typography';
 import gray from '../../assets/gray.jpg';
@@ -49,18 +50,20 @@ export default function Welcome() {
         </Typography>
         <Typography {...contentStyle}>{data.paragraph}</Typography>
         <ContainerButton>
-          <ButtonUi
-            hover
-            bold
-            width="150px"
-            height="56px"
-            children={
-              <>
-                Get Started
-                <i className="fas fa-angle-right" />
-              </>
-            }
-          />
+          <Link to="/components">
+            <ButtonUi
+              hover
+              bold
+              width="150px"
+              height="56px"
+              children={
+                <>
+                  Get Started
+                  <i className="fas fa-angle-right" />
+                </>
+              }
+            />
+          </Link>
           <ButtonUi
             border
             bold
