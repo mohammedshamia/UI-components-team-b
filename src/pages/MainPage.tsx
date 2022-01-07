@@ -1,19 +1,8 @@
-import {
-  SideBar,
-  Container,
-  InfoContainer,
-} from '../components/layoutComponent';
+import { SideBar } from '../components/layoutComponent';
+import 'react-code-container/dist/index.css';
 
 const MainPage = () => {
-  return (
-    <Container style={{ display: 'flex' }} width="100%">
-      <div>ddd</div>
-      <Container width="100%">
-        ddd
-        <InfoContainer>ddd</InfoContainer>
-      </Container>
-    </Container>
-  );
+  return <SideBar />;
 };
 
 export default MainPage;

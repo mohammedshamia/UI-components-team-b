@@ -1,3 +1,3 @@
 export { default as SideBar } from './Sidebar';
 export { default as Navbar } from './Navbar';
-export { Container, InfoContainer } from './Container';
+export { Container, InfoContainer, EmbedCode } from './Container';

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IContainerProps } from './interface';
+import { IContainerProps, IEmbedCodeProps } from './interface';
 
 export const ContainerStyle = styled.div<IContainerProps>`
   background-color: ${props => props.backgroundColor || '#fefefe'};
@@ -50,4 +50,10 @@ export const InfoContainerStyle = styled.div<IContainerProps>`
   }
 `;
 
-export const EmbedCodeStyle = styled.div<any>``;
+export const EmbedCodeStyle = styled.iframe<IEmbedCodeProps>`
+  width: ${props => props.width || '100%'};
+  height: ${props => props.height || '20rem'};
+  border-radius: 12px;
+  align-items: center;
+  margin-top: 20px;
+`;
