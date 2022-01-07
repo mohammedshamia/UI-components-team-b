@@ -1,34 +1,199 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { lazy } from 'react';
+import { PathItem } from '../types/Path';
 import Loadable from './Loading';
 
 const RatingPage = Loadable(lazy(() => import('../pages/Rating')));
 const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
-const paths = [
+const paths: PathItem[] = [
   {
     path: 'rating',
-    subPath: ['#tag1', '#tag2'],
+    items: [
+      {
+        label: 'Basic rating',
+        toId: '#basic-rating',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
     element: <RatingPage />,
   },
   {
     path: 'typography',
-    subPath: ['#tag1', '#tag2'],
+    items: [
+      {
+        label: 'Basic rating',
+        toId: '#basic-rating',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
     element: <TypographyPage />,
   },
   {
     path: 'card',
-    subPath: ['#tag1', '#tag2'],
+    items: [
+      {
+        label: 'Basic rating',
+        toId: '#basic-rating',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
     element: <p>rating</p>,
   },
   {
     path: 'avatars',
-    subPath: ['#tag1', '#tag2'],
+    items: [
+      {
+        label: 'Basic rating',
+        toId: '#basic-rating',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
     element: () => <p>rating</p>,
   },
   {
     path: 'autocomplete',
-    subPath: ['#tag1', '#tag2'],
+    items: [
+      {
+        label: 'Basic rating',
+        toId: '#basic-rating',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
     element: <p>autocomplete</p>,
   },
 ];
