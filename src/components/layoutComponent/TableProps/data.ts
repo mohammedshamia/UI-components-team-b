@@ -1,6 +1,6 @@
 import { IPropTable } from './interface';
 
-export const Data: IPropTable[] = [
+export const data: IPropTable[] = [
   {
     id: '1',
     Name: 'children',

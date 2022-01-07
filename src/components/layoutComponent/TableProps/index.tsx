@@ -1,16 +1,16 @@
 import React from 'react';
-import { Data } from './Data';
+import { data } from './data';
 import { Table, TBody, Th, Tr, Td, Container } from './style';
 import Typography from '../../baseComponent/Typography';
 
 const tableHeader = () => {
-  const head = Object.keys(Data[0]);
+  const head = Object.keys(data[0]);
   return head.slice(1).map((key: string, index) => {
     return <Th key={index}> {key} </Th>;
   });
 };
 const bodyTable = () => {
-  return Data.map(item => {
+  return data.map(item => {
     const { Name, Type, Default, Description } = item;
     return (
       <Tr key={item.id}>
