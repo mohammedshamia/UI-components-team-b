@@ -25,10 +25,9 @@ function App() {
       <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
         <Navbar theme={state} setTheme={setState} />
-        <Main />
-        {/* <WelcomeScreen /> */}
-
-        {/* <AllRoutes /> */}
+        {/* <Main /> */}
+        <WelcomeScreen />
+        <AllRoutes />
       </ThemeProvider>
     </>
   );
