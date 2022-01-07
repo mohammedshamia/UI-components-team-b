@@ -1,6 +1,6 @@
 import React, { Suspense, LazyExoticComponent, ComponentType } from 'react';
 
-const Loader = () => <p> loaser ...</p>;
+const Loader = () => <p> loader ...</p>;
 const Loadable =
   (
     Component:

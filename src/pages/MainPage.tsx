@@ -1,10 +1,9 @@
-import React from 'react';
-import Layout from '../components/layoutComponent';
+import { SideBar } from '../components/layoutComponent';
 
 const MainPage = () => {
   return (
     <div>
-      <Layout />
+      <SideBar />
     </div>
   );
 };

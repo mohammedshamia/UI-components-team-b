@@ -1,5 +1,4 @@
 import React from 'react';
-import { IconContext } from 'react-icons';
 import { AiFillStar } from 'react-icons/ai';
 import { ISvgProps } from '../../../types/rating';
 import { WrapperParentStart } from './style';
@@ -15,7 +14,6 @@ const SvgStart = ({
   color,
   disabled,
   icon,
-  ...props
 }: ISvgProps) => {
   const handelMouseEnter = () => {
     if (disabled || readonly) return;

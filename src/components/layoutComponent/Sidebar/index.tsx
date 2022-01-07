@@ -1,8 +1,8 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import paths from '../../routes/paths';
-import { handelPath } from '../../utils/handlePath';
+import paths from '../../../routes/paths';
+import { handelPath } from '../../../utils/handlePath';
 import MainLayout, {
   Contents,
   ContentSide,
@@ -13,12 +13,11 @@ import MainLayout, {
 
 const Layout = () => {
   const location = useLocation();
-  const currrentPath = location.pathname.split('/')[2];
-  const rigthSide = useMemo(
-    () => handelPath(paths, currrentPath),
+  const currentPath = location.pathname.split('/')[2];
+  const rightSide = useMemo(
+    () => handelPath(paths, currentPath),
     [location.pathname],
   );
-  console.log('rigthSide', rigthSide);
 
   return (
     <MainLayout>
@@ -34,7 +33,7 @@ const Layout = () => {
       <RightSide>
         <Contents>Contents</Contents>
         <nav>
-          {rigthSide.map(x => (
+          {rightSide.map(x => (
             <LinkItem to={`${x.toId}`}>{x.label}</LinkItem>
           ))}
         </nav>
