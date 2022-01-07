@@ -1,12 +1,8 @@
-import React from 'react';
-import Layout from '../components/layoutComponent';
+import { SideBar } from '../components/layoutComponent';
+import 'react-code-container/dist/index.css';
 
 const MainPage = () => {
-  return (
-    <div>
-      <Layout />
-    </div>
-  );
+  return <SideBar />;
 };
 
 export default MainPage;

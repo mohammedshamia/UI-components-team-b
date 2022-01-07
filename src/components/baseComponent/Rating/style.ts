@@ -26,41 +26,65 @@ interface IDivWrapper {
 export const AnimationSpan = keyframes`
 
   0% {
-    transform: rotate(0deg) scale(1);
-    background: 'red';
+    /* transform: rotate(0deg); */
+    /* background: 'red'; */
   }
-  50% {
-    transform: rotate(180deg) scale(0.5);
+  100% {
+    /* transform: rotate(180deg); */
 
   }
   
-  100% {
-    transform: rotate(360deg) scale(1);
-  
-}
 `;
 
 interface IWrapperParentStart {
-  readonly?: boolean;
+  readonly: boolean;
+  disabled: boolean;
+  fill?: string;
+  width?: number;
 }
 
 export const WrapperParentStart = styled('div')<IWrapperParentStart>`
   cursor: pointer;
   /* background: red; */
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
+
   ${props =>
-    props.readonly === true &&
+    props.disabled &&
     css`
       cursor: auto;
       opacity: 0.4;
+      &:hover {
+        /* padding: 0px 4px; */
+        animation: none !important;
+        transition: none !important;
+      }
     `};
+  ${props =>
+    props.readonly &&
+    css`
+      cursor: auto !important;
+      &:hover {
+        padding: 0px 4px;
+        animation: none !important;
+        transition: none !important;
+      }
+    `};
+
+  svg {
+    /* fill: ${props => props.fill} !important;
+    color: red;
+    width: ${props => props.width} !important; */
+  }
   &:hover {
-    padding: 0px 4px;
+    /* padding: 0px 4px; */
     transition-property: all;
     transition-duration: 100ms;
     transition-delay: 100ms;
-    animation: ${AnimationSpan} 0.8s;
+    /* animation: ${AnimationSpan} 1s; */
   }
 `;
 

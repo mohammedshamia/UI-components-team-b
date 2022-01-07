@@ -1,0 +1,12 @@
+export interface IContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  width?: string;
+  height?: string;
+  backgroundColor?: string;
+}
+
+export interface IEmbedCodeProps {
+  src: string;
+  width?: string;
+  height?: string;
+}
