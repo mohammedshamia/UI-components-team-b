@@ -10,6 +10,8 @@ import MainLayout, {
   LinkItem,
   RightSide,
 } from './style';
+import { Container } from '../Container';
+import AvatarDoc from '../../../pages/documentation/Avatar';
 
 const Layout = () => {
   const location = useLocation();
@@ -23,12 +25,15 @@ const Layout = () => {
     <MainLayout>
       <LeftSide>left side</LeftSide>
       <ContentSide>
-        <Routes>
-          <Route index element={() => <p>1111</p>} />
-          {paths.map(path => (
-            <Route path={path.path} element={path.element} key={path.path} />
-          ))}
-        </Routes>
+        <Container>
+          <AvatarDoc />
+          <Routes>
+            <Route index element={() => <p>1111</p>} />
+            {paths.map(path => (
+              <Route path={path.path} element={path.element} key={path.path} />
+            ))}
+          </Routes>
+        </Container>
       </ContentSide>
       <RightSide>
         <Contents>Contents</Contents>
