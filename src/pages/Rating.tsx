@@ -5,7 +5,6 @@ const RatingPage = () => {
   return (
     <Rating
       isRow
-      count={5}
       // style={{ textAlign: 'center', background: 'red' }}
     />
   );
