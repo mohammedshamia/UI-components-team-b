@@ -1,7 +1,8 @@
 /* eslint-disable react/no-array-index-key */
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import paths from '../../../routes/paths';
+
 import { handelPath } from '../../../utils/handlePath';
 import MainLayout, {
   Contents,
@@ -11,6 +12,11 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
+import Loadable from '../../../routes/Loading';
+
+const AvatarDocumentation = Loadable(
+  React.lazy(() => import('../../../pages/documentation/Avatar')),
+);
 
 const Layout = () => {
   const location = useLocation();
@@ -25,6 +31,7 @@ const Layout = () => {
       <LeftSide>left side</LeftSide>
       <ContentSide>
         <Container>
+          <AvatarDocumentation />
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (
