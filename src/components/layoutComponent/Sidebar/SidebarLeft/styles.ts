@@ -35,7 +35,6 @@ export const SidebarLink = styled(NavLink)`
   line-height: 1.5;
   letter-spacing: 0;
   box-sizing: border-box;
-
   &:hover {
     background-color: rgba(0, 0, 0, 0.04);
     cursor: pointer;

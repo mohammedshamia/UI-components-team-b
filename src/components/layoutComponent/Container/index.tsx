@@ -22,4 +22,6 @@ export const ScriptCodeContainer: React.FC<any> = ({
   ...props
 }: {
   code: string;
-}) => <CodeContainer {...props} code={code} language="javascript" />;
+}) => (
+  <CodeContainer {...props} code={code} language="typescript" showLineNumber />
+);

@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import AllRoutes from './routes';
 import { Navbar } from './components/layoutComponent';
-import WelcomeScreen from './pages/WelcomeScreen';
 import { GlobalStyle } from './Theme';
 import { lightTheme, darkTheme } from './Theme/theme';
-import Main from './pages/MainPage';
 
 interface IState {
   theme: string;
@@ -21,15 +19,11 @@ function App() {
     });
   }, []);
   return (
-    <>
-      <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
-        <GlobalStyle />
-        <Navbar theme={state} setTheme={setState} />
-        {/* <Main /> */}
-        <WelcomeScreen />
-        <AllRoutes />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <Navbar theme={state} setTheme={setState} />
+      <AllRoutes />
+    </ThemeProvider>
   );
 }
 
