@@ -1,4 +1,4 @@
-import { SideBar } from '../components/layoutComponent';
+import SideBar from '../components/layoutComponent/Sidebar';
 import 'react-code-container/dist/index.css';
 
 const MainPage = () => {

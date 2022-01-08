@@ -4,34 +4,43 @@ import { IProps } from './interface';
 interface Iprops {
   width: string;
   disabled?: boolean;
+  error?: string;
+  borderRadius?: string;
 }
 interface fontSize {
   fontSize: string;
-  error?: string;
 }
 export const Wrapper = styled('div')<Iprops>`
   width: ${props => props.width};
+  border: 1px solid ${props => props.theme.primary.dark};
+  background-color: ${props => props.theme.background.default};
+  border-radius: ${props => props.borderRadius || '0px'};
+  ${props =>
+    props.error
+      ? 'border:1px solid #f75555;background-color: #f7d6d6; '
+      : ' border: 1px solid #e1e1e1'};
+
+  &:hover {
+    outline: none;
+    box-shadow: 0 0 5px ${props => props.theme.background.paper};
+    border: 1px solid ${props => props.theme.background.paper};
+    background-color: ${props => props.theme.background.default};
+  }
   & div {
     position: relative;
+    display: flex;
   }
 `;
 
 export const StyledAutoComplete = styled.input<fontSize>`
   padding: 10px;
   font-size: ${props => props.fontSize};
-  ${props =>
-    props.error
-      ? 'border:1px solid #f75555;background-color: #f7d6d6; '
-      : ' border: 1px solid #e1e1e1'};
 
   transition: all 0.4s;
   width: 100%;
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 5px #e1e1e1;
-    border: 1px solid #e1e1e1;
-    background-color: #ffffff;
-  }
+  border: none;
+  outline: none;
+  background: none;
 `;
 
 interface IChoicesWrapperProps {
@@ -100,4 +109,16 @@ interface error {
 }
 export const TextError = styled.span<error>`
   color: #f75555;
+`;
+export const StartIcon = styled.span`
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: ${props => props.theme.text.disable};
+  font-size: 0.7rem;
+  padding: 7px 10px 7px 10px;
+  margin-right: 2px;
+  ${Wrapper}:hover & {
+    color: ${props => props.theme.text.secondary};
+  }
 `;

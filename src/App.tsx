@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import AllRoutes from './routes';
-import { Navbar } from './components/layoutComponent';
+import Navbar from './components/layoutComponent/Navbar';
 import { GlobalStyle } from './Theme';
 import { lightTheme, darkTheme } from './Theme/theme';
 

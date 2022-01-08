@@ -13,4 +13,8 @@ export interface IProps {
   disableClearable?: boolean;
   error?: string;
   renderOption?: JSX.Element[];
+  search?: boolean;
+  startAdornment?: JSX.Element;
+  endAdornment?: JSX.Element;
+  borderRadius?: string;
 }
