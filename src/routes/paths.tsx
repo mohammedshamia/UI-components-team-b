@@ -1,22 +1,14 @@
-// import { lazy } from 'react';
-// import Loadable from './Loading';
+import { lazy } from 'react';
+import Loadable from './Loading';
 
-// const RatingPage = Loadable(lazy(() => import('../pages/Rating')));
+const RatingPage = Loadable(
+  lazy(() => import('../pages/Components/RatingPage')),
+);
 // const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
-  // {
-  //   path: 'rating',
-  //   subPath: ['#tag1', '#tag2'],
-  //   element: <RatingPage />,
-  // },
-  // {
-  //   path: 'typography',
-  //   subPath: ['#tag1', '#tag2'],
-  //   element: <TypographyPage />,
-  // },
   {
-    path: 'card',
+    path: 'rating',
     items: [
       {
         label: 'Basic rating',
@@ -51,7 +43,7 @@ const paths = [
         toId: '#keyboard',
       },
     ],
-    element: <p>rating</p>,
+    element: <RatingPage />,
   },
   {
     path: 'avatars',
