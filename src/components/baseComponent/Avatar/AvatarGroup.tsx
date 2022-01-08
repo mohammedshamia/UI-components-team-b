@@ -16,6 +16,9 @@ const AvatarGroup: React.FC<IAvatarGroupProps> = ({
         children={(total - max).toString()}
         border
         shadow={props?.shadow}
+        style={{
+          backgroundColor: '#f5f5f5',
+        }}
       />
     )}
   </AvatarGroupComponent>

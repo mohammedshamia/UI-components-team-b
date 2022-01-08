@@ -8,6 +8,10 @@ export interface IAvatarProps {
   border?: boolean;
   shadow?: boolean;
   variant?: 'circle' | 'square';
+  name?: string;
+  backgroundColor?: string;
+  badge?: boolean;
+  badgeColor?: string;
 }
 
 export interface IAvatarGroupProps {

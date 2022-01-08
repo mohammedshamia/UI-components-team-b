@@ -1,17 +1,29 @@
-import React from 'react';
-import docs from './avatarDocs';
-import * as Components from '../../../components';
+import Markdown from '../../../components/layoutComponent/Markdown';
+import {
+  AvatarExample,
+  LetterAvatar,
+  AvatarWithSizes,
+  AvatarWithVariant,
+  AvatarGroupExample,
+  AvatarWithBadge,
+} from './AvatarExamples';
 
-export const AvatarDocs: React.FC<any> = () => {
+import avatarDoc from './doc';
+
+const AvatarDocumentation: React.FC<any> = () => {
   return (
-    <>
-      {docs.map(({ type, ...props }: DocsProps, index) =>
-        React.cloneElement(
-          Components[type]({ key: index.toString(), ...(props as any) }) as any,
-        ),
-      )}
-    </>
+    <Markdown
+      content={avatarDoc}
+      examples={{
+        ex1: AvatarExample,
+        ex2: LetterAvatar,
+        ex3: AvatarWithSizes,
+        ex4: AvatarWithVariant,
+        ex5: AvatarGroupExample,
+        ex6: AvatarWithBadge,
+      }}
+    />
   );
 };
 
-export default AvatarDocs;
+export default AvatarDocumentation;

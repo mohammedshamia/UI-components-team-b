@@ -28,6 +28,7 @@ const Wrapper = styled.div<any>`
     props?.fontSize || getTypographySize(props?.variant || '')};
   width: ${props => props?.width || '100%'};
   line-height: ${props => (props?.bold ? 1.1 : 1.25)};
+  font-family: ${props => props?.fontFamily || 'PlusJakartaSans'};
   ${props =>
     Object.keys(props)
       .map((key: any) => `${key}: ${props?.[key]};`)

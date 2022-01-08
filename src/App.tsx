@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes } from 'react-router-dom';
 import AllRoutes from './routes';
@@ -23,8 +23,8 @@ function App() {
     <>
       <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
-        <Navbar theme={state} setTheme={setState} />
         <BrowserRouter>
+          <Navbar theme={state} setTheme={setState} />
           {/* <Routes> */}
           <AllRoutes />
           {/* </Routes> */}

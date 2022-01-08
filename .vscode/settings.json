@@ -17,6 +17,8 @@
     },
     "editor.tabCompletion": "on",
     "cSpell.words": [
+        "hljs",
+        "rehype",
         "xlarge"
     ],
 }
