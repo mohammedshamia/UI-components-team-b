@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from '../components/baseComponent/Rating';
+import Rating from '../../components/baseComponent/Rating';
 
 const RatingPage = () => {
   return (
