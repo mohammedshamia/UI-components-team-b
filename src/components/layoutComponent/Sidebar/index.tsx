@@ -19,16 +19,15 @@ const AvatarDocumentation = Loadable(
 );
 
 const Layout = () => {
-  const location = useLocation();
-  const currentPath = location.pathname.split('/')[2];
-  const rightSide = useMemo(
-    () => handelPath(paths, currentPath),
-    [location.pathname],
-  );
+  const { hash, pathname } = useLocation();
+  const currentPath = pathname.split('/')[2];
+
+  const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
+  console.log('hash', hash);
 
   return (
     <MainLayout>
-      <LeftSide>left side</LeftSide>
+      <LeftSide>left side111111</LeftSide>
       <ContentSide>
         <Container>
           <AvatarDocumentation />
@@ -44,7 +43,9 @@ const Layout = () => {
         <Contents>Contents</Contents>
         <nav>
           {rightSide.map(x => (
-            <LinkItem to={`${x.toId}`}>{x.label}</LinkItem>
+            <LinkItem to={`${x.toId}`} isActive={x.toId === hash}>
+              {x.label}
+            </LinkItem>
           ))}
         </nav>
       </RightSide>
