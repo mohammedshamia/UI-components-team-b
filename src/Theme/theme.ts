@@ -69,8 +69,8 @@ export const darkTheme: DefaultTheme = {
     dark: '#d32f2f',
   },
   background: {
-    paper: '#1e1e1e',
-    default: '#121212',
+    paper: '#121212',
+    default: '#1e1e1e',
   },
   text: {
     primary: '#fff',

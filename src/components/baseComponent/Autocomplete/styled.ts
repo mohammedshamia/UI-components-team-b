@@ -35,7 +35,6 @@ export const Wrapper = styled('div')<Iprops>`
 export const StyledAutoComplete = styled.input<fontSize>`
   padding: 10px;
   font-size: ${props => props.fontSize};
-
   transition: all 0.4s;
   width: 100%;
   border: none;
@@ -50,7 +49,7 @@ interface IChoicesWrapperProps {
 }
 
 export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
-  display: ${props => (props.openChoices ? 'flex' : 'none')};
+  display: ${props => (!props.openChoices ? 'none' : 'flex')};
   align-items: ${props =>
     props.alignItem === 'center'
       ? 'center'
@@ -83,7 +82,7 @@ export const Button = styled.button<IButtonProps>`
 `;
 export const Icon = styled.span`
   position: absolute;
-  right: 10px;
+  right: 35px;
   top: calc(50% - 10px);
   justify-content: center;
   display: flex;
@@ -96,7 +95,7 @@ export const Icon = styled.span`
 `;
 export const ArrowIcon = styled.span`
   position: absolute;
-  right: -3%;
+  right: 3%;
   top: calc(50% - 10px);
   transition: all 0.5s;
   justify-content: center;

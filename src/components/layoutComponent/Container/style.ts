@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { IContainerProps, IEmbedCodeProps } from './interface';
 
 export const ContainerStyle = styled.div<IContainerProps>`
-  background-color: ${props => props.backgroundColor || '#fefefe'};
+  background-color: ${props => props.theme.background.default};
   padding: 6%;
   border: none;
   width: ${props => props.width || '100%'};
