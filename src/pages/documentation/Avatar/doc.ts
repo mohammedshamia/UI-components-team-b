@@ -1,10 +1,12 @@
 export default `
-## **Avatar**
+<h2 id='avatar'>Avatar</h2>
+
 #### Avatars are found throughout material design with uses in everything from tables to dialog menus.
 
 <br />
 
-### **Image avatars**
+<h2 id="image">Image avatars</h2>
+
 #### Image avatars can be created by passing standard **img** props **src** to the component.
 <br />
 
@@ -114,7 +116,7 @@ export default `
 ~~~
 <br />
 
-### **Avatar Group**
+<h2 id="group">Avatar Group</h2>
 ##### **AvatarGroup** renders its children as a stack. Use the max prop to limit the number of avatars.
 
 <br />

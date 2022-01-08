@@ -23,7 +23,6 @@ const Layout = () => {
   const currentPath = pathname.split('/')[2];
 
   const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
-  console.log('hash', hash);
 
   return (
     <MainLayout>
