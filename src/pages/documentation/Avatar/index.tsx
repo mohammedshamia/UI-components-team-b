@@ -1,17 +1,20 @@
 import React from 'react';
-import docs from './avatarDocs';
-import * as Components from '../../../components';
+import Markdown from '../../../components/layoutComponent/Markdown';
+import Loadable from '../../../routes/Loading';
+import { AvatarExample, LetterAvatar } from './AvatarExamples';
 
-export const AvatarDocs: React.FC<any> = () => {
+import avatarDoc from './doc';
+
+const Docs: React.FC<any> = () => {
   return (
-    <>
-      {docs.map(({ type, ...props }: DocsProps, index) =>
-        React.cloneElement(
-          Components[type]({ key: index.toString(), ...(props as any) }) as any,
-        ),
-      )}
-    </>
+    <Markdown
+      content={avatarDoc}
+      examples={{
+        example1: LetterAvatar,
+        example2: AvatarExample,
+      }}
+    />
   );
 };
 
-export default AvatarDocs;
+export default Loadable(React.lazy(Docs as any));
