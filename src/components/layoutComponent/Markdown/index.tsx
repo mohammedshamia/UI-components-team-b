@@ -4,10 +4,10 @@ import rehypeRaw from 'rehype-raw';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 // @ts-ignore
 import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import remarkGfm from 'remark-gfm';
 
 import React from 'react';
 import { Typography } from '../../../components';
-import Loadable from '../../../routes/Loading';
 
 const ConvertTypography = [
   'h1',
@@ -28,6 +28,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
     <ReactMarkdown
       children={content}
       rehypePlugins={[rehypeRaw]}
+      remarkPlugins={[remarkGfm]}
       components={{
         code({ inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');
@@ -52,4 +53,4 @@ const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
   );
 };
 
-export default Loadable(React.lazy(Markdown as any));
+export default Markdown;

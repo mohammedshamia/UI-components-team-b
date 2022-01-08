@@ -63,3 +63,15 @@ export const AvatarGroupComponent = styled.div<IAvatarGroupProps>`
     margin: 0 0 0 -5px;
   }
 `;
+
+export const BadgeComponent = styled.div<IAvatarProps>`
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 2%;
+  background-color: ${props => props.badgeColor || '#2AA22A'};
+  width: 10px;
+  height: 10px;
+  padding: 4px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+`;
