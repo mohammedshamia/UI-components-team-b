@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Routes } from 'react-router-dom';
 import AllRoutes from './routes';
 import Navbar from './components/layoutComponent/Navbar';
 import { GlobalStyle } from './Theme';
@@ -19,11 +20,17 @@ function App() {
     });
   }, []);
   return (
-    <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyle />
-      <Navbar theme={state} setTheme={setState} />
-      <AllRoutes />
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyle />
+        <BrowserRouter>
+          <Navbar theme={state} setTheme={setState} />
+          {/* <Routes> */}
+          <AllRoutes />
+          {/* </Routes> */}
+        </BrowserRouter>
+      </ThemeProvider>
+    </>
   );
 }
 

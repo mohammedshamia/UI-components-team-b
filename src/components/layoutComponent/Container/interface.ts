@@ -3,6 +3,7 @@ export interface IContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   width?: string;
   height?: string;
   backgroundColor?: string;
+  flexDirection?: string;
 }
 
 export interface IEmbedCodeProps {

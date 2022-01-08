@@ -1,7 +1,7 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import paths from '../../../routes/paths';
+import SidebarLeft from './SidebarLeft';
 
 import { handelPath } from '../../../utils/handlePath';
 import MainLayout, {
@@ -19,16 +19,17 @@ const AvatarDocumentation = Loadable(
 );
 
 const Layout = () => {
-  const location = useLocation();
-  const currentPath = location.pathname.split('/')[2];
-  const rightSide = useMemo(
-    () => handelPath(paths, currentPath),
-    [location.pathname],
-  );
+  const { hash, pathname } = useLocation();
+  const currentPath = pathname.split('/')[2];
+
+  const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
+  console.log('hash', hash);
 
   return (
     <MainLayout>
-      <LeftSide>left side</LeftSide>
+      <LeftSide>
+        <SidebarLeft />
+      </LeftSide>
       <ContentSide>
         <Container>
           <AvatarDocumentation />
@@ -44,7 +45,9 @@ const Layout = () => {
         <Contents>Contents</Contents>
         <nav>
           {rightSide.map(x => (
-            <LinkItem to={`${x.toId}`}>{x.label}</LinkItem>
+            <LinkItem to={`${x.toId}`} isActive={x.toId === hash}>
+              {x.label}
+            </LinkItem>
           ))}
         </nav>
       </RightSide>
