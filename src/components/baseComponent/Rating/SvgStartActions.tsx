@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { ISvgProps } from '../../../types/rating';
 import { WrapperParentStart } from './style';
@@ -14,6 +15,7 @@ const SvgStart = ({
   disabled,
   icon,
 }: ISvgProps) => {
+  const [fullHover, setfullHover] = useState(true);
   const handelMouseEnter = () => {
     if (disabled || readonly) return;
     setHover(index);
@@ -48,15 +50,24 @@ const SvgStart = ({
 
     return color.unfill;
   };
-  <svg width={width} height={width} style={{ color: getColor() }}>
-    <defs>
+  <svg
+    width={width}
+    height={width}
+    style={{ color: getColor(), clipPath: `inset(0 50% 0 0)` }}
+  >
+    {/* <defs>
       <linearGradient id="myGradient">
         <stop offset="50%" stopColor="yellow" />
         <stop offset="50%" stopColor="grey" stopOpacity="1" />
       </linearGradient>
-    </defs>
+    </defs> */}
   </svg>;
 
+  const handleWithWidth = (e: React.MouseEvent<HTMLDivElement> | any) => {
+    const v = e.target.getBoundingClientRect();
+    console.log('e.target.getBoundingClientRect()', width);
+    console.log('e.target.getBoundingClientRect()', v.x);
+  };
   return (
     <>
       <WrapperParentStart
@@ -65,11 +76,15 @@ const SvgStart = ({
         onMouseEnter={handelMouseEnter}
         onMouseLeave={handelMouseEnterLeave}
         onClick={handelClick}
+        onMouseMove={handleWithWidth}
       >
         {/* <IconContext.Provider value={{ attr: { fill: "url('#myGradient')" } }}> */}
-        {icon}
         <AiFillStar
-          style={{ stroke: 'url(#myGradient)', color: getColor() }}
+          style={{
+            stroke: 'url(#myGradient)',
+            color: getColor(),
+            clipPath: ` ${ishover && !fullHover && `inset(0 50% 0 0)`}`,
+          }}
           size={width}
           offset={width}
           width={width}

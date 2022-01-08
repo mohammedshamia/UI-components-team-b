@@ -45,7 +45,6 @@ interface IWrapperParentStart {
 
 export const WrapperParentStart = styled('div')<IWrapperParentStart>`
   cursor: pointer;
-  /* background: red; */
   margin-left: 10px;
   display: flex;
   justify-content: center;

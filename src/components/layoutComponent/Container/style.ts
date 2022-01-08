@@ -24,7 +24,7 @@ export const ContainerStyle = styled.div<IContainerProps>`
 
 export const InfoContainerStyle = styled.div<IContainerProps>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${props => props.flexDirection || 'row'};
   justify-content: center;
   align-items: center;
   margin-top: 20px;

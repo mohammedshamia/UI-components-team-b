@@ -58,7 +58,7 @@ Rating.defaultProps = {
   size: 'medium',
   defaultValue: 1,
   color: {
-    fill: 'red',
+    fill: 'yellow',
     unfill: '#DCDCDC',
   },
   value: 0,

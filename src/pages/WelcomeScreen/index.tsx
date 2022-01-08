@@ -23,7 +23,12 @@ export default function Welcome() {
   return (
     <Wrapper>
       <Content>
-        <Typography fontFamily="PlusJakartaSans" bold variant="h1">
+        <Typography
+          fontFamily="PlusJakartaSans"
+          bold
+          variant="h1"
+          fontSize="4rem"
+        >
           {data.title[0]}
         </Typography>
         <Typography>
@@ -45,7 +50,12 @@ export default function Welcome() {
             {data.title[2]}
           </Typography>
         </Typography>
-        <Typography variant="h1" fontFamily="PlusJakartaSans" bold>
+        <Typography
+          variant="h1"
+          fontFamily="PlusJakartaSans"
+          bold
+          fontSize="4rem"
+        >
           {data.title[3]}
         </Typography>
         <Typography {...contentStyle}>{data.paragraph}</Typography>
