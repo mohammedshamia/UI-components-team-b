@@ -28,7 +28,9 @@ const Layout = () => {
 
   return (
     <MainLayout>
-      <LeftSide>kkk</LeftSide>
+      <LeftSide>
+        <SidebarLeft />
+      </LeftSide>
       <ContentSide>
         <Container>
           <AvatarDocumentation />
