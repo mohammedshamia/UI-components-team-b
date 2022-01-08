@@ -1,20 +1,29 @@
-import React from 'react';
 import Markdown from '../../../components/layoutComponent/Markdown';
-import Loadable from '../../../routes/Loading';
-import { AvatarExample, LetterAvatar } from './AvatarExamples';
+import {
+  AvatarExample,
+  LetterAvatar,
+  AvatarWithSizes,
+  AvatarWithVariant,
+  AvatarGroupExample,
+  AvatarWithBadge,
+} from './AvatarExamples';
 
 import avatarDoc from './doc';
 
-const Docs: React.FC<any> = () => {
+const AvatarDocumentation: React.FC<any> = () => {
   return (
     <Markdown
       content={avatarDoc}
       examples={{
-        example1: LetterAvatar,
-        example2: AvatarExample,
+        ex1: AvatarExample,
+        ex2: LetterAvatar,
+        ex3: AvatarWithSizes,
+        ex4: AvatarWithVariant,
+        ex5: AvatarGroupExample,
+        ex6: AvatarWithBadge,
       }}
     />
   );
 };
 
-export default Loadable(React.lazy(Docs as any));
+export default AvatarDocumentation;
