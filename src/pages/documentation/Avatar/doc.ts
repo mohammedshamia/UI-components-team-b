@@ -29,7 +29,7 @@ export default `
 
 <br />
 
-<h2 id="letter-avatar">Letter avatars</h2>
+<h2 id="letter-avatars">Letter avatars</h2>
 
 ### Avatars containing simple characters can be created by passing a string as children
 <br />
