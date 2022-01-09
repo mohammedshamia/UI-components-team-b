@@ -70,7 +70,7 @@ export const LeftSide = styled('div')`
   }
 `;
 export const ContentSide = styled('div')`
-  background: white;
+  /* background: white; */
   grid-column: span 3 / span 3;
   border-left-width: 2px;
 `;
