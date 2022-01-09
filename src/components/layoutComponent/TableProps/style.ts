@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   algin-items: center;
-  flex-direction: column; ;
+  flex-direction: column;
+  margin-top: 20px;
 `;
 export const Table = styled.table`
   display: flex;

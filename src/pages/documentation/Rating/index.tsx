@@ -3,9 +3,6 @@ import {
   SimpleRatingExample,
   SizeRatingExample,
   CustomizationRating,
-  AvatarWithVariant,
-  AvatarGroupExample,
-  AvatarWithBadge,
 } from './RatingExamples';
 
 import ratingDoc from './doc';
@@ -18,9 +15,6 @@ const RatingDocumentation: React.FC<any> = () => {
         ex1: SimpleRatingExample,
         ex2: SizeRatingExample,
         ex3: CustomizationRating,
-        ex4: AvatarWithVariant,
-        ex5: AvatarGroupExample,
-        ex6: AvatarWithBadge,
       }}
     />
   );

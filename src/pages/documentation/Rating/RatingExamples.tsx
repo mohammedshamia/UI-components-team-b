@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AiFillApple } from 'react-icons/ai';
-import { Avatar, InfoContainer, AvatarGroup } from '../../../components';
+import { InfoContainer } from '../../../components';
 import Rating from '../../../components/baseComponent/Rating';
 import WrapperParent from '../../../components/baseComponent/Rating/style';
 
@@ -63,38 +63,5 @@ export const CustomizationRating = () => (
       <Rating value={2} isRow size="large" icon={<AiFillApple />} />
     </WrapperParent>
     <br />
-  </InfoContainer>
-);
-
-export const AvatarWithVariant = () => (
-  <InfoContainer>
-    <Avatar src="https://mui.com/static/images/avatar/2.jpg" variant="square" />
-    <Avatar src="https://mui.com/static/images/avatar/2.jpg" variant="square" />
-  </InfoContainer>
-);
-
-export const AvatarGroupExample = () => (
-  <InfoContainer>
-    <AvatarGroup total={20} max={3}>
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-    </AvatarGroup>
-  </InfoContainer>
-);
-
-export const AvatarWithBadge = () => (
-  <InfoContainer>
-    <Avatar src="https://mui.com/static/images/avatar/2.jpg" badge />
-    <Avatar
-      src="https://mui.com/static/images/avatar/2.jpg"
-      badge
-      badgeColor="#f44336"
-    />
-    <Avatar
-      src="https://mui.com/static/images/avatar/2.jpg"
-      badge
-      badgeColor="orange"
-    />
   </InfoContainer>
 );
