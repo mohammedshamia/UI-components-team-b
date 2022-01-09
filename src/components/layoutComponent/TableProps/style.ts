@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   algin-items: center;
-  flex-direction: column;
+  flex-direction: column; ;
 `;
 export const Table = styled.table`
   display: flex;
@@ -17,8 +17,11 @@ export const TR = styled.tr`
   display: flex;
 `;
 export const Tr = styled.tr`
-  color: #3e5060;
+  /* color: ; */
+  /* color: #3e5060; */
+  color: ${props => props.theme.text.primary};
   border-bottom: 1px solid #3e5060;
+  background: ${props => props.theme.background.paper};
 `;
 export const Td = styled.td`
   border: 1px solid #ddd;
@@ -33,7 +36,9 @@ export const Th = styled.th`
   margin: 0px;
   padding: 16px;
   width: 161px;
-  color: #3e5060;
+  color: ${props => props.theme.text.primary};
+  /* color:  ${props => props?.color || props.theme.text.primary} */
+
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;

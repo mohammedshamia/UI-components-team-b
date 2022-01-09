@@ -12,7 +12,7 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
-import Loadable from '../../../routes/Loading';
+// import Loadable from '../../../routes/Loading';
 
 const Layout = () => {
   const { hash, pathname } = useLocation();

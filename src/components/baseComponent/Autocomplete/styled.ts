@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { IProps } from './interface';
 
 interface Iprops {
   width: string;

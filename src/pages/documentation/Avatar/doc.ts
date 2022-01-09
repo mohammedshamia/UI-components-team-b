@@ -165,5 +165,7 @@ export const AvatarWithBadge = () => (
 
   ~~~
 
-
+  <br />
+  <br />
+ 
 `;
