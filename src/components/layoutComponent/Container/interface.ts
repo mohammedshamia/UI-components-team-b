@@ -12,3 +12,7 @@ export interface IEmbedCodeProps {
   height?: string;
   title?: string;
 }
+
+export interface IEditPageProps {
+  href: string;
+}

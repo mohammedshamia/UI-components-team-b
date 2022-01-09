@@ -1,6 +1,6 @@
-import { EmbedCode, Typography } from '../../../components';
+import { EmbedCode } from '../../../components';
+import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
-import { NavbarLink } from '../../../components/layoutComponent/Navbar/style';
 import TableProps from '../../../components/layoutComponent/TableProps';
 import {
   AvatarExample,
@@ -17,22 +17,8 @@ import propsTableData from './propsTableData';
 const AvatarDocumentation: React.FC<any> = () => {
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-        }}
-      >
-        <NavbarLink
-          as="a"
-          style={{ marginLeft: 'auto' }}
-          href="https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Avatar/doc.ts"
-          target="_blank"
-        >
-          <i className="fas fa-edit" style={{ marginRight: '2px' }} />
-          Edit page
-        </NavbarLink>
-      </div>
+      <EditPage href="https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Avatar/doc.ts" />
+
       <Markdown
         content={avatarDoc}
         examples={{

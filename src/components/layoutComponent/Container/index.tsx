@@ -6,7 +6,8 @@ import {
   EmbedCodeStyle,
   ButtonStyle,
 } from './style';
-import { IContainerProps, IEmbedCodeProps } from './interface';
+import { IContainerProps, IEditPageProps, IEmbedCodeProps } from './interface';
+import { NavbarLink } from '../Navbar/style';
 
 export const Container: React.FC<IContainerProps> = props => {
   return <ContainerStyle {...props} />;
@@ -37,4 +38,23 @@ export const ScriptCodeContainer: React.FC<any> = ({
   code: string;
 }) => (
   <CodeContainer {...props} code={code} language="typescript" showLineNumber />
+);
+
+export const EditPage: React.FC<IEditPageProps> = ({ href }) => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'flex-end',
+    }}
+  >
+    <NavbarLink
+      as="a"
+      style={{ marginLeft: 'auto' }}
+      href={href}
+      target="_blank"
+    >
+      <i className="fas fa-edit" style={{ marginRight: '2px' }} />
+      Edit page
+    </NavbarLink>
+  </div>
 );
