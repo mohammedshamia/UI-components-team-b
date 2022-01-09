@@ -1,11 +1,11 @@
 import React from 'react';
-import { data as inistialData } from './data';
+// import { data as inistialData } from './data';
 import { Table, TBody, Th, Tr, Td, Container } from './style';
 import Typography from '../../baseComponent/Typography';
 import { IPropTable } from './interface';
 
 interface ITableComponent {
-  data?: IPropTable[] ;
+  data?: IPropTable[];
 }
 
 const tableHeader = ({ data = [] }: ITableComponent) => {
@@ -35,8 +35,8 @@ const TableProps: React.FC<ITableComponent> = ({
       <Typography variant="h2" children="API Props" bold />
       <Table>
         <TBody>
-          <Tr>{tableHeader(data)}</Tr>
-          {bodyTable(data)}
+          <Tr>{tableHeader(data as ITableComponent)}</Tr>
+          {bodyTable(data as ITableComponent)}
         </TBody>
       </Table>
     </Container>

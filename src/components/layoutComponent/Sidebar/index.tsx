@@ -34,7 +34,6 @@ const Layout = () => {
       <ContentSide>
         <Container>
           <AvatarDocumentation />
-          <TableProps data={data} />
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (
