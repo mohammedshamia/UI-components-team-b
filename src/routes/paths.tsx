@@ -4,6 +4,13 @@ import Loadable from './Loading';
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),
 );
+const AutoCompletePage = Loadable(
+  lazy(() => import('../pages/Components/AutocompletePage')),
+);
+
+const AvatarsPage = Loadable(
+  lazy(() => import('../pages/Components/AvatarsPage')),
+);
 // const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
@@ -46,7 +53,7 @@ const paths = [
     element: <RatingPage />,
   },
   {
-    path: 'avatars',
+    path: 'avatar',
     items: [
       {
         label: 'Avatar Group',
@@ -81,45 +88,37 @@ const paths = [
         toId: '#keyboard',
       },
     ],
-    element: () => <p>rating</p>,
+    element: <AvatarsPage />,
   },
   {
     path: 'autocomplete',
     items: [
       {
-        label: 'Basic rating',
-        toId: '#basic-rating',
+        label: 'Combo box',
+        toId: '#combo-box',
       },
       {
-        label: 'Rating precision',
-        toId: '#rating-precision',
+        label: 'Playground',
+        toId: '#playground',
       },
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
+        label: 'Country select',
+        toId: '#country-select',
       },
       {
-        label: 'Customization',
-        toId: '#customization',
+        label: 'Free solo',
+        toId: '#free-solo',
       },
       {
-        label: 'Radio group',
-        toId: '#radio-group',
+        label: 'Icons',
+        toId: '#icons',
       },
       {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'Validation',
+        toId: '#validation',
       },
     ],
-    element: <p>autocomplete</p>,
+    element: <AutoCompletePage />,
   },
 ];
 

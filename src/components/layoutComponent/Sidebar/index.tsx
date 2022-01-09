@@ -12,14 +12,7 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
-import Loadable from '../../../routes/Loading';
-
-const AvatarDocumentation = Loadable(
-  React.lazy(() => import('../../../pages/documentation/Avatar')),
-);
-const TyographyDocumentation = Loadable(
-  React.lazy(() => import('../../../pages/documentation/Typography')),
-);
+// import Loadable from '../../../routes/Loading';
 
 const Layout = () => {
   const { hash, pathname } = useLocation();
@@ -34,8 +27,6 @@ const Layout = () => {
       </LeftSide>
       <ContentSide>
         <Container>
-          <AvatarDocumentation />
-          {/* <TyographyDocumentation /> */}
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (
