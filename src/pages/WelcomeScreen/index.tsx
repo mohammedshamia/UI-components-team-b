@@ -60,7 +60,7 @@ export default function Welcome() {
         </Typography>
         <Typography {...contentStyle}>{data.paragraph}</Typography>
         <ContainerButton>
-          <Link to="/components">
+          <Link to="/getting-started/install">
             <ButtonUi
               hover
               bold
