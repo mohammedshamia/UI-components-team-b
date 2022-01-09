@@ -3,7 +3,7 @@ import { IPropsAPI } from './interface';
 export const data: IPropsAPI[] = [
   {
     id: '1',
-    Name: 'rating',
+    Name: 'Rating',
     Link: 'components/rating',
   },
   {

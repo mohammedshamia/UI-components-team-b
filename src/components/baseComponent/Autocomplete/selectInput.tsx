@@ -1,4 +1,3 @@
-/* eslint-disable no-empty */
 import React, { memo, useRef, useState } from 'react';
 import {
   ChoicesWrapper,
@@ -8,6 +7,9 @@ import {
   ArrowIcon,
   Button,
   TextError,
+  StartIcon,
+  BoxInput,
+  Box,
 } from './styled';
 import { ReactComponent as CloseIcon } from '../../../assets/Icons/x.svg';
 import { ReactComponent as ArrowUp } from '../../../assets/Icons/chevron-up.svg';
@@ -24,13 +26,20 @@ function SelectInput({
   alignItem = 'left',
   freeSolo,
   fontSize = '1rem',
+  id,
   ...others
 }: IProps) {
   const [state, setstate] = useState<string>(value);
   const [openChoices, setOpenChoices] = useState<boolean>(false);
   const [Choices, setChoices] = useState<any>([...option]);
+
   const ref = useRef<HTMLDivElement>(null);
 
+  const handleSearchItem = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && others.search) {
+      // console.log('Enter', e.key);
+    }
+  };
   const handleClickChoice = (item: string) => {
     onChange(item);
     setstate(item);
@@ -51,13 +60,13 @@ function SelectInput({
 
   const checkIfClickedOutside = (e: MouseEvent) => {
     if (
-      ref.current !== null &&
-      e.target !== null &&
-      ref.current.contains(e.target as any)
-    ) {
-    } else {
+      !(
+        ref.current !== null &&
+        e.target !== null &&
+        ref.current.contains(e.target as any)
+      )
+    )
       setOpenChoices(false);
-    }
   };
 
   document.addEventListener('mousedown', checkIfClickedOutside);
@@ -66,59 +75,94 @@ function SelectInput({
     setstate('');
   };
   return (
-    <Wrapper disabled={others.disabled || false} width={width} ref={ref}>
-      <div>
-        <StyledAutoComplete
-          autoComplete="false"
-          error={others.error || ''}
-          disabled={others.disabled || false}
-          onChange={handleChangeInput}
-          value={state}
-          placeholder={placeholder}
-          onFocus={handleFocusInput}
-          name={name}
-          fontSize={fontSize}
-        />
-        {state && !others.disableClearable && (
-          <Icon onClick={handleClearInput}>
-            <CloseIcon />
-          </Icon>
-        )}
-        {!freeSolo && (
-          <ArrowIcon
-            onClick={() => {
-              setOpenChoices(!openChoices);
-            }}
-          >
-            {openChoices ? <ArrowUp /> : <ArrowDown />}
-          </ArrowIcon>
-        )}
-      </div>
+    <Box>
+      <Wrapper
+        margin={others.margin || ''}
+        borderRadius={others.borderRadius}
+        error={others.error || ''}
+        disabled={others.disabled || false}
+        width={width}
+        ref={ref}
+      >
+        <BoxInput>
+          {others.startAdornment && (
+            <StartIcon>{others.startAdornment}</StartIcon>
+          )}
+          <StyledAutoComplete
+            id={id}
+            autoComplete="false"
+            onChange={handleChangeInput}
+            value={state}
+            placeholder={placeholder}
+            onFocus={handleFocusInput}
+            name={name}
+            fontSize={fontSize}
+            onKeyUp={e => handleSearchItem(e)}
+            disabled={others.disabled || false}
+          />
 
-      {!others.renderOption && Choices.length > 0 && (
-        <ChoicesWrapper alignItem={alignItem} openChoices={openChoices}>
-          {Choices.map((item: string, index: number) => (
-            <Button
-              fontSize={fontSize}
-              isActive={state === item}
-              type="button"
-              key={index}
+          {state && !others.disableClearable && (
+            <Icon onClick={handleClearInput}>
+              <CloseIcon />
+            </Icon>
+          )}
+          {!freeSolo && (
+            <ArrowIcon
               onClick={() => {
-                handleClickChoice(item);
+                setOpenChoices(!openChoices);
               }}
             >
-              {item}
-            </Button>
-          ))}
-        </ChoicesWrapper>
-      )}
-      {others.renderOption && (
-        <ChoicesWrapper alignItem={alignItem} openChoices={openChoices}>
-          {others.renderOption}
-        </ChoicesWrapper>
-      )}
+              {openChoices ? <ArrowUp /> : <ArrowDown />}
+            </ArrowIcon>
+          )}
+          {others.endAdornment && <StartIcon>{others.endAdornment}</StartIcon>}
+        </BoxInput>
+
+        {!others.renderOption && Choices.length > 0 && (
+          <ChoicesWrapper
+            maxHeight="300px"
+            alignItem={alignItem}
+            openChoices={openChoices || false}
+          >
+            {Choices.map((item: string, index: number) => (
+              <Button
+                fontSize={fontSize}
+                isActive={state === item}
+                type="button"
+                key={index}
+                onClick={() => {
+                  handleClickChoice(item);
+                }}
+              >
+                {item}
+              </Button>
+            ))}
+          </ChoicesWrapper>
+        )}
+        {others.renderOption && (
+          <ChoicesWrapper
+            maxHeight="300px"
+            alignItem={alignItem}
+            openChoices={openChoices}
+          >
+            {others.renderOption.map((item: any, index: number) => (
+              <Button
+                fontSize={fontSize}
+                isActive={state === item}
+                type="button"
+                key={index}
+                onClick={() => {
+                  handleClickChoice(item);
+                }}
+              >
+                {item}
+              </Button>
+            ))}
+          </ChoicesWrapper>
+        )}
+      </Wrapper>
       <TextError error={others.error}>{others.error || ''}</TextError>
-    </Wrapper>
+    </Box>
   );
 }
 

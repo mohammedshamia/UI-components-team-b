@@ -77,7 +77,7 @@ export const LeftSide = styled('div')`
   }
 `;
 export const ContentSide = styled('div')`
-  background: white;
+  /* background: white; */
   grid-column: span 3 / span 3;
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};

@@ -1,0 +1,73 @@
+export default [
+  {
+    id: '1',
+    Name: 'src',
+    Type: 'string',
+    Default: 'primary',
+    Description: 'The image source',
+  },
+  {
+    id: '2',
+    Name: 'alt',
+    Type: 'string',
+    Default: 'primary',
+    Description: 'The image alt for screen readers and accessibility',
+  },
+  {
+    id: '3',
+    Name: 'name',
+    Type: 'string',
+    Default: 'primary',
+    Description: 'The content of the component.',
+  },
+  {
+    id: '4',
+    Name: 'name',
+    Type: 'string',
+    Default: 'secondary',
+    Description: 'avatar name implement inside image',
+  },
+  {
+    id: '5',
+    Name: 'size',
+    Type: 'string',
+    Default: 'secondary',
+    Description:
+      'avatar size between [small, medium, large, xlarge], default is small',
+  },
+  {
+    id: '6',
+    Name: 'variant',
+    Type: 'string',
+    Default: 'secondary',
+    Description: 'avatar variant between [square, circle], default is square',
+  },
+  {
+    id: '7',
+    Name: 'total',
+    Type: 'string',
+    Default: 'secondary',
+    Description: 'total number of avatars uses for avatar group',
+  },
+  {
+    id: '8',
+    Name: 'max',
+    Type: 'string',
+    Default: 'secondary',
+    Description: 'max number of avatars uses for avatar group',
+  },
+  {
+    id: '9',
+    Name: 'badge',
+    Type: 'boolean',
+    Default: 'secondary',
+    Description: 'is have badge',
+  },
+  {
+    id: '10',
+    Name: 'badgeColor',
+    Type: 'boolean',
+    Default: 'secondary',
+    Description: 'badge color',
+  },
+];
