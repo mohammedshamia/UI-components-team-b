@@ -7,6 +7,7 @@ export default `
 <br />
 
 ### **Basic rating**
+<h3 id="radio-group"></h3/>
 <br />
 <br />
 
@@ -47,6 +48,7 @@ export const AvatarExample = () => (
 
 ### **Sizes**
 
+<h3 id="hover-feedback"></h3>
 #### For larger or smaller ratings use the **size** prop.
 [ **larger** , **medium** , **small**  ]
 

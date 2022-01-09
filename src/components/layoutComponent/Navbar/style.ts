@@ -24,9 +24,9 @@ export const NavbarLink = styled.li`
   cursor: pointer;
   &:hover {
     background: #f3f6f9;
-    color: ${props => props.theme.common.black}
+    color: ${props => props.theme.common.black};
+  }
 `;
-
 export const NavbarSearchInput = styled.input`
   border: 0px solid #e5e5e5;
   border-radius: 10px;

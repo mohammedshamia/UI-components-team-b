@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+import { Link } from 'react-scroll';
 
 const MainLayout = styled('div')`
   background: ${props => props.theme.background.default};
@@ -64,7 +65,6 @@ export const LinkItem = styled(NavLink)<{ isActive?: boolean }>`
 export const LeftSide = styled('div')`
   background: ${props => props.theme.background.default};
   grid-column: span 1 / span 1;
-  border-right-width: 2px;
   padding: 10px;
   color: ${props => props.theme.text.primary};
 
@@ -79,17 +79,15 @@ export const LeftSide = styled('div')`
 export const ContentSide = styled('div')`
   background: white;
   grid-column: span 3 / span 3;
-  border-left-width: 2px;
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
 `;
 export const RightSide = styled('div')`
   grid-column: span 1 / span 1;
-  border-left-width: 2px;
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
   color: #1a2027;
-  height: 100vh;
+  height: 100%;
   min-width: 240px;
   /* padding-left: 20px; */
 `;
