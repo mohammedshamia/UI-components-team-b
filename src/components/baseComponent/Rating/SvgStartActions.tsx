@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { AiFillStar } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
+
 import { ISvgProps } from '../../../types/rating';
 import { WrapperParentStart } from './style';
 
@@ -9,21 +10,20 @@ const SvgStart = ({
   setvalue,
   ishover,
   setHover,
+  // handleChange,
   index,
   value,
+  icon,
   color,
   disabled,
-  icon,
 }: ISvgProps) => {
-  const [fullHover, setfullHover] = useState(true);
+  const [fullHover] = useState(true);
   const handelMouseEnter = () => {
     if (disabled || readonly) return;
     setHover(index);
   };
-
   const handelMouseEnterLeave = () => {
     if (disabled || readonly) return;
-
     setHover(0);
   };
   const handelClick = () => {
@@ -50,24 +50,32 @@ const SvgStart = ({
 
     return color.unfill;
   };
-  <svg
-    width={width}
-    height={width}
-    style={{ color: getColor(), clipPath: `inset(0 50% 0 0)` }}
-  >
-    {/* <defs>
-      <linearGradient id="myGradient">
-        <stop offset="50%" stopColor="yellow" />
-        <stop offset="50%" stopColor="grey" stopOpacity="1" />
-      </linearGradient>
-    </defs> */}
-  </svg>;
 
-  const handleWithWidth = (e: React.MouseEvent<HTMLDivElement> | any) => {
-    const v = e.target.getBoundingClientRect();
-    console.log('e.target.getBoundingClientRect()', width);
-    console.log('e.target.getBoundingClientRect()', v.x);
-  };
+  // const handleWithWidth = (e: React.MouseEvent<HTMLDivElement> | any) => {
+  //   const v = e.target.getBoundingClientRect();
+  //   console.log('e.target.getBoundingClientRect()', width);
+  //   console.log('e.target.getBoundingClientRect()', v.x);
+  // };
+  // const CustomIcon = (Icon: ReactNode, props: IconBaseProps) => (
+  //   <>
+  //     <Icon {...props} />
+  //   </>
+  // );
+  // const Icon = (
+  //   <CustomIcon
+  //     Icon={<AiFillStar />}
+  //     style={{
+  //       stroke: 'url(#myGradient)',
+  //       color: getColor(),
+  //       opacity: `${disabled ? '0.4' : '1'}`,
+  //       clipPath: ` ${ishover && !fullHover && `inset(0 50% 0 0)`}`,
+  //     }}
+  //     size={width}
+  //     offset={width}
+  //     width={width}
+  //     stopColor="red"
+  //   />
+  // );
   return (
     <>
       <WrapperParentStart
@@ -76,21 +84,27 @@ const SvgStart = ({
         onMouseEnter={handelMouseEnter}
         onMouseLeave={handelMouseEnterLeave}
         onClick={handelClick}
-        onMouseMove={handleWithWidth}
+        // onMouseMove={handleWithWidth}
       >
-        {/* <IconContext.Provider value={{ attr: { fill: "url('#myGradient')" } }}> */}
-        <AiFillStar
-          style={{
-            stroke: 'url(#myGradient)',
-            color: getColor(),
-            clipPath: ` ${ishover && !fullHover && `inset(0 50% 0 0)`}`,
+        <IconContext.Provider
+          value={{
+            style: {
+              color: getColor(),
+              width,
+              opacity: disabled ? '0.4' : '1',
+              stroke: 'url(#myGradient)',
+              offset: width,
+              clipPath: ` ${ishover && !fullHover && `inset(0 50% 0 0)`}`,
+              stopColor: 'red',
+            },
+            size: `${width}`,
+            // offset: width,
+
+            // width:40,
           }}
-          size={width}
-          offset={width}
-          width={width}
-          stopColor="red"
-        />
-        {/* </IconContext.Provider> */}
+        >
+          {icon}
+        </IconContext.Provider>
       </WrapperParentStart>
     </>
   );
