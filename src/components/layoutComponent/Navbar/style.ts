@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const NavbarComponent = styled.div`
+  z-index: 999;
+  position: fixed;
   width: 100%;
   margin: 0 auto;
   height: 64px;

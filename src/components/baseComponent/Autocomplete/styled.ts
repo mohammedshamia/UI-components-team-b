@@ -76,6 +76,7 @@ export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
       ? 'flex-end'
       : 'flex-start'};
   flex-direction: column;
+  z-index: 2;
   border: 1px solid #e1e1e1;
   max-height: 300px;
   overflow-y: ${props => (props.maxHeight >= '300px' ? 'auto' : 'auto')};
