@@ -57,3 +57,19 @@ export const EmbedCodeStyle = styled.iframe<IEmbedCodeProps>`
   align-items: center;
   margin-top: 20px;
 `;
+
+export const ButtonStyle = styled.button`
+  background-color: ${props => props.theme.background.default};
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 20px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  &:focus {
+    outline: none;
+  }
+`;
