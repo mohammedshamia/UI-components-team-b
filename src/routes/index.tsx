@@ -1,18 +1,9 @@
-import React, { lazy } from 'react';
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useRoutes,
-} from 'react-router-dom';
+import { lazy } from 'react';
+import { Navigate, useRoutes } from 'react-router-dom';
 import Loadable from './Loading';
 
-<<<<<<< HEAD
 const WelcomeScreen = Loadable(lazy(() => import('../pages/WelcomeScreen')));
-=======
-const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
->>>>>>> 05fc0e0ca5dc2b636f71a5dc76a648f34502a8b8
+// const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
 const MainPage = Loadable(lazy(() => import('../pages/MainPage')));
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),
@@ -27,7 +18,7 @@ const CardPage = Loadable(lazy(() => import('../pages/Components/CardPage')));
 const AvatarsPage = Loadable(
   lazy(() => import('../pages/Components/AvatarsPage')),
 );
-const PageNotFound = Loadable(lazy(() => import('../pages/NotFound')));
+// const PageNotFound = Loadable(lazy(() => import('../pages/NotFound')));
 
 const AllRoutes = () => {
   return useRoutes([
