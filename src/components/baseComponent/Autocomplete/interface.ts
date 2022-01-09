@@ -1,8 +1,9 @@
 export interface IProps {
   option: any[];
+  getOptionLabel?: any[];
   value: string;
   onChange: (e: any) => void;
-  name: string;
+  name?: string;
   placeholder?: string;
   width?: string;
   alignItem?: string;
@@ -17,4 +18,6 @@ export interface IProps {
   startAdornment?: JSX.Element;
   endAdornment?: JSX.Element;
   borderRadius?: string;
+  margin?: string;
+  id: string;
 }

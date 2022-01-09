@@ -9,6 +9,8 @@ import {
   Button,
   TextError,
   StartIcon,
+  BoxInput,
+  Box,
 } from './styled';
 import { ReactComponent as CloseIcon } from '../../../assets/Icons/x.svg';
 import { ReactComponent as ArrowUp } from '../../../assets/Icons/chevron-up.svg';
@@ -24,12 +26,15 @@ function SelectInput({
   width = '100%',
   alignItem = 'left',
   freeSolo,
+  getOptionLabel,
   fontSize = '1rem',
+  id,
   ...others
 }: IProps) {
   const [state, setstate] = useState<string>(value);
   const [openChoices, setOpenChoices] = useState<boolean>(false);
   const [Choices, setChoices] = useState<any>([...option]);
+
   const ref = useRef<HTMLDivElement>(null);
 
   const handleSearchItem = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -72,21 +77,22 @@ function SelectInput({
     setstate('');
   };
   return (
-    <div>
+    <Box>
       <Wrapper
+        margin={others.margin || ''}
         borderRadius={others.borderRadius}
         error={others.error || ''}
         disabled={others.disabled || false}
         width={width}
         ref={ref}
       >
-        <div>
+        <BoxInput>
           {others.startAdornment && (
             <StartIcon>{others.startAdornment}</StartIcon>
           )}
           <StyledAutoComplete
+            id={id}
             autoComplete="false"
-            disabled={others.disabled || false}
             onChange={handleChangeInput}
             value={state}
             placeholder={placeholder}
@@ -94,6 +100,7 @@ function SelectInput({
             name={name}
             fontSize={fontSize}
             onKeyUp={e => handleSearchItem(e)}
+            disabled={others.disabled || false}
           />
 
           {state && !others.disableClearable && (
@@ -111,10 +118,14 @@ function SelectInput({
             </ArrowIcon>
           )}
           {others.endAdornment && <StartIcon>{others.endAdornment}</StartIcon>}
-        </div>
+        </BoxInput>
 
         {!others.renderOption && Choices.length > 0 && (
-          <ChoicesWrapper alignItem={alignItem} openChoices={openChoices}>
+          <ChoicesWrapper
+            maxHeight="300px"
+            alignItem={alignItem}
+            openChoices={openChoices || false}
+          >
             {Choices.map((item: string, index: number) => (
               <Button
                 fontSize={fontSize}
@@ -131,13 +142,29 @@ function SelectInput({
           </ChoicesWrapper>
         )}
         {others.renderOption && (
-          <ChoicesWrapper alignItem={alignItem} openChoices={openChoices}>
-            {others.renderOption}
+          <ChoicesWrapper
+            maxHeight="300px"
+            alignItem={alignItem}
+            openChoices={openChoices}
+          >
+            {others.renderOption.map((item: any, index: number) => (
+              <Button
+                fontSize={fontSize}
+                isActive={state === item}
+                type="button"
+                key={index}
+                onClick={() => {
+                  handleClickChoice(item);
+                }}
+              >
+                {item}
+              </Button>
+            ))}
           </ChoicesWrapper>
         )}
       </Wrapper>
       <TextError error={others.error}>{others.error || ''}</TextError>
-    </div>
+    </Box>
   );
 }
 

@@ -1,26 +1,26 @@
 import Markdown from '../../../components/layoutComponent/Markdown';
 import {
   ComboboxExample,
-  LetterAvatar,
-  AvatarWithSizes,
-  AvatarWithVariant,
-  AvatarGroupExample,
-  AvatarWithBadge,
+  Playground,
+  CountrySelect,
+  FreeSolo,
+  IconExample,
+  ValidationExample,
 } from './AutoComplete';
 
-import avatarDoc from './doc';
+import autoCompleteDoc from './doc';
 
 const AutoComleteDocumentation: React.FC<any> = () => {
   return (
     <Markdown
-      content={avatarDoc}
+      content={autoCompleteDoc}
       examples={{
         ex1: ComboboxExample,
-        ex2: LetterAvatar,
-        ex3: AvatarWithSizes,
-        ex4: AvatarWithVariant,
-        ex5: AvatarGroupExample,
-        ex6: AvatarWithBadge,
+        ex2: Playground,
+        ex3: CountrySelect,
+        ex4: FreeSolo,
+        ex5: IconExample,
+        ex6: ValidationExample,
       }}
     />
   );

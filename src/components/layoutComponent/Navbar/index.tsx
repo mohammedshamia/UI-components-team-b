@@ -8,7 +8,7 @@ import {
 } from './style';
 import { Avatar } from '../../baseComponent';
 import logo from '../../../assets/logo.png';
-import { SelectInput } from '../../baseComponent/Autocomplete';
+import SelectInput from '../../baseComponent/Autocomplete/selectInput';
 // interface INavbar {}
 
 const Navbar: React.FC<any> = ({ theme, setTheme }) => {
@@ -40,6 +40,7 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
       {/* )} */}
       <NavbarSearchContainer>
         <SelectInput
+          id="search"
           borderRadius="13px"
           search
           freeSolo
@@ -50,9 +51,6 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
           option={[]}
           startAdornment={<i className="fas fa-search" />}
         />
-        {/* <NavbarSearchContainer>
-          <NavbarSearchIcon className="fas fa-search" />
-        </NavbarSearchContainer> */}
         <NavbarLinksIcon
           className={theme.theme === 'light' ? 'fas fa-moon' : 'fas fa-sun'}
           onClick={handleChangeTheme}

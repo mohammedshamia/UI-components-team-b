@@ -6,33 +6,48 @@ interface Iprops {
   disabled?: boolean;
   error?: string;
   borderRadius?: string;
+  margin: string;
 }
 interface fontSize {
   fontSize: string;
 }
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 export const Wrapper = styled('div')<Iprops>`
+  margin: ${props => props.margin};
   width: ${props => props.width};
-  border: 1px solid ${props => props.theme.primary.dark};
-  background-color: ${props => props.theme.background.default};
+  border: 1px solid
+    ${props =>
+      props.disabled ? props.theme.text.disable : props.theme.primary.dark};
+  background-color: ${props =>
+    props.disabled
+      ? props.theme.background.paper
+      : props.theme.background.default};
   border-radius: ${props => props.borderRadius || '0px'};
   ${props =>
     props.error
       ? 'border:1px solid #f75555;background-color: #f7d6d6; '
-      : ' border: 1px solid #e1e1e1'};
+      : 'border: 1px solid #e1e1e1'};
 
+  ${props =>
+    props.disabled ? ' pointer-events: none' : ' pointer-events: auto'};
   &:hover {
     outline: none;
     box-shadow: 0 0 5px ${props => props.theme.background.paper};
     border: 1px solid ${props => props.theme.background.paper};
     background-color: ${props => props.theme.background.default};
   }
-  & div {
-    position: relative;
-    display: flex;
-  }
 `;
-
+export const BoxInput = styled.div`
+  position: relative;
+  display: flex;
+`;
 export const StyledAutoComplete = styled.input<fontSize>`
+  color: ${props =>
+    props.disabled ? props.theme.text.disable : props.theme.text.secondary};
   padding: 10px;
   font-size: ${props => props.fontSize};
   transition: all 0.4s;
@@ -46,9 +61,11 @@ interface IChoicesWrapperProps {
   openChoices: boolean;
   isActive?: boolean;
   alignItem: string;
+  maxHeight: string;
 }
 
 export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
+  width: 100%;
   display: ${props => (!props.openChoices ? 'none' : 'flex')};
   align-items: ${props =>
     props.alignItem === 'center'
@@ -57,10 +74,9 @@ export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
       ? 'flex-end'
       : 'flex-start'};
   flex-direction: column;
-  width: calc(100% + 20px);
   border: 1px solid #e1e1e1;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: ${props => (props.maxHeight >= '300px' ? 'auto' : 'auto')};
 `;
 interface IButtonProps {
   isActive?: boolean;
