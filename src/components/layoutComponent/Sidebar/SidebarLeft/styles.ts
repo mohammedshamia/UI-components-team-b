@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const SidebarNav = styled.nav`
-  background-color: #fff;
+  background-color: ${props => props.theme.background.default};
   border-right: 1px solid rgba(0, 0, 0, 0.12);
   overflow-y: auto;
   width: 240px;
