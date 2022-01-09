@@ -68,16 +68,17 @@ export const EmbedCodeStyle = styled.iframe<IEmbedCodeProps>`
 
 export const ButtonStyle = styled.button`
   background-color: ${props => props.theme.background.default};
-  border: none;
-  border-radius: 12px;
-  padding: 10px;
-  margin-top: 20px;
-  outline: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.5px solid ${props => props.theme.text.primary};
+  border-radius: 1rem;
+  padding: 1rem;
+  color: ${props => props.theme.text.primary};
   cursor: pointer;
-  border-radius: 12px;
   font-size: 14px;
   font-weight: bold;
-  &:focus {
-    outline: none;
+  &:hover {
+    background-color: ${props => props.theme.background.paper};
+    color: ${props => props.theme.text.secondary};
   }
 `;

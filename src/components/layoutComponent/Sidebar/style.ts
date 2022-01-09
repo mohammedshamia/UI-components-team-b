@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 const MainLayout = styled('div')`
   background: ${props => props.theme.background.default};

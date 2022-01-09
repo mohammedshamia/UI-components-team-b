@@ -131,7 +131,7 @@ const paths = [
     element: <TypographyPage />,
   },
   {
-    path: 'avatars',
+    path: 'avatar',
     items: [
       {
         label: 'Avatar Group',

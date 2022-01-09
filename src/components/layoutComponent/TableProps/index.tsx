@@ -11,7 +11,7 @@ interface ITableComponent {
 const tableHeader = (data = []) => {
   const head = Object.keys(data[0]);
   return head.slice(1).map((key: string, index) => {
-    return <Th key={index}> {key} </Th>;
+    return <Th key={index.toString()}> {key} </Th>;
   });
 };
 const bodyTable = (data = []) => {

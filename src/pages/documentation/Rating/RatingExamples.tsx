@@ -5,7 +5,7 @@ import Rating from '../../../components/baseComponent/Rating';
 import WrapperParent from '../../../components/baseComponent/Rating/style';
 
 export const SimpleRatingExample = () => {
-  const [value, setvalue] = useState<number>(2);
+  const [value] = useState<number>(2);
   return (
     <InfoContainer flexDirection="column">
       <WrapperParent display="flex" JC="space-between" item="center">

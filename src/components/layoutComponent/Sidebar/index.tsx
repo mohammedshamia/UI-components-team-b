@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 // import { Link } from 'react-scroll';
 import paths from '../../../routes/paths';
@@ -17,7 +17,7 @@ import { Container } from '../Container';
 const Layout = () => {
   const { hash, pathname } = useLocation();
   const currentPath = pathname.split('/')[2];
-  const goToViolation = (id: string) => {
+  const goToViolation = () => {
     const w = paths[0].items[4].toId.slice(1);
     document.getElementById(w)?.scrollIntoView({
       behavior: 'smooth',
@@ -50,7 +50,8 @@ const Layout = () => {
             <LinkItem
               to={`${x.toId}`}
               isActive={x.toId === hash}
-              onClick={() => goToViolation(x.toId.slice(1))}
+              onClick={() => goToViolation()}
+              // onClick={() => goToViolation(x.toId.slice(1))}
             >
               {x.label}
             </LinkItem>

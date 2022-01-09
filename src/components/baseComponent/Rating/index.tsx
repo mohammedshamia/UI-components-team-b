@@ -12,7 +12,7 @@ const Rating = ({
   defaultValue,
   color,
   precision,
-  handleChange,
+  // handleChange,
   icon,
   readonly,
   disabled,
