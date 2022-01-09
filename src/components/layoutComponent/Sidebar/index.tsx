@@ -12,27 +12,23 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
-import Loadable from '../../../routes/Loading';
-
-const AvatarDocumentation = Loadable(
-  React.lazy(() => import('../../../pages/documentation/Avatar')),
-);
 
 const Layout = () => {
   const { hash, pathname } = useLocation();
   const currentPath = pathname.split('/')[2];
 
   const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
-  console.log('hash', hash);
 
   return (
     <MainLayout>
-      <LeftSide>left side111111</LeftSide>
+      <LeftSide>LEFT SIDE </LeftSide>
       <ContentSide>
         <Container>
-          <AvatarDocumentation />
           <Routes>
             <Route index element={() => <p>1111</p>} />
+            {/* // hre  you need  to  add  the other  path  here  or  add  in the   in path  paths  file  */}
+            <Route path="about" element={<p>about</p>} />
+            <Route path="install" element={<p>install2</p>} />
             {paths.map(path => (
               <Route path={path.path} element={path.element} key={path.path} />
             ))}

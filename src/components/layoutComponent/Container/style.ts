@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { IContainerProps, IEmbedCodeProps } from './interface';
 
 export const ContainerStyle = styled.div<IContainerProps>`
-  background-color: ${props => props.backgroundColor || '#fefefe'};
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
+
   padding: 6%;
   border: none;
-  width: ${props => props.width || '100%'};
-  height: ${props => props.height || '100%'};
+  width: ${props => props.width || '90%'};
+  height: ${props => props.height || 'auto'};
   outline: none;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -19,6 +21,13 @@ export const ContainerStyle = styled.div<IContainerProps>`
   }
   @media (max-width: 526px) {
     width: 100%;
+  }
+  strong {
+    background: ${props => props.theme.background.default};
+    color: ${props => props.theme.text.primary};
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 3.3rem;
   }
 `;
 

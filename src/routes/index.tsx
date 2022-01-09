@@ -1,18 +1,8 @@
 import React, { lazy } from 'react';
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useRoutes,
-} from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
 import Loadable from './Loading';
 
-<<<<<<< HEAD
 const WelcomeScreen = Loadable(lazy(() => import('../pages/WelcomeScreen')));
-=======
-const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
->>>>>>> 05fc0e0ca5dc2b636f71a5dc76a648f34502a8b8
 const MainPage = Loadable(lazy(() => import('../pages/MainPage')));
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),
@@ -44,28 +34,21 @@ const AllRoutes = () => {
         { path: 'typography', element: <TypographyPage /> },
         { path: 'avatars', element: <AvatarsPage /> },
         { path: 'card', element: <CardPage /> },
-        {
-          path: 'autocomplete',
-          element: <AutocompletePage />,
-        },
-        { path: '404', element: <Navigate to="/404" replace /> },
-        // { path: '*', element: <PageNotFound /> },
+        { path: 'autocomplete', element: <AutocompletePage /> },
+      ],
+    },
+    {
+      path: '/getting-started',
+      element: <MainPage />,
+      children: [
+        // { path: '/', element: <Navigate to="components/rating" replace /> },
+        { path: 'about', element: <RatingPage /> },
+        { path: 'install', element: <p>install</p> },
       ],
     },
     { path: '*', element: <Navigate to="/404" replace /> },
+    { path: '404', element: <PageNotFound /> },
   ]);
-  // return (
-  //   <>
-  //     <BrowserRouter>
-  //       <Routes>
-  //         <Route path="/" element={<WelcomeScreen />} />
-  //         <Route path="/components/*" element={<MainPage />} />
-  //         <Route path="404" element={<div>page not found 404 </div>} />
-  //       </Routes>
-  //       {/* {AllRoutesItems} */}
-  //     </BrowserRouter>
-  //   </>
-  // );
 };
 
 export default AllRoutes;
