@@ -54,7 +54,22 @@ export const InfoContainerStyle = styled.div<IContainerProps>`
 export const EmbedCodeStyle = styled.iframe<IEmbedCodeProps>`
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '20rem'};
-  border-radius: 12px;
   align-items: center;
   margin-top: 20px;
+`;
+
+export const ButtonStyle = styled.button`
+  border: none;
+  border-left: 1px solid #e6e6e6;
+  background-color: ${props => props.theme.background.default};
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: ${props => props.theme.text.primary};
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover {
+    color: ${props => props.theme.text.secondary};
+  }
 `;

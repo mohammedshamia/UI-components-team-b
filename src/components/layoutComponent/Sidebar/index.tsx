@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 // import { Link } from 'react-scroll';
 import paths from '../../../routes/paths';

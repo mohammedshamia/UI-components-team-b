@@ -10,14 +10,14 @@ const SvgStart = ({
   setvalue,
   ishover,
   setHover,
-  handleChange,
+  // handleChange,
   index,
   value,
   icon,
   color,
   disabled,
 }: ISvgProps) => {
-  const [fullHover, setfullHover] = useState(true);
+  const [fullHover] = useState(true);
   const handelMouseEnter = () => {
     if (disabled || readonly) return;
     setHover(index);

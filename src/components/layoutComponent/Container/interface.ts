@@ -10,4 +10,5 @@ export interface IEmbedCodeProps {
   src: string;
   width?: string;
   height?: string;
+  title?: string;
 }

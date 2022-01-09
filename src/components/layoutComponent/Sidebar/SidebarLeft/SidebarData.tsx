@@ -54,7 +54,7 @@ const SidebarData = [
       },
       {
         title: 'Avatar',
-        path: '/components/avatars',
+        path: '/components/avatar',
         cName: 'sub-nav',
       },
       {

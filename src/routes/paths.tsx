@@ -28,16 +28,12 @@ const paths = [
         toId: '#rating-precision',
       },
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
+        label: 'Sizes',
+        toId: '#sizes',
       },
       {
         label: 'Customization',
         toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
       },
       {
         label: 'Accessibility',
@@ -96,42 +92,26 @@ const paths = [
     path: 'typography',
     items: [
       {
-        label: 'Basic rating',
-        toId: '#basic-rating',
-      },
-      {
-        label: 'Rating precision',
-        toId: '#rating-precision',
-      },
-      {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
-      },
-      {
-        label: 'Customization',
-        toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
-      },
-      {
         label: 'Accessibility',
         toId: '#accessibility',
       },
       {
-        label: 'ARIA',
-        toId: '#accessibility',
+        label: 'Colors',
+        toId: '#colors',
       },
       {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'FontSize',
+        toId: '#fontSize',
+      },
+      {
+        label: 'Theme',
+        toId: '#theme',
       },
     ],
     element: <TypographyPage />,
   },
   {
-    path: 'avatars',
+    path: 'avatar',
     items: [
       {
         label: 'Image avatars',
@@ -143,19 +123,19 @@ const paths = [
       },
       {
         label: 'Sizes',
-        toId: '#sizes',
+        toId: '#avatar-sizes',
       },
       {
         label: 'Variants',
-        toId: '#variants',
+        toId: '#avatar-variants',
       },
       {
         label: 'Avatar Group',
-        toId: '#group',
+        toId: '#avatar-group',
       },
       {
         label: 'Avatar With badge',
-        toId: '#badge',
+        toId: '#avatar-badge',
       },
 
       {

@@ -35,7 +35,7 @@ const AllRoutes = () => {
         // { path: '/', element: <Navigate to="components/rating" replace /> },
         { path: 'rating', element: <RatingPage /> },
         { path: 'typography', element: <TypographyPage /> },
-        { path: 'avatars', element: <AvatarsPage /> },
+        { path: 'avatar', element: <AvatarsPage /> },
         { path: 'card', element: <CardPage /> },
         { path: 'autocomplete', element: <AutocompletePage /> },
       ],

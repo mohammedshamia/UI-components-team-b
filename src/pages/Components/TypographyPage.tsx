@@ -1,7 +1,8 @@
 import React from 'react';
+import TypographyDocumentation from '../documentation/Typography';
 
 const TypographyPage = () => {
-  return <div>TypographyPage</div>;
+  return <TypographyDocumentation />;
 };
 
 export default TypographyPage;
