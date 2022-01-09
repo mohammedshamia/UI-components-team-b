@@ -36,7 +36,7 @@ export const lightTheme: DefaultTheme = {
     dark: '#c62828',
   },
   background: {
-    paper: '#e1e1e1',
+    paper: '#fefefe',
     default: '#fff',
   },
   text: {
@@ -69,7 +69,7 @@ export const darkTheme: DefaultTheme = {
     dark: '#d32f2f',
   },
   background: {
-    paper: '#121212',
+    paper: '#232323',
     default: '#1e1e1e',
   },
   text: {

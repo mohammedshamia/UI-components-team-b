@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 0;
-  height: 92vh;
+  height: 100vh;
   background: ${props => props.theme.background.default};
   overflow: hidden;
   @media (max-width: 888px) {
@@ -48,7 +48,7 @@ export const contentStyle = {
   'letter-spacing': 0,
   'font-family': 'IBM Plex Sans',
   'font-weight': 400,
-  color: '#3E5060',
+
   margin: '1em 0 2em 0',
   'max-width': '500px',
 };

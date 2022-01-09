@@ -36,8 +36,7 @@ export const Wrapper = styled('div')<Iprops>`
     props.disabled ? ' pointer-events: none' : ' pointer-events: auto'};
   &:hover {
     outline: none;
-    box-shadow: 0 0 5px ${props => props.theme.background.paper};
-    border: 1px solid ${props => props.theme.background.paper};
+    box-shadow: 0px 0px 2px ${props => props.theme.text.disable};
     background-color: ${props => props.theme.background.default};
   }
 `;

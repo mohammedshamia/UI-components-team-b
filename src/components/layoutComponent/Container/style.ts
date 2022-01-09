@@ -2,11 +2,8 @@ import styled from 'styled-components';
 import { IContainerProps, IEmbedCodeProps } from './interface';
 
 export const ContainerStyle = styled.div<IContainerProps>`
-<<<<<<< HEAD
   background: ${props => props.theme.background.default};
-=======
-  background-color: ${props => props.theme.background.default};
->>>>>>> a59043be85e2f6fb5cd1d24c457eb93f10e18d9a
+  margin-top: 2em;
   padding: 6%;
   border: none;
   width: ${props => props.width || '100%'};
