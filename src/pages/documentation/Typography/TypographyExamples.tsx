@@ -12,3 +12,18 @@ export const TypographyExample = () => (
     <Typography variant="span" children="span" />
   </InfoContainer>
 );
+
+export const TypographyExample2 = () => (
+  <InfoContainer flexDirection="column">
+    <Typography variant="h2" children="Hello World" color="pink" />
+    <Typography variant="h3" children="Hello World" color="red" />
+  </InfoContainer>
+);
+
+export const TypographyExample3 = () => (
+  <InfoContainer flexDirection="column">
+    <Typography variant="h3" children="Hello World" fontSize="2rem" />
+    <Typography variant="h2" children="Hello World" fontSize="3rem" />
+    <Typography variant="h4" children="Hello World" fontSize="4rem" bold />
+  </InfoContainer>
+);
