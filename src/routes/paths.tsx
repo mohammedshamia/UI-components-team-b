@@ -4,6 +4,7 @@ import Loadable from './Loading';
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),
 );
+const CardPage = Loadable(lazy(() => import('../pages/Components/CardPage')));
 // const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
@@ -120,6 +121,36 @@ const paths = [
       },
     ],
     element: <p>autocomplete</p>,
+  },
+  {
+    path: 'card',
+    items: [
+      {
+        label: 'Simple card',
+        toId: '#simple-card',
+      },
+      {
+        label: 'Image Card',
+        toId: '#image-card',
+      },
+      {
+        label: 'Header Card',
+        toId: '#header-card',
+      },
+      {
+        label: 'Size Card',
+        toId: '#size-card',
+      },
+      {
+        label: 'Color Card',
+        toId: '#color-card',
+      },
+      {
+        label: 'API',
+        toId: '#api',
+      },
+    ],
+    element: <CardPage />,
   },
 ];
 

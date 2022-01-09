@@ -1,4 +1,4 @@
-export { Avatar, AvatarGroup, Typography } from './baseComponent';
+export { Avatar, AvatarGroup, Typography, Carding } from './baseComponent';
 export {
   Container,
   EmbedCode,

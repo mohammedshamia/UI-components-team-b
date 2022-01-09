@@ -8,11 +8,8 @@ import {
 } from 'react-router-dom';
 import Loadable from './Loading';
 
-<<<<<<< HEAD
 const WelcomeScreen = Loadable(lazy(() => import('../pages/WelcomeScreen')));
-=======
 const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
->>>>>>> 05fc0e0ca5dc2b636f71a5dc76a648f34502a8b8
 const MainPage = Loadable(lazy(() => import('../pages/MainPage')));
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),

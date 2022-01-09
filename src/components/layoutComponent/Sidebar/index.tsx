@@ -21,9 +21,7 @@ const AvatarDocumentation = Loadable(
 const Layout = () => {
   const { hash, pathname } = useLocation();
   const currentPath = pathname.split('/')[2];
-
   const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
-  console.log('hash', hash);
 
   return (
     <MainLayout>
@@ -32,7 +30,7 @@ const Layout = () => {
       </LeftSide>
       <ContentSide>
         <Container>
-          <AvatarDocumentation />
+          {/* <AvatarDocumentation /> */}
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (
