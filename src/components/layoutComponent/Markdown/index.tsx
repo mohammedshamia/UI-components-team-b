@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm';
 
 import React from 'react';
 import { Typography } from '../../../components';
+import TableProps from '../../layoutComponent/TableProps';
 
 const ConvertTypography = [
   'h1',
@@ -46,6 +47,7 @@ const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
             </code>
           );
         },
+        table: TableProps,
         ...ConvertTypography,
         ...examples,
       }}
