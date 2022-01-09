@@ -24,5 +24,46 @@ export const TypographyExample = () => (
   </InfoContainer>
 );
 
+
 ~~~
+## **Accessibility**
+#### A few key factors to follow for an accessible typography:
+<br />
+
+* Color Provide enough contrast between text and its background, check out the minimum recommended WCAG 2.0 color contrast ratio (4.5:1).
+<br />
+
+## **Colors**
+#### Convey meaning through color with a handful of color utility.
+<ex2></ex2>
+ 
+~~~jsx
+export const TypographyExample2 = () => (
+  <InfoContainer flexDirection="column">
+    <Typography variant="h2" children="Hello World" color="pink" />
+  </InfoContainer>
+);
+
+~~~
+<br />
+
+## **fontSize and bold**
+
+#### (typically 16px) so visitors can customize their browser defaults as needed.
+<ex3></ex3>
+~~~jsx
+export const TypographyExample3 = () => (
+  <InfoContainer flexDirection="column">
+    <Typography variant="h3" children="Hello World" fontSize="2rem" />
+    <Typography variant="h2" children="Hello World" fontSize="3rem" />
+    <Typography variant="h4" children="Hello World" fontSize="4rem" bold />
+  </InfoContainer>
+);
+~~~
+<br />
+
+## **Theme**
+#### In some situations you might not be able to use the Typography component. Hopefully, you might be able to take advantage of the typography keys of the theme.
+
+
 `;
