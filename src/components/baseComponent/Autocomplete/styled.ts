@@ -17,6 +17,7 @@ export const Box = styled.div`
   align-items: center;
 `;
 export const Wrapper = styled('div')<Iprops>`
+  position: relative;
   margin: ${props => props.margin};
   width: ${props => props.width};
   border: 1px solid
@@ -65,6 +66,8 @@ interface IChoicesWrapperProps {
 }
 
 export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
+  background: ${props => props.theme.background.default};
+  position: absolute;
   width: 100%;
   display: ${props => (!props.openChoices ? 'none' : 'flex')};
   align-items: ${props =>
@@ -81,6 +84,7 @@ export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
 interface IButtonProps {
   isActive?: boolean;
   fontSize: string;
+  textAlign?: string;
 }
 
 export const Button = styled.button<IButtonProps>`
@@ -91,7 +95,8 @@ export const Button = styled.button<IButtonProps>`
   padding: 10px;
   margin-bottom: 1px;
   width: 100%;
-  ${props => props.isActive && 'background-color:#c8c8c8'};
+  text-align: ${props => props.textAlign || 'center'}
+    ${props => props.isActive && 'background-color:#c8c8c8'};
   &:hover {
     background-color: #e1e1e1;
   }
