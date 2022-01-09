@@ -1,19 +1,14 @@
 import { lazy } from 'react';
+import AutocompletePage from '../pages/Components/AutocompletePage';
+import AvatarsPage from '../pages/Components/AvatarsPage';
+import TypographyPage from '../pages/Components/TypographyPage';
 import Loadable from './Loading';
 
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),
 );
 const CardPage = Loadable(lazy(() => import('../pages/Components/CardPage')));
-const AvatarsPage = Loadable(
-  lazy(() => import('../pages/Components/AvatarsPage')),
-);
-const TypographyPage = Loadable(
-  lazy(() => import('../pages/Components/TypographyPage')),
-);
-const AutocompletePage = Loadable(
-  lazy(() => import('../pages/Components/AutocompletePage')),
-);
+// const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
   {
@@ -58,36 +53,28 @@ const paths = [
     path: 'card',
     items: [
       {
-        label: 'Basic rating',
-        toId: '#basic-rating',
+        label: 'Simple card',
+        toId: '#simple-card',
       },
       {
-        label: 'Rating precision',
-        toId: '#rating-precision',
+        label: 'Image Card',
+        toId: '#image-card',
       },
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
+        label: 'Header Card',
+        toId: '#header-card',
       },
       {
-        label: 'Customization',
-        toId: '#customization',
+        label: 'Size Card',
+        toId: '#size-card',
       },
       {
-        label: 'Radio group',
-        toId: '#radio-group',
+        label: 'Color Card',
+        toId: '#color-card',
       },
       {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'API',
+        toId: '#api',
       },
     ],
     element: <CardPage />,

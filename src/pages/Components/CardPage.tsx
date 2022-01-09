@@ -1,6 +1,7 @@
 import React from 'react';
+import CardDocumentation from '../documentation/Card';
 
 const CardPage = () => {
-  return <div>CardPage</div>;
+  return <CardDocumentation />;
 };
 export default CardPage;

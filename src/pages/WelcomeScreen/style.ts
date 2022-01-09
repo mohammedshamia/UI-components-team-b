@@ -19,6 +19,8 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  margin-top: 64px;
+
   width: 50%;
   overflow: scroll;
   height: 100%;

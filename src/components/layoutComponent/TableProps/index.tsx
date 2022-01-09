@@ -29,7 +29,7 @@ const bodyTable = (data = []) => {
 const TableProps: React.FC<ITableComponent> = ({ data }: ITableComponent) => {
   return (
     <Container>
-      <Typography variant="h3" children="API Props" bold />
+      <Typography variant="h3" children="API Props" bold color="" />
       <Table>
         <TBody>
           {data && <Tr>{tableHeader(data as [])}</Tr>}

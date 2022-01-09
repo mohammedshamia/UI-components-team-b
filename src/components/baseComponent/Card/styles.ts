@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
-const CardSection = styled.div`
+interface IProps {
+  width?: string;
+  height?: string;
+}
+
+const CardSection = styled.div<IProps>`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: ${props => (props.width ? props.width : '25%')};
+  height: ${props => (props.height ? props.height : 'auto')};
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
