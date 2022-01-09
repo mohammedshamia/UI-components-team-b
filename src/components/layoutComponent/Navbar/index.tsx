@@ -1,5 +1,6 @@
 import { useState } from 'react';
-// import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+
 import {
   NavbarComponent,
   NavbarLink,
@@ -13,9 +14,9 @@ import SelectInput from '../../baseComponent/Autocomplete/selectInput';
 
 const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const [searchValue, setSearchValue] = useState('');
-  // const { pathname } = useLocation();
-  // const IsMainPage = pathname.includes('components');
-  // console.log(pathname);
+  const { pathname } = useLocation();
+  const IsMainPage = pathname.includes('components');
+
   const handleChangeTheme = () => {
     if (theme.theme === 'light') {
       setTheme({ theme: 'dark' });
@@ -29,15 +30,19 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
     setSearchValue(newValue);
   };
   return (
-    <NavbarComponent>
-      {/* {!IsMainPage && ( */}
+    <NavbarComponent IsMainPage>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Avatar src={logo} />
-        <NavbarLink>Products</NavbarLink>
-        <NavbarLink>Docs</NavbarLink>
-        <NavbarLink>About us</NavbarLink>
+        <Link to="/">
+          <Avatar src={logo} />
+        </Link>
+        {!IsMainPage && (
+          <>
+            <NavbarLink>Products</NavbarLink>
+            <NavbarLink>Docs</NavbarLink>
+            <NavbarLink>About us</NavbarLink>
+          </>
+        )}
       </div>
-      {/* )} */}
       <NavbarSearchContainer>
         <SelectInput
           id="search"

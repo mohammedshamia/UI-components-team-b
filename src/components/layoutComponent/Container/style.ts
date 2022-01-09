@@ -4,6 +4,7 @@ import { IContainerProps, IEmbedCodeProps } from './interface';
 export const ContainerStyle = styled.div<IContainerProps>`
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
+  margin-top: 2em;
   padding: 6%;
   border: none;
   width: ${props => props.width || '90%'};

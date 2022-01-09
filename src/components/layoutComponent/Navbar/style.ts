@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-export const NavbarComponent = styled.div`
+interface Iprops {
+  IsMainPage: boolean;
+}
+export const NavbarComponent = styled.div<Iprops>`
   z-index: 999;
   position: fixed;
   width: 100%;
@@ -8,7 +11,10 @@ export const NavbarComponent = styled.div`
   height: 64px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8);
+  box-shadow: ${props =>
+    props.IsMainPage
+      ? `0px 0px 1px ${props.theme.text.secondary}`
+      : '0px 0px 7px rgba(0, 0, 0, 0.8)'};
   padding: 1rem 9.3%;
   background: ${props => props.theme.background.default};
   justify-content: space-between;

@@ -23,8 +23,8 @@ function App() {
     <>
       <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
-        <Navbar theme={state} setTheme={setState} />
         <BrowserRouter>
+          <Navbar theme={state} setTheme={setState} />
           <AllRoutes />
         </BrowserRouter>
       </ThemeProvider>

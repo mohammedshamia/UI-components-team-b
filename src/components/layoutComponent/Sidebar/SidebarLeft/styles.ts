@@ -5,7 +5,7 @@ export const SidebarNav = styled.nav`
   margin-top: 64px;
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 2px ${props => props.theme.text.secondary};
   overflow-y: auto;
   width: 240px;
   height: 100vh;
@@ -20,6 +20,7 @@ export const SidebarNav = styled.nav`
 
 export const SidebarWrap = styled.div`
   width: 100%;
+  margin-top: 1em;
 `;
 
 export const SidebarLink = styled(NavLink)`
@@ -27,7 +28,7 @@ export const SidebarLink = styled(NavLink)`
   justify-content: space-between;
   align-items: center;
   padding: 6px 8px 8px 24px;
-  color: #1a2027;
+  color: ${props => props.theme.text.primary};
   text-decoration: none;
   font-size: 0.875rem;
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -38,7 +39,7 @@ export const SidebarLink = styled(NavLink)`
   letter-spacing: 0;
   box-sizing: border-box;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: ${props => props.theme.background.hover};
     cursor: pointer;
   }
   &:active {
