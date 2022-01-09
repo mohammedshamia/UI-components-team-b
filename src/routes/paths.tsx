@@ -11,7 +11,9 @@ const AutoCompletePage = Loadable(
 const AvatarsPage = Loadable(
   lazy(() => import('../pages/Components/AvatarsPage')),
 );
-// const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
+const TypographyPage = Loadable(
+  lazy(() => import('../pages/Components/TypographyPage')),
+);
 
 const paths = [
   {
@@ -51,6 +53,36 @@ const paths = [
       },
     ],
     element: <RatingPage />,
+  },
+  {
+    path: 'typography',
+    items: [
+      {
+        label: 'Variant',
+        toId: '#Variant',
+      },
+      {
+        label: 'Size',
+        toId: '#size',
+      },
+      {
+        label: 'Colors',
+        toId: '#colors',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Theme',
+        toId: '#Theme',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+    ],
+    element: <TypographyPage />,
   },
   {
     path: 'avatar',
