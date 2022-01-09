@@ -1,7 +1,5 @@
 import AutoCompleteDocumentation from '../documentation/AutoComplete';
 
-const AutocompletePage = () => {
-  return <AutoCompleteDocumentation />;
-};
+const AutocompletePage = AutoCompleteDocumentation;
 
 export default AutocompletePage;

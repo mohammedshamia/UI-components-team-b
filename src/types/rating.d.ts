@@ -8,10 +8,12 @@ export type TSize = 'small' | 'large' | 'medium';
 
 export interface IShared {
   disabled: boolean;
+  handleChange?: (value: number) => void;
   readonly: boolean;
   precision: number;
   color: TColor;
   value: number;
+  icon: IconType;
 }
 export interface ISvgProps extends IShared {
   colorFill?: string;
@@ -21,7 +23,6 @@ export interface ISvgProps extends IShared {
   setHover: React.Dispatch<React.SetStateAction<number>>;
   isActive: boolean;
   index: number;
-  icon?: ReactNode;
   emptyIcon?: ReactNode;
 }
 

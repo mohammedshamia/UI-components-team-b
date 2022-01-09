@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { InfoContainer } from '../../../components';
 import SelectInput from '../../../components/baseComponent/Autocomplete/selectInput';
 import { Countries } from './dataOption';

@@ -3,11 +3,11 @@ import { IContainerProps, IEmbedCodeProps } from './interface';
 
 export const ContainerStyle = styled.div<IContainerProps>`
   background: ${props => props.theme.background.default};
-  margin-top: 2em;
+  color: ${props => props.theme.text.primary};
   padding: 6%;
   border: none;
-  width: ${props => props.width || '100%'};
-  height: ${props => props.height || '100%'};
+  width: ${props => props.width || '90%'};
+  height: ${props => props.height || 'auto'};
   outline: none;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -20,6 +20,13 @@ export const ContainerStyle = styled.div<IContainerProps>`
   }
   @media (max-width: 526px) {
     width: 100%;
+  }
+  strong {
+    background: ${props => props.theme.background.default};
+    color: ${props => props.theme.text.primary};
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 3.3rem;
   }
 `;
 
@@ -54,7 +61,22 @@ export const InfoContainerStyle = styled.div<IContainerProps>`
 export const EmbedCodeStyle = styled.iframe<IEmbedCodeProps>`
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '20rem'};
-  border-radius: 12px;
   align-items: center;
   margin-top: 20px;
+`;
+
+export const ButtonStyle = styled.button`
+  border: none;
+  border-left: 1px solid #e6e6e6;
+  background-color: ${props => props.theme.background.default};
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: ${props => props.theme.text.primary};
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover {
+    color: ${props => props.theme.text.secondary};
+  }
 `;

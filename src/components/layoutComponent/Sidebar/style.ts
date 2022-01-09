@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+// import { Link } from 'react-scroll';
 
 const MainLayout = styled('div')`
-  /* background: red; */
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -13,7 +15,8 @@ const MainLayout = styled('div')`
 export default MainLayout;
 
 export const Contents = styled('h3')`
-  color: #6f7e8c;
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
   font-size: 22px;
   padding: 20px;
   padding-bottom: 8px;
@@ -29,11 +32,10 @@ export const Contents = styled('h3')`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
-  color: rgb(111, 126, 140);
 `;
 export const LinkItem = styled(NavLink)<{ isActive?: boolean }>`
-  color: black;
   font-size: 18px;
+  color: ${props => props.theme.text.primary};
   font-weight: 500;
   padding: 20px 0px;
   display: block;
@@ -45,22 +47,27 @@ export const LinkItem = styled(NavLink)<{ isActive?: boolean }>`
   margin: 8px 0px;
   text-decoration: none;
   &:hover {
-    border-left: 1px solid black;
-    color: #0072e5;
+    ${props =>
+      props.isActive &&
+      css`
+        border-left: ${`1px solid  ${props.theme.secondary.main}`};
+        color: #0072e5;
+      `}
   }
   ${props =>
     props.isActive &&
     css`
-      border-left: 1px solid #0072e5;
+      border-left: ${`1px solid  ${props.theme.secondary.main}`};
       color: #0072e5;
     `}
 `;
 
 export const LeftSide = styled('div')`
-  background: #f2f2f2;
+  background: ${props => props.theme.background.default};
   grid-column: span 1 / span 1;
-  border-right-width: 2px;
   padding: 10px;
+  color: ${props => props.theme.text.primary};
+
   height: 100%;
   & + div {
     flex-direction: column;
@@ -72,18 +79,20 @@ export const LeftSide = styled('div')`
 export const ContentSide = styled('div')`
   /* background: white; */
   grid-column: span 3 / span 3;
-  border-left-width: 2px;
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
 `;
 export const RightSide = styled('div')`
   grid-column: span 1 / span 1;
-  border-left-width: 2px;
-  background: #f2f2f2;
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
   color: #1a2027;
-  height: 100vh;
+  height: 100%;
   min-width: 240px;
   /* padding-left: 20px; */
 `;
 
 export const HeaderLeft = styled('div')`
-  background: red;
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
 `;

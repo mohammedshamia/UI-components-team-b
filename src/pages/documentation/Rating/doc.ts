@@ -1,13 +1,14 @@
 export default `
-<h2 id="avatar">Avatar</h2>
-
-### Avatars are found throughout material design with uses in everything from tables to dialog menus.
+## **Rating**
+<br/>
+<br/>
+## Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own..
 
 <br />
 
-<h2 id="image">Image avatars</h2>
-
-### Image avatars can be created by passing standard img props src to the component.
+### **Basic rating**
+<h3 id="radio-group"></h3/>
+<br />
 <br />
 
 <ex1></ex1>
@@ -16,24 +17,45 @@ export default `
 
 ~~~js
 
-  import { Avatar, InfoContainer } from '../../../components';
 
-  export const AvatarExample = () => (
-    <InfoContainer>
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
+export const AvatarExample = () => (
+
+  <InfoContainer flexDirection="column">
+    <WrapperParent display="flex" JC="space-between" item="center">
+      <h3> Controlled</h3>
+      <Rating value={2} isRow />
+    </WrapperParent>
+  
+    <br />
+  
+    <WrapperParent display="flex" JC="space-between" item="center">
+      <h3> Readonly</h3>
+      <Rating value={2} readonly />
+    </WrapperParent>
+    <br />
+
+    <WrapperParent display="flex" JC="space-between" item="center">
+      <h3> Readonly</h3>
+      <Rating value={2} disabled />
+    </WrapperParent>
+    <br />
+
     </InfoContainer>
-  );
-
+);
 ~~~
 
 <br />
 
-<h2 id="letter-avatar">Letter avatars</h2>
+### **Sizes**
 
-### Avatars containing simple characters can be created by passing a string as children
+<h3 id="hover-feedback"></h3>
+#### For larger or smaller ratings use the **size** prop.
+[ **larger** , **medium** , **small**  ]
+
 <br />
+<br />
+<br />
+
 <ex2></ex2>
 
 <br />
@@ -53,11 +75,9 @@ export default `
 ~~~
 <br />
 
-<h2 id="avatar-sizes">Avatars Sizes</h2>
-
-### You can change the size of the avatar with pass size props to the component.
-Note: The size of the avatar is not the size of the image.
- [  small , medium , large ,  xlarge ]
+### **Sizes**
+#### You can change the size of the avatar with pass size props to the component.
+**Note:** The size of the avatar is not the size of the image.
 <br />
 <ex3></ex3>
 <br />
@@ -92,9 +112,8 @@ Note: The size of the avatar is not the size of the image.
 
 <br />
 
-<h2 id="avatar-variants">Avatars Variants</h2>
-
-### If you need square or rounded avatars, use the variant prop.
+### **Variants**
+#### If you need square or rounded avatars, use the **variant** prop.
 <br />
 <ex4></ex4>
 <br />
@@ -118,9 +137,8 @@ Note: The size of the avatar is not the size of the image.
 ~~~
 <br />
 
-<h2 id="avatar-group">Avatar Group</h2>
-
-### AvatarGroup renders its children as a stack. Use the max prop to limit the number of avatars.
+### **Avatar Group**
+##### **AvatarGroup** renders its children as a stack. Use the max prop to limit the number of avatars.
 
 <br />
 <ex5></ex5>
@@ -141,9 +159,8 @@ export const AvatarGroupExample = () => (
   ~~~
 <br />
 
-<h2 id="avatar-badge">Avatar With badge</h2>
-
-#### Badge renders a badge on the avatar at the bottom right corner with color can change by pass badge color props.
+### **Avatar With badge**
+##### **Badge** renders a badge on the avatar at the bottom right corner with color can change by pass badge color props.
 
 <br />
 <ex6></ex6>
@@ -169,7 +186,5 @@ export const AvatarWithBadge = () => (
 
   ~~~
 
-  <br />
-  <br />
- 
+
 `;

@@ -7,7 +7,7 @@ interface ISubItem {
 }
 
 function SubMenu({ item }: any) {
-  const [subnav, setSubnav] = useState(false);
+  const [subnav, setSubnav] = useState(true);
   const showSubnav = () => setSubnav(!subnav);
   return (
     <>
@@ -25,7 +25,7 @@ function SubMenu({ item }: any) {
         </div>
       </SidebarLink>
       {subnav &&
-        item.subNav.map((subItem: ISubItem, index: number) => {
+        item?.subNav?.map((subItem: ISubItem, index: number) => {
           return (
             <DropdownLink to={subItem.path} key={index}>
               <SidebarLabel>{subItem.title}</SidebarLabel>

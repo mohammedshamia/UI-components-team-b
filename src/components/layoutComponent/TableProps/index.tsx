@@ -11,7 +11,7 @@ interface ITableComponent {
 const tableHeader = (data = []) => {
   const head = Object.keys(data[0]);
   return head.slice(1).map((key: string, index) => {
-    return <Th key={index}> {key} </Th>;
+    return <Th key={index.toString()}> {key} </Th>;
   });
 };
 const bodyTable = (data = []) => {
@@ -29,7 +29,7 @@ const bodyTable = (data = []) => {
 const TableProps: React.FC<ITableComponent> = ({ data }: ITableComponent) => {
   return (
     <Container>
-      <Typography variant="h2" children="API Props" bold />
+      <Typography variant="h3" children="API Props" bold />
       <Table>
         <TBody>
           {data && <Tr>{tableHeader(data as [])}</Tr>}
