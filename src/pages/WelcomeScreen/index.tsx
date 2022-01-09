@@ -96,9 +96,9 @@ export default function Welcome() {
           />
         </ContainerButton>
       </Content>
-      <ImageContainer>
+      {/* <ImageContainer>
         <ContainerImg src={gray} alt="pictures" />
-      </ImageContainer>
+      </ImageContainer> */}
     </Wrapper>
   );
 }
