@@ -1,7 +1,10 @@
+import { useTheme } from 'styled-components';
+import Popup from 'reactjs-popup';
 import { EmbedCode } from '../../../components';
 import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
 import TableProps from '../../../components/layoutComponent/TableProps';
+import 'reactjs-popup/dist/index.css';
 import {
   AvatarExample,
   LetterAvatar,
@@ -13,12 +16,13 @@ import {
 
 import avatarDoc from './doc';
 import propsTableData from './propsTableData';
+import { ButtonStyle } from '../../../components/layoutComponent/Container/style';
 
 const AvatarDocumentation: React.FC<any> = () => {
+  const { background } = useTheme();
   return (
     <>
       <EditPage href="https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Avatar/doc.ts" />
-
       <Markdown
         content={avatarDoc}
         examples={{
@@ -30,12 +34,27 @@ const AvatarDocumentation: React.FC<any> = () => {
           ex6: AvatarWithBadge,
         }}
       />
-      <EmbedCode
-        title="Edit your component before use"
-        height="40rem"
-        src="https://codesandbox.io/embed/jolly-ardinghelli-70mn6?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fpages%2Fdocumentation%2FAvatar%2FAvatarExamples.tsx&theme=dark"
-      />
-      <TableProps data={propsTableData} />
+      <Popup
+        trigger={
+          <ButtonStyle type="button">
+            Edit your component before use
+          </ButtonStyle>
+        }
+        modal
+        contentStyle={{
+          width: '80%',
+        }}
+      >
+        <EmbedCode
+          title="Edit your component before use"
+          height="40rem"
+          width="100%"
+          src={`https://codesandbox.io/embed/jolly-ardinghelli-70mn6?fontsize=14&hidenavigation=1&theme=${
+            background.default === '#fff' ? 'light' : 'dark'
+          }`}
+        />
+      </Popup>
+      <TableProps data={propsTableData} />{' '}
     </>
   );
 };

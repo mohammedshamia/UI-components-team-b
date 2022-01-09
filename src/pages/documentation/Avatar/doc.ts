@@ -12,7 +12,6 @@ export default `
 
 <ex1></ex1>
 
-<br />
 
 ~~~js
 
@@ -36,8 +35,6 @@ export default `
 <br />
 <ex2></ex2>
 
-<br />
-
 ~~~js
 
   import { Avatar, InfoContainer } from '../../../components';
@@ -60,7 +57,6 @@ Note: The size of the avatar is not the size of the image.
  [  small , medium , large ,  xlarge ]
 <br />
 <ex3></ex3>
-<br />
 
 
 ~~~js
@@ -97,7 +93,6 @@ Note: The size of the avatar is not the size of the image.
 ### If you need square or rounded avatars, use the variant prop.
 <br />
 <ex4></ex4>
-<br />
 
 ~~~js
 
@@ -124,7 +119,6 @@ Note: The size of the avatar is not the size of the image.
 
 <br />
 <ex5></ex5>
-<br />
 
 ~~~jsx
 
@@ -147,7 +141,6 @@ export const AvatarGroupExample = () => (
 
 <br />
 <ex6></ex6>
-<br />
 
 ~~~jsx
 
