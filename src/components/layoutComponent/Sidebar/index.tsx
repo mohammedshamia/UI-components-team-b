@@ -1,7 +1,7 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import paths from '../../../routes/paths';
+import SidebarLeft from './SidebarLeft';
 
 import { handelPath } from '../../../utils/handlePath';
 import MainLayout, {

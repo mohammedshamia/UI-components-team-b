@@ -1,8 +1,10 @@
 import React, { lazy } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
+import PageNotFound from '../pages/NotFound';
 import Loadable from './Loading';
 
 const WelcomeScreen = Loadable(lazy(() => import('../pages/WelcomeScreen')));
+// const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
 const MainPage = Loadable(lazy(() => import('../pages/MainPage')));
 const RatingPage = Loadable(
   lazy(() => import('../pages/Components/RatingPage')),
@@ -17,7 +19,7 @@ const CardPage = Loadable(lazy(() => import('../pages/Components/CardPage')));
 const AvatarsPage = Loadable(
   lazy(() => import('../pages/Components/AvatarsPage')),
 );
-const PageNotFound = Loadable(lazy(() => import('../pages/NotFound')));
+// const PageNotFound = Loadable(lazy(() => import('../pages/NotFound')));
 
 const AllRoutes = () => {
   return useRoutes([

@@ -134,8 +134,8 @@ const paths = [
     path: 'avatars',
     items: [
       {
-        label: 'Basic rating',
-        toId: '#basic-rating',
+        label: 'Avatar Group',
+        toId: '#Avatar Group',
       },
       {
         label: 'Rating precision',
