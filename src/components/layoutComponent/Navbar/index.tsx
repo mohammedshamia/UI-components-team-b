@@ -31,7 +31,7 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   return (
     <NavbarComponent>
       {/* {!IsMainPage && ( */}
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
         <Avatar src={logo} />
         <NavbarLink>Products</NavbarLink>
         <NavbarLink>Docs</NavbarLink>

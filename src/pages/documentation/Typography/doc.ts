@@ -1,6 +1,7 @@
 export default `
 
-## **Typography**
+<h2 id='Typography'>Typography</h2>
+
 #### The Typography component makes it easy to apply a default set of font weights and sizes in your application.
 <br />
 
@@ -13,7 +14,7 @@ import { Typography, InfoContainer } from '../../../components';
 
 export const TypographyExample = () => (
   <InfoContainer>
-    <Typography variant="h1" children="heading.1" />
+    <Typography variant="h2" children="heading.1" />
     <Typography variant="h2" children="heading.2 " />
     <Typography variant="h3" children="heading.3 " />
     <Typography variant="h4" children="heading.4 " />
@@ -26,15 +27,23 @@ export const TypographyExample = () => (
 
 
 ~~~
-## **Accessibility**
+
+<h2 id='Accessibility'>Accessibility</h2>
+
 #### A few key factors to follow for an accessible typography:
+
 <br />
 
 * Color Provide enough contrast between text and its background, check out the minimum recommended WCAG 2.0 color contrast ratio (4.5:1).
+
 <br />
 
-## **Colors**
+
+<h2 id='Colors'>Colors</h2>
+
 #### Convey meaning through color with a handful of color utility.
+<br />
+
 <ex2></ex2>
  
 ~~~jsx
@@ -49,7 +58,11 @@ export const TypographyExample2 = () => (
 
 ## **fontSize and bold**
 
+<h2 id='fontSize'>fontSize</h2> 
+
 #### (typically 16px) so visitors can customize their browser defaults as needed.
+<br />
+
 <ex3></ex3>
 ~~~jsx
 export const TypographyExample3 = () => (
@@ -62,7 +75,10 @@ export const TypographyExample3 = () => (
 ~~~
 <br />
 
-## **Theme**
+
+
+<h2 id='Theme'>Theme</h2>
+
 #### In some situations you might not be able to use the Typography component. Hopefully, you might be able to take advantage of the typography keys of the theme.
 
 

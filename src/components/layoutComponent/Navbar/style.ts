@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const NavbarComponent = styled.div`
+  z-index: 999;
+  position: fixed;
   width: 100%;
   margin: 0 auto;
   height: 64px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8);
   padding: 1rem 9.3%;
   background: ${props => props.theme.background.default};
   justify-content: space-between;
@@ -24,9 +26,7 @@ export const NavbarLink = styled.li`
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   &:hover {
-    background: #f3f6f9;
-    color: ${props => props.theme.common.black};
-  }
+    color: ${props => props.theme.text.secondary}
 `;
 
 export const NavbarSearchContainer = styled.div`
@@ -35,14 +35,18 @@ export const NavbarSearchContainer = styled.div`
 `;
 
 export const NavbarLinksIcon = styled.i`
-  color: #3e5060;
+  color: ${props => props.theme.text.primary};
   margin-left: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
-  background: #ffffff;
+  background: ${props => props.theme.background.paper};
   border-radius: 10px;
-  border: 1px solid #e5e5e5;
+  box-shadow: 0px 0px 2px ${props => props.theme.text.disable};
+  border: none;
   cursor: pointer;
   &:hover {
-    background: #f3f6f9;
+    box-shadow: 0px 0px 4px ${props => props.theme.text.secondary};
   }
 `;

@@ -1,7 +1,4 @@
-import React from 'react';
+import Typography from '../documentation/Typography';
 
-const TypographyPage = () => {
-  return <div>TypographyPage</div>;
-};
-
+export const TypographyPage = Typography;
 export default TypographyPage;

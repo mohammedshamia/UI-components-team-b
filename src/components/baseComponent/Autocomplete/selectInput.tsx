@@ -147,6 +147,7 @@ function SelectInput({
           >
             {others.renderOption.map((item: any, index: number) => (
               <Button
+                textAlign="start"
                 fontSize={fontSize}
                 isActive={state === item}
                 type="button"

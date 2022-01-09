@@ -16,6 +16,7 @@ export const Box = styled.div`
   align-items: center;
 `;
 export const Wrapper = styled('div')<Iprops>`
+  position: relative;
   margin: ${props => props.margin};
   width: ${props => props.width};
   border: 1px solid
@@ -35,8 +36,7 @@ export const Wrapper = styled('div')<Iprops>`
     props.disabled ? ' pointer-events: none' : ' pointer-events: auto'};
   &:hover {
     outline: none;
-    box-shadow: 0 0 5px ${props => props.theme.background.paper};
-    border: 1px solid ${props => props.theme.background.paper};
+    box-shadow: 0px 0px 2px ${props => props.theme.text.disable};
     background-color: ${props => props.theme.background.default};
   }
 `;
@@ -64,6 +64,8 @@ interface IChoicesWrapperProps {
 }
 
 export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
+  background: ${props => props.theme.background.default};
+  position: absolute;
   width: 100%;
   display: ${props => (!props.openChoices ? 'none' : 'flex')};
   align-items: ${props =>
@@ -73,6 +75,7 @@ export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
       ? 'flex-end'
       : 'flex-start'};
   flex-direction: column;
+  z-index: 2;
   border: 1px solid #e1e1e1;
   max-height: 300px;
   overflow-y: ${props => (props.maxHeight >= '300px' ? 'auto' : 'auto')};
@@ -80,6 +83,7 @@ export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
 interface IButtonProps {
   isActive?: boolean;
   fontSize: string;
+  textAlign?: string;
 }
 
 export const Button = styled.button<IButtonProps>`
@@ -90,7 +94,8 @@ export const Button = styled.button<IButtonProps>`
   padding: 10px;
   margin-bottom: 1px;
   width: 100%;
-  ${props => props.isActive && 'background-color:#c8c8c8'};
+  text-align: ${props => props.textAlign || 'center'}
+    ${props => props.isActive && 'background-color:#c8c8c8'};
   &:hover {
     background-color: #e1e1e1;
   }

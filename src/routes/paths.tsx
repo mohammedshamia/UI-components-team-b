@@ -83,36 +83,28 @@ const paths = [
     path: 'typography',
     items: [
       {
-        label: 'Basic rating',
-        toId: '#basic-rating',
+        label: 'Typography',
+        toId: '#Typography',
       },
       {
-        label: 'Rating precision',
-        toId: '#rating-precision',
+        label: 'Colors',
+        toId: '#Colors',
       },
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
+        label: 'fontSize',
+        toId: '#fontSize',
       },
       {
         label: 'Customization',
         toId: '#customization',
       },
       {
-        label: 'Radio group',
-        toId: '#radio-group',
-      },
-      {
         label: 'Accessibility',
-        toId: '#accessibility',
+        toId: '#Accessibility',
       },
       {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'Theme',
+        toId: '#Theme',
       },
     ],
     element: <TypographyPage />,

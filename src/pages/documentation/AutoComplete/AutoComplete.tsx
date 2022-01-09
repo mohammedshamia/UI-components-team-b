@@ -80,6 +80,7 @@ export const CountrySelect = () => {
         id="country-select-demo"
         width="300px"
         onChange={handeleChange}
+        align-items="left"
         placeholder="Country Select"
         name="CountrySelect"
         option={Countries.map(item => item.label)}

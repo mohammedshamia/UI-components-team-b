@@ -30,33 +30,39 @@ const ConvertTypography = [
 const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
   const { background } = useTheme();
   return (
-    <ReactMarkdown
-      children={content}
-      rehypePlugins={[rehypeRaw]}
-      remarkPlugins={[remarkGfm]}
-      components={{
-        code({ inline, className, children, ...props }) {
-          const match = /language-(\w+)/.exec(className || '');
-          return !inline && match ? (
-            <SyntaxHighlighter
-              children={String(children).replace(/\n$/, '')}
-              style={
-                background?.default === '#fff' ? atelierEstuaryLight : vs2015
-              }
-              language={match[1]}
-              PreTag="dev"
-              {...props}
-            />
-          ) : (
-            <code className={className} {...props}>
-              {children}
-            </code>
-          );
-        },
-        ...ConvertTypography,
-        ...examples,
+    <div
+      style={{
+        marginTop: '2rem',
       }}
-    />
+    >
+      <ReactMarkdown
+        children={content}
+        rehypePlugins={[rehypeRaw]}
+        remarkPlugins={[remarkGfm]}
+        components={{
+          code({ inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || '');
+            return !inline && match ? (
+              <SyntaxHighlighter
+                children={String(children).replace(/\n$/, '')}
+                style={
+                  background?.default === '#fff' ? atelierEstuaryLight : vs2015
+                }
+                language={match[1]}
+                PreTag="dev"
+                {...props}
+              />
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+          ...ConvertTypography,
+          ...examples,
+        }}
+      />
+    </div>
   );
 };
 
