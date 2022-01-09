@@ -1,4 +1,7 @@
 import { lazy } from 'react';
+import AutocompletePage from '../pages/Components/AutocompletePage';
+import AvatarsPage from '../pages/Components/AvatarsPage';
+import TypographyPage from '../pages/Components/TypographyPage';
 import Loadable from './Loading';
 
 const RatingPage = Loadable(
@@ -47,82 +50,6 @@ const paths = [
     element: <RatingPage />,
   },
   {
-    path: 'avatars',
-    items: [
-      {
-        label: 'Basic rating',
-        toId: '#basic-rating',
-      },
-      {
-        label: 'Rating precision',
-        toId: '#rating-precision',
-      },
-      {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
-      },
-      {
-        label: 'Customization',
-        toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
-      },
-      {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
-      },
-    ],
-    element: () => <p>rating</p>,
-  },
-  {
-    path: 'autocomplete',
-    items: [
-      {
-        label: 'Basic rating',
-        toId: '#basic-rating',
-      },
-      {
-        label: 'Rating precision',
-        toId: '#rating-precision',
-      },
-      {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
-      },
-      {
-        label: 'Customization',
-        toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
-      },
-      {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
-      },
-    ],
-    element: <p>autocomplete</p>,
-  },
-  {
     path: 'card',
     items: [
       {
@@ -151,6 +78,112 @@ const paths = [
       },
     ],
     element: <CardPage />,
+  },
+  {
+    path: 'typography',
+    items: [
+      {
+        label: 'Basic rating',
+        toId: '#basic-rating',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
+    element: <TypographyPage />,
+  },
+  {
+    path: 'avatar',
+    items: [
+      {
+        label: 'Avatar Group',
+        toId: '#Avatar Group',
+      },
+      {
+        label: 'Rating precision',
+        toId: '#rating-precision',
+      },
+      {
+        label: 'Hover feedback',
+        toId: '#hover-feedback',
+      },
+      {
+        label: 'Customization',
+        toId: '#customization',
+      },
+      {
+        label: 'Radio group',
+        toId: '#radio-group',
+      },
+      {
+        label: 'Accessibility',
+        toId: '#accessibility',
+      },
+      {
+        label: 'ARIA',
+        toId: '#accessibility',
+      },
+      {
+        label: 'keyboard',
+        toId: '#keyboard',
+      },
+    ],
+    element: <AvatarsPage />,
+  },
+  {
+    path: 'autocomplete',
+    items: [
+      {
+        label: 'Combo box',
+        toId: '#combo-box',
+      },
+      {
+        label: 'Playground',
+        toId: '#playground',
+      },
+      {
+        label: 'Country select',
+        toId: '#country-select',
+      },
+      {
+        label: 'Free solo',
+        toId: '#free-solo',
+      },
+      {
+        label: 'Icons',
+        toId: '#icons',
+      },
+      {
+        label: 'Validation',
+        toId: '#validation',
+      },
+    ],
+    element: <AutocompletePage />,
   },
 ];
 

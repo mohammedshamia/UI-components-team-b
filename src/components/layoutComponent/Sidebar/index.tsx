@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+// import { Link } from 'react-scroll';
 import paths from '../../../routes/paths';
-import SidebarLeft from './SidebarLeft';
+import SidebarLeft from './Left';
 
 import { handelPath } from '../../../utils/handlePath';
 import MainLayout, {
@@ -12,15 +13,16 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
-import Loadable from '../../../routes/Loading';
-
-const AvatarDocumentation = Loadable(
-  React.lazy(() => import('../../../pages/documentation/Avatar')),
-);
 
 const Layout = () => {
   const { hash, pathname } = useLocation();
   const currentPath = pathname.split('/')[2];
+  const goToViolation = () => {
+    const w = paths[0].items[4].toId.slice(1);
+    document.getElementById(w)?.scrollIntoView({
+      behavior: 'smooth',
+    }) as any;
+  };
   const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
 
   return (
@@ -30,9 +32,11 @@ const Layout = () => {
       </LeftSide>
       <ContentSide>
         <Container>
-          {/* <AvatarDocumentation /> */}
           <Routes>
             <Route index element={() => <p>1111</p>} />
+            {/* // hre  you need  to  add  the other  path  here  or  add  in the   in path  paths  file  */}
+            <Route path="about" element={<p>about</p>} />
+            <Route path="install" element={<p>install2</p>} />
             {paths.map(path => (
               <Route path={path.path} element={path.element} key={path.path} />
             ))}
@@ -43,7 +47,12 @@ const Layout = () => {
         <Contents>Contents</Contents>
         <nav>
           {rightSide.map(x => (
-            <LinkItem to={`${x.toId}`} isActive={x.toId === hash}>
+            <LinkItem
+              to={`${x.toId}`}
+              isActive={x.toId === hash}
+              onClick={() => goToViolation()}
+              // onClick={() => goToViolation(x.toId.slice(1))}
+            >
               {x.label}
             </LinkItem>
           ))}

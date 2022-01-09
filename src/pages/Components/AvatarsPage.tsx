@@ -1,7 +1,5 @@
-import React from 'react';
+import Avatar from '../documentation/Avatar';
 
-export const AvatarsPage = () => {
-  return <div>AvatarsPage</div>;
-};
+export const AvatarsPage = Avatar;
 
 export default AvatarsPage;

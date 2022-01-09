@@ -6,6 +6,6 @@ export type TChildrenPath = {
 };
 export type PathItem = {
   path: string;
-  element: ReactNode;
+  element?: ReactNode;
   items: TChildrenPath[];
 };

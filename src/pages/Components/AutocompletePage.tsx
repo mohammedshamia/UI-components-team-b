@@ -1,7 +1,5 @@
-import React from 'react';
+import AutoCompleteDocumentation from '../documentation/AutoComplete';
 
-const AutocompletePage = () => {
-  return <div>AutocompletePage</div>;
-};
+const AutocompletePage = AutoCompleteDocumentation;
 
 export default AutocompletePage;

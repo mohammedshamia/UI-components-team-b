@@ -9,6 +9,7 @@ export const NavbarComponent = styled.div`
   border-bottom: 1px solid #e5e5e5;
   padding: 1rem 9.3%;
   background: ${props => props.theme.background.default};
+  justify-content: space-between;
 `;
 
 export const NavbarLink = styled.li`
@@ -24,48 +25,13 @@ export const NavbarLink = styled.li`
   cursor: pointer;
   &:hover {
     background: #f3f6f9;
-    color: ${props => props.theme.common.black}
-`;
-
-export const NavbarSearchInput = styled.input`
-  border: 0px solid #e5e5e5;
-  border-radius: 10px;
-  padding: 9px;
-  background: #f3f6f9;
-  width: 85%;
-  margin-left: auto;
-  font-size: 0.8rem;
-  font-weight: thin;
-  font-family: 'Roboto', sans-serif;
-  &:focus {
-    outline: none;
+    color: ${props => props.theme.common.black};
   }
 `;
 
 export const NavbarSearchContainer = styled.div`
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
-  background: #f3f6f9;
-  width: 20em;
-  margin-left: auto;
-  font-size: 0.8rem;
-  font-weight: thin;
-  font-family: 'Roboto', sans-serif;
-  &:focus {
-    outline: none;
-  }
-`;
-
-export const NavbarSearchIcon = styled.i`
-  color: #3e5060;
-  font-size: 0.7rem;
-  background: #ffffff;
-  padding: 7px 10px 7px 10px;
-  margin-right: 2px;
-  border-radius: 5px;
-  &:hover {
-    background: #f3f6f9;
-  }
+  display: flex;
+  justify-content: end;
 `;
 
 export const NavbarLinksIcon = styled.i`

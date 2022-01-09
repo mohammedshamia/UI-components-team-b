@@ -12,21 +12,22 @@ const Rating = ({
   defaultValue,
   color,
   precision,
+  // handleChange,
+  icon,
   readonly,
   disabled,
   ...props
 }: PropsRating) => {
-  const [value, setvalue] = useState<number>(defaultValue || props.value || 0);
+  const [value, setvalue] = useState<number>(props.value || defaultValue || 0);
   const [ishover, setHover] = useState<number>(0);
-
   const width = getMyWidth(size);
-
   const RateMemo = useMemo(() => {
     return Array(count)
       .fill(0)
       .map((_, i) => i + 1)
       .map(index => (
         <SvgStart
+          icon={icon}
           width={width}
           color={color}
           isActive={index <= value}
@@ -38,14 +39,13 @@ const Rating = ({
           precision={precision}
           readonly={readonly}
           disabled={disabled}
-          icon={AiFillStar}
         />
       ));
   }, [value, count, ishover, precision]);
 
   return (
-    <div id={props.name}>
-      {value === 0 ? <p>{props.emptyLabelText} </p> : value}
+    <div>
+      {value === 0 ? <p>{props.emptyLabelText} </p> : ''}
       <WrapperParent {...props} FD={isRow ? 'row' : 'column'}>
         {RateMemo}
       </WrapperParent>
@@ -54,11 +54,13 @@ const Rating = ({
 };
 
 Rating.defaultProps = {
-  count: 10,
+  count: 5,
   size: 'medium',
+  icon: <AiFillStar />,
+  isRow: true,
   defaultValue: 1,
   color: {
-    fill: 'yellow',
+    fill: 'red',
     unfill: '#DCDCDC',
   },
   value: 0,
