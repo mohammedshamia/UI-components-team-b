@@ -1,3 +1,4 @@
+import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
 import {
   ComboboxExample,
@@ -12,17 +13,23 @@ import autoCompleteDoc from './doc';
 
 const AutoComleteDocumentation: React.FC<any> = () => {
   return (
-    <Markdown
-      content={autoCompleteDoc}
-      examples={{
-        ex1: ComboboxExample,
-        ex2: Playground,
-        ex3: CountrySelect,
-        ex4: FreeSolo,
-        ex5: IconExample,
-        ex6: ValidationExample,
-      }}
-    />
+    <>
+      <EditPage
+        href="
+https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/AutoComplete/doc.ts"
+      />{' '}
+      <Markdown
+        content={autoCompleteDoc}
+        examples={{
+          ex1: ComboboxExample,
+          ex2: Playground,
+          ex3: CountrySelect,
+          ex4: FreeSolo,
+          ex5: IconExample,
+          ex6: ValidationExample,
+        }}
+      />
+    </>
   );
 };
 

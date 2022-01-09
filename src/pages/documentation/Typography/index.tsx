@@ -7,10 +7,15 @@ import {
 import TypographyDocs from './doc';
 import TableProps from '../../../components/layoutComponent/TableProps';
 import propsTableData from './propsTableData';
+import { EditPage } from '../../../components/layoutComponent/Container';
 
 const TypographyDocumentation = () => {
   return (
     <>
+      <EditPage
+        href="
+      https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Typography/doc.ts"
+      />
       <Markdown
         content={TypographyDocs}
         examples={{

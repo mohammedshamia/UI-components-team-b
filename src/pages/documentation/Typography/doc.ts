@@ -27,12 +27,7 @@ export const TypographyExample = () => (
 
 
 ~~~
-<<<<<<< HEAD
-
-<h2 id='Accessibility'>Accessibility</h2>
-=======
 <h2 id="accessibility">Accessibility</h2>
->>>>>>> 582ce5142ad7e4a33d856bd8ee4d57acbde15551
 
 #### A few key factors to follow for an accessible typography:
 
@@ -43,11 +38,7 @@ export const TypographyExample = () => (
 <br />
 
 
-<<<<<<< HEAD
-<h2 id='Colors'>Colors</h2>
-=======
 <h2 id="colors">Colors</h2>
->>>>>>> 582ce5142ad7e4a33d856bd8ee4d57acbde15551
 
 #### Convey meaning through color with a handful of color utility.
 <br />
@@ -84,13 +75,7 @@ export const TypographyExample3 = () => (
 ~~~
 <br />
 
-<<<<<<< HEAD
-
-
-<h2 id='Theme'>Theme</h2>
-=======
 <h2 id="theme">Theme</h2>
->>>>>>> 582ce5142ad7e4a33d856bd8ee4d57acbde15551
 
 #### In some situations you might not be able to use the Typography component. Hopefully, you might be able to take advantage of the typography keys of the theme.
 
