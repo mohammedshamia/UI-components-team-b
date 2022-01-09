@@ -1,6 +1,5 @@
 import React, { lazy } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
-import CardPage from '../pages/Components/CardPage';
 import RatingPage from '../pages/Components/RatingPage';
 import Loadable from './Loading';
 
@@ -16,7 +15,7 @@ const TypographyPage = Loadable(
 const AutocompletePage = Loadable(
   lazy(() => import('../pages/documentation/AutoComplete')),
 );
-// const CardPage = Loadable(lazy(() => import('../pages/documentation/Card')));
+const CardPage = Loadable(lazy(() => import('../pages/documentation/Card')));
 const AvatarsPage = Loadable(
   lazy(() => import('../pages/documentation/Avatar')),
 );

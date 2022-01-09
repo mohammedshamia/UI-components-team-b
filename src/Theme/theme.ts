@@ -19,8 +19,8 @@ const commonTheme = {
 export const lightTheme: DefaultTheme = {
   ...commonTheme,
   primary: {
-    main: '#1976d2',
-    light: '#42a5f5',
+    main: '#0072E5',
+    light: '#F0F7FF',
     dark: '#1565c0',
     contrastText: '#ffffff',
   },
@@ -53,7 +53,7 @@ export const darkTheme: DefaultTheme = {
   ...commonTheme,
   primary: {
     main: '#90caf9',
-    light: '#fafafa',
+    light: '#ebeff31f',
     dark: '#040404',
     contrastText: 'rgba(0,0,0,0.87)',
   },

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 // import { Link } from 'react-scroll';
 import paths from '../../../routes/paths';
-import SidebarLeft from './SidebarLeft';
+import SidebarLeft from './Left';
 
 import { handelPath } from '../../../utils/handlePath';
 import MainLayout, {

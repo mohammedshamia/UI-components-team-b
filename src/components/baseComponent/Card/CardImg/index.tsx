@@ -6,8 +6,8 @@ interface IProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   height?: string;
 }
 
-function CardImg({ width, height, ...rest }: IProps) {
-  return <Img width={width} height={height} {...rest} />;
+function CardImg({ ...rest }: IProps) {
+  return <Img {...rest} />;
 }
 
 export default CardImg;
