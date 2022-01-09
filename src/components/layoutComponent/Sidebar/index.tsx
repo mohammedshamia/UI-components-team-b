@@ -13,6 +13,8 @@ import MainLayout, {
 } from './style';
 import { Container } from '../Container';
 import Loadable from '../../../routes/Loading';
+import TableProps from '../TableProps';
+import { data } from '../TableProps/data';
 
 const AvatarDocumentation = Loadable(
   React.lazy(() => import('../../../pages/documentation/Avatar')),
@@ -23,7 +25,6 @@ const Layout = () => {
   const currentPath = pathname.split('/')[2];
 
   const rightSide = useMemo(() => handelPath(paths, currentPath), [pathname]);
-  console.log('hash', hash);
 
   return (
     <MainLayout>
@@ -33,6 +34,7 @@ const Layout = () => {
       <ContentSide>
         <Container>
           <AvatarDocumentation />
+          <TableProps data={data} />
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (
