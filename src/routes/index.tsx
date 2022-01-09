@@ -4,7 +4,7 @@ import RatingPage from '../pages/Components/RatingPage';
 import Loadable from './Loading';
 
 const WelcomeScreen = Loadable(lazy(() => import('../pages/WelcomeScreen')));
-const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
+// const LandingPage = Loadable(lazy(() => import('../pages/WelcomeScreen')));
 const MainPage = Loadable(lazy(() => import('../pages/MainPage')));
 // const RatingPage = Loadable(
 //   lazy(() => import('../pages/documentation/Rating')),
