@@ -1,5 +1,3 @@
-import propsData from './propsTableData';
-
 export default `
 <h2 id='avatar'>Avatar</h2>
 
@@ -166,5 +164,8 @@ export const AvatarWithBadge = () => (
 );
 
   ~~~
-  <table data=${propsData}></table>
+
+  <br />
+  <br />
+ 
 `;

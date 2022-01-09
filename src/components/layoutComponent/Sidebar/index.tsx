@@ -13,8 +13,6 @@ import MainLayout, {
 } from './style';
 import { Container } from '../Container';
 import Loadable from '../../../routes/Loading';
-import TableProps from '../TableProps';
-import { data } from '../TableProps/data';
 
 const AvatarDocumentation = Loadable(
   React.lazy(() => import('../../../pages/documentation/Avatar')),

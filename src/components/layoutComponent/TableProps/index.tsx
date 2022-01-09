@@ -8,17 +8,16 @@ interface ITableComponent {
   data?: IPropTable[];
 }
 
-const tableHeader = ({ data = [] }: ITableComponent) => {
+const tableHeader = (data = []) => {
   const head = Object.keys(data[0]);
   return head.slice(1).map((key: string, index) => {
     return <Th key={index}> {key} </Th>;
   });
 };
-const bodyTable = ({ data = [] }: ITableComponent) => {
-  return data.map(item => {
-    const { Name, Type, Default, Description } = item;
+const bodyTable = (data = []) => {
+  return data.map(({ id, Name, Type, Default, Description }) => {
     return (
-      <Tr key={item.id} color="#3e5060">
+      <Tr key={id} color="#3e5060">
         <Td> {Name} </Td>
         <Td> {Type} </Td>
         <Td> {Default} </Td>
@@ -27,16 +26,14 @@ const bodyTable = ({ data = [] }: ITableComponent) => {
     );
   });
 };
-const TableProps: React.FC<ITableComponent> = ({
-  data = [],
-}: ITableComponent) => {
+const TableProps: React.FC<ITableComponent> = ({ data }: ITableComponent) => {
   return (
     <Container>
       <Typography variant="h2" children="API Props" bold />
       <Table>
         <TBody>
-          <Tr>{tableHeader(data as ITableComponent)}</Tr>
-          {bodyTable(data as ITableComponent)}
+          {data && <Tr>{tableHeader(data as [])}</Tr>}
+          {bodyTable(data as [])}
         </TBody>
       </Table>
     </Container>

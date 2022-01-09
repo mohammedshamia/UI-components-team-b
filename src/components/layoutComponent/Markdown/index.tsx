@@ -47,7 +47,6 @@ const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
             </code>
           );
         },
-        table: TableProps,
         ...ConvertTypography,
         ...examples,
       }}
