@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes } from 'react-router-dom';
 import AllRoutes from './routes';
-import { Navbar } from './components/layoutComponent';
+import Navbar from './components/layoutComponent/Navbar';
 import { GlobalStyle } from './Theme';
 import { lightTheme, darkTheme } from './Theme/theme';
 
@@ -23,8 +23,8 @@ function App() {
     <>
       <ThemeProvider theme={state.theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
+        <Navbar theme={state} setTheme={setState} />
         <BrowserRouter>
-          <Navbar theme={state} setTheme={setState} />
           {/* <Routes> */}
           <AllRoutes />
           {/* </Routes> */}

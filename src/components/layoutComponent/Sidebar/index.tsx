@@ -14,10 +14,6 @@ import MainLayout, {
 import { Container } from '../Container';
 import Loadable from '../../../routes/Loading';
 
-const AvatarDocumentation = Loadable(
-  React.lazy(() => import('../../../pages/documentation/Avatar')),
-);
-
 const Layout = () => {
   const { hash, pathname } = useLocation();
   const currentPath = pathname.split('/')[2];
@@ -31,7 +27,6 @@ const Layout = () => {
       </LeftSide>
       <ContentSide>
         <Container>
-          <AvatarDocumentation />
           <Routes>
             <Route index element={() => <p>1111</p>} />
             {paths.map(path => (
