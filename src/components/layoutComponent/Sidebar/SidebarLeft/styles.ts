@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 export const SidebarNav = styled.nav`
   margin-top: 64px;
-  background-color: ${props => props.theme.background.default};
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
   border-right: 1px solid rgba(0, 0, 0, 0.12);
   overflow-y: auto;
   width: 240px;
@@ -54,6 +55,8 @@ export const DropdownLink = styled(NavLink)`
   align-items: center;
   margin: 10px 0px 0px;
   padding: 5px 0px 5px 31px;
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
   color: rgb(111, 126, 140);
   text-decoration: none;
   font-size: 0.6875rem;
@@ -76,5 +79,6 @@ export const Icon = styled.svg`
   fill: currentColor;
   width: 2em;
   height: 1em;
-  color: #007fff;
+  background: ${props => props.theme.background.default};
+  color: ${props => props.theme.text.primary};
 `;
