@@ -1,19 +1,24 @@
 import React from 'react';
-import { data } from './data';
+// import { data as inistialData } from './data';
 import { Table, TBody, Th, Tr, Td, Container } from './style';
 import Typography from '../../baseComponent/Typography';
+import { IPropTable } from './interface';
 
-const tableHeader = () => {
+interface ITableComponent {
+  data?: IPropTable[];
+}
+
+const tableHeader = ({ data = [] }: ITableComponent) => {
   const head = Object.keys(data[0]);
   return head.slice(1).map((key: string, index) => {
     return <Th key={index}> {key} </Th>;
   });
 };
-const bodyTable = () => {
+const bodyTable = ({ data = [] }: ITableComponent) => {
   return data.map(item => {
     const { Name, Type, Default, Description } = item;
     return (
-      <Tr key={item.id}>
+      <Tr key={item.id} color="#3e5060">
         <Td> {Name} </Td>
         <Td> {Type} </Td>
         <Td> {Default} </Td>
@@ -22,16 +27,19 @@ const bodyTable = () => {
     );
   });
 };
-export default function TableProps() {
+const TableProps: React.FC<ITableComponent> = ({
+  data = [],
+}: ITableComponent) => {
   return (
     <Container>
       <Typography variant="h2" children="API Props" bold />
       <Table>
         <TBody>
-          <Tr>{tableHeader()}</Tr>
-          {bodyTable()}
+          <Tr>{tableHeader(data as ITableComponent)}</Tr>
+          {bodyTable(data as ITableComponent)}
         </TBody>
       </Table>
     </Container>
   );
-}
+};
+export default TableProps;
