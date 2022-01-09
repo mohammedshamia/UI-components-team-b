@@ -5,9 +5,9 @@ export const getMyWidth = (size: TSize): number => {
     case 'small':
       return 20;
     case 'large':
-      return 30;
-    case 'medium':
       return 40;
+    case 'medium':
+      return 30;
     default:
       return 20;
   }
