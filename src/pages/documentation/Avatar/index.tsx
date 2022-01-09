@@ -26,7 +26,7 @@ const AvatarDocumentation: React.FC<any> = () => {
           ex6: AvatarWithBadge,
         }}
       />
-      <TableProps data={propsTableData} />
+      <TableProps id="api" data={propsTableData} />
     </>
   );
 };

@@ -131,7 +131,7 @@ export default `
 ~~~
 <br />
 
-**<h3 id='icon' >Icons</h3>**
+**<h3 id='icons' >Icons</h3>**
 #### There are multiple ways to display an icon with a text field.
 
 <br />
@@ -169,7 +169,7 @@ export default `
   ~~~
 <br />
 
-**<h3 id='icon' >Validation</h3>**
+**<h3 id='validation' >Validation</h3>**
 #### The error prop can then be used to provide feedback to the user about the error.
 
 <br />

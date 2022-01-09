@@ -13,13 +13,13 @@ import MainLayout, {
   RightSide,
 } from './style';
 import { Container } from '../Container';
+import InstallPage from '../../../pages/installPage';
 
 const Layout = () => {
   const { hash, pathname } = useLocation();
   const currentPath = pathname.split('/')[2];
   const goToViolation = (id: string) => {
-    const w = paths[0].items[4].toId.slice(1);
-    document.getElementById(w)?.scrollIntoView({
+    document.getElementById(id)?.scrollIntoView({
       behavior: 'smooth',
     }) as any;
   };
@@ -34,9 +34,8 @@ const Layout = () => {
         <Container>
           <Routes>
             <Route index element={() => <p>1111</p>} />
-            {/* // hre  you need  to  add  the other  path  here  or  add  in the   in path  paths  file  */}
             <Route path="about" element={<p>about</p>} />
-            <Route path="install" element={<p>install2</p>} />
+            <Route path="install" element={<InstallPage />} />
             {paths.map(path => (
               <Route path={path.path} element={path.element} key={path.path} />
             ))}

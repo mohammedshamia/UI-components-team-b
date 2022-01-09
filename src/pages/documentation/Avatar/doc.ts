@@ -30,7 +30,8 @@ export default `
 
 <br />
 
-### **Letter avatars**
+<h2 id="letter-avatars">Letter avatars</h2>
+
 
 #### Avatars containing simple characters can be created by passing a string as **children**
 <br />
@@ -54,6 +55,8 @@ export default `
 <br />
 
 ### **Sizes**
+<h2 id="sizes">Sizes</h2>
+
 #### You can change the size of the avatar with pass size props to the component.
 **Note:** The size of the avatar is not the size of the image.
  [ **small** , **medium** , **large** ,  **xlarge** ]
@@ -91,7 +94,8 @@ export default `
 
 <br />
 
-### **Variants**
+<h2 id="variants">Variants</h2>
+
 #### If you need square or rounded avatars, use the **variant** prop.
 <br />
 <ex4></ex4>
@@ -138,7 +142,8 @@ export const AvatarGroupExample = () => (
   ~~~
 <br />
 
-### **Avatar With badge**
+<h2 id="badge">Avatar With badge</h2>
+
 ##### **Badge** renders a badge on the avatar at the bottom right corner with color can change by pass badge color props.
 
 <br />

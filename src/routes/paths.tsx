@@ -134,36 +134,33 @@ const paths = [
     path: 'avatars',
     items: [
       {
+        label: 'Image avatars',
+        toId: '#image',
+      },
+      {
+        label: 'Letter avatars',
+        toId: '#letter-avatars',
+      },
+      {
+        label: 'Sizes',
+        toId: '#sizes',
+      },
+      {
+        label: 'Variants',
+        toId: '#variants',
+      },
+      {
         label: 'Avatar Group',
-        toId: '#Avatar Group',
+        toId: '#group',
       },
       {
-        label: 'Rating precision',
-        toId: '#rating-precision',
+        label: 'Avatar With badge',
+        toId: '#badge',
       },
+
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
-      },
-      {
-        label: 'Customization',
-        toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
-      },
-      {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'Api props',
+        toId: '#api',
       },
     ],
     element: <AvatarsPage />,

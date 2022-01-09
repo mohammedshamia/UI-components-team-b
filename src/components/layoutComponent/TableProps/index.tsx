@@ -6,6 +6,7 @@ import { IPropTable } from './interface';
 
 interface ITableComponent {
   data?: IPropTable[];
+  id?: string;
 }
 
 const tableHeader = (data = []) => {
@@ -26,9 +27,12 @@ const bodyTable = (data = []) => {
     );
   });
 };
-const TableProps: React.FC<ITableComponent> = ({ data }: ITableComponent) => {
+const TableProps: React.FC<ITableComponent> = ({
+  data,
+  id,
+}: ITableComponent) => {
   return (
-    <Container>
+    <Container id={id}>
       <Typography variant="h2" children="API Props" bold />
       <Table>
         <TBody>
