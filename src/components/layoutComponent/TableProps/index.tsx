@@ -1,5 +1,4 @@
 import React from 'react';
-// import { data as inistialData } from './data';
 import { Table, TBody, Th, Tr, Td, Container } from './style';
 import Typography from '../../baseComponent/Typography';
 import { IPropTable } from './interface';
