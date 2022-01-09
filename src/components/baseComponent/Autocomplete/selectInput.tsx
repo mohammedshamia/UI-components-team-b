@@ -1,4 +1,3 @@
-/* eslint-disable no-empty */
 import React, { memo, useRef, useState } from 'react';
 import {
   ChoicesWrapper,
@@ -26,7 +25,6 @@ function SelectInput({
   width = '100%',
   alignItem = 'left',
   freeSolo,
-  getOptionLabel,
   fontSize = '1rem',
   id,
   ...others
@@ -39,7 +37,7 @@ function SelectInput({
 
   const handleSearchItem = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && others.search) {
-      console.log('Enter', e.key);
+      // console.log('Enter', e.key);
     }
   };
   const handleClickChoice = (item: string) => {
@@ -62,13 +60,13 @@ function SelectInput({
 
   const checkIfClickedOutside = (e: MouseEvent) => {
     if (
-      ref.current !== null &&
-      e.target !== null &&
-      ref.current.contains(e.target as any)
-    ) {
-    } else {
+      !(
+        ref.current !== null &&
+        e.target !== null &&
+        ref.current.contains(e.target as any)
+      )
+    )
       setOpenChoices(false);
-    }
   };
 
   document.addEventListener('mousedown', checkIfClickedOutside);

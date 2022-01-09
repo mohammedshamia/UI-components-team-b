@@ -7,6 +7,10 @@ const RatingPage = Loadable(
 const AutoCompletePage = Loadable(
   lazy(() => import('../pages/Components/AutocompletePage')),
 );
+
+const AvatarsPage = Loadable(
+  lazy(() => import('../pages/Components/AvatarsPage')),
+);
 // const TypographyPage = Loadable(lazy(() => import('../pages/Typography')));
 
 const paths = [
@@ -49,7 +53,7 @@ const paths = [
     element: <RatingPage />,
   },
   {
-    path: 'avatars',
+    path: 'avatar',
     items: [
       {
         label: 'Avatar Group',
@@ -84,7 +88,7 @@ const paths = [
         toId: '#keyboard',
       },
     ],
-    element: () => <p>rating</p>,
+    element: <AvatarsPage />,
   },
   {
     path: 'autocomplete',

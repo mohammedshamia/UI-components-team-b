@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AllRoutes from './routes';
 import Navbar from './components/layoutComponent/Navbar';
 import { GlobalStyle } from './Theme';
@@ -25,9 +25,7 @@ function App() {
         <GlobalStyle />
         <Navbar theme={state} setTheme={setState} />
         <BrowserRouter>
-          {/* <Routes> */}
           <AllRoutes />
-          {/* </Routes> */}
         </BrowserRouter>
       </ThemeProvider>
     </>
