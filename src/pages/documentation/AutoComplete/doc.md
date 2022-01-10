@@ -1,4 +1,4 @@
-export default `
+
 **<h1 id='autocomplete' >AutoComplete </h2>**
 
 <br />
@@ -205,4 +205,4 @@ export default `
   ~~~
 
 
-`;
+

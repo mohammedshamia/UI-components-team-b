@@ -1,5 +1,4 @@
-export default `
-<h1 id="radio-group">Rating</h3/>
+ <h1 id="radio-group">Rating</h3/>
 <br/>
 <br/>
 ## Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
@@ -174,4 +173,4 @@ export const SizeRatingExample = () => (
 
 <br />
 
-`;
+ 

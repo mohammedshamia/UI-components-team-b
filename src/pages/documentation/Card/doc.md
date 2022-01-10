@@ -1,4 +1,3 @@
-export default `
 ## **Card**
 #### Cards contain content and actions about a single subject.
 
@@ -177,4 +176,4 @@ You can change the color of the components card with pass color props to the com
 <br />
 <br />
 
-`;
+
