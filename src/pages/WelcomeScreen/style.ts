@@ -19,12 +19,22 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  border: 1px solid #e6e6e6;
+  padding: 20px;
   margin-top: 64px;
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 50%;
   overflow: scroll;
   height: 100%;
   border-bottom-left-radius: 1rem;
+  & div {
+    border: none;
+    padding: -1px;
+    width: 20rem;
+    height: auto;
+  }
 `;
 
 export const ContainerImg = styled.img`

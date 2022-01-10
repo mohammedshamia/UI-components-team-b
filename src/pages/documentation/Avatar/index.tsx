@@ -33,7 +33,7 @@ const AvatarDocumentation: React.FC<any> = () => {
 
   return (
     <>
-      <EditPage href="https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Avatar/doc.ts" />
+      <EditPage href="https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Avatar/doc.md" />
       <Markdown
         content={avatarDoc}
         examples={{
