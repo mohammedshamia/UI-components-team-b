@@ -43,15 +43,28 @@ const Markdown: React.FC<MarkdownProps> = ({ content, examples }) => {
           code({ inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
-              <SyntaxHighlighter
-                children={String(children).replace(/\n$/, '')}
-                style={
-                  background?.default === '#fff' ? atelierEstuaryLight : vs2015
-                }
-                language={match[1]}
-                PreTag="dev"
-                {...props}
-              />
+              <div
+                style={{
+                  border: `1px solid #E9E7E7`,
+                  borderBottomRightRadius: '0.5rem',
+                  borderBottomLeftRadius: '0.5rem',
+                  borderTop: 'none',
+                  marginTop: '-.5rem',
+                  overflow: 'auto',
+                }}
+              >
+                <SyntaxHighlighter
+                  children={String(children).replace(/\n$/, '')}
+                  style={
+                    background?.default === '#fff'
+                      ? atelierEstuaryLight
+                      : vs2015
+                  }
+                  language={match[1]}
+                  PreTag="dev"
+                  {...props}
+                />
+              </div>
             ) : (
               <code className={className} {...props}>
                 {children}
