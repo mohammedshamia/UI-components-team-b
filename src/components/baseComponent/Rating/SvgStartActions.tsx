@@ -51,31 +51,6 @@ const SvgStart = ({
     return color.unfill;
   };
 
-  // const handleWithWidth = (e: React.MouseEvent<HTMLDivElement> | any) => {
-  //   const v = e.target.getBoundingClientRect();
-  //   console.log('e.target.getBoundingClientRect()', width);
-  //   console.log('e.target.getBoundingClientRect()', v.x);
-  // };
-  // const CustomIcon = (Icon: ReactNode, props: IconBaseProps) => (
-  //   <>
-  //     <Icon {...props} />
-  //   </>
-  // );
-  // const Icon = (
-  //   <CustomIcon
-  //     Icon={<AiFillStar />}
-  //     style={{
-  //       stroke: 'url(#myGradient)',
-  //       color: getColor(),
-  //       opacity: `${disabled ? '0.4' : '1'}`,
-  //       clipPath: ` ${ishover && !fullHover && `inset(0 50% 0 0)`}`,
-  //     }}
-  //     size={width}
-  //     offset={width}
-  //     width={width}
-  //     stopColor="red"
-  //   />
-  // );
   return (
     <>
       <WrapperParentStart
@@ -84,7 +59,6 @@ const SvgStart = ({
         onMouseEnter={handelMouseEnter}
         onMouseLeave={handelMouseEnterLeave}
         onClick={handelClick}
-        // onMouseMove={handleWithWidth}
       >
         <IconContext.Provider
           value={{
