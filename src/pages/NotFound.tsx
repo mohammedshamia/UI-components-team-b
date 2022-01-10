@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const PageNotFound = () => {
-  const navigate = useNavigate();
-  const goBack = () => navigate(-1);
+  // const navigate = useNavigate();
+  // const goBack = () => navigate(-1);
   return (
     <div>
       <svg

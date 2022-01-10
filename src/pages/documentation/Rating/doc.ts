@@ -1,17 +1,54 @@
 export default `
-<h2 id="rating">Rating</h2>
+<h1 id="radio-group">Rating</h3/>
 <br/>
-<h3>Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
-</h3>
+<br/>
+## Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
 
 <br />
+
+
+<h3 id="radio-group">Basic rating</h3/>
+<br />
 <br />
 <br />
 
-**<h2 id="basic-rating">Basic Rating Example</h2>**
+~~~js
+
+
+export const RatingExample = () => (
+
+  <InfoContainer flexDirection="column">
+    <WrapperParent display="flex" JC="space-between" item="center">
+      <h3> Controlled</h3>
+      <Rating value={2} isRow />
+    </WrapperParent>
+  
+    <br />
+  
+    <WrapperParent display="flex" JC="space-between" item="center">
+      <h3> Readonly</h3>
+      <Rating value={2} readonly />
+    </WrapperParent>
+    <br />
+
+    <WrapperParent display="flex" JC="space-between" item="center">
+      <h3> Readonly</h3>
+      <Rating value={2} disabled />
+    </WrapperParent>
+    <br />
+
+    </InfoContainer>
+);
+~~~
+
 <br />
 
-### use  custom  rating  with  simple  example like  readonly  or  controllor example  and  disable the action.
+
+
+<h2 id="hover-feedback">Sizes</h3>
+
+#### For larger or smaller ratings use the size prop.
+**larger** , **medium** , **small**
 
 <br />
 <br />
