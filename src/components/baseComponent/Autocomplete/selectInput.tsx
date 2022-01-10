@@ -41,9 +41,16 @@ function SelectInput({
       navigate(`/components/${state}`);
     }
   };
-  const handleClickChoice = (item: string) => {
-    onChange(item);
-    setstate(item);
+  const handleClickChoice = (item: string | any) => {
+    if (others.renderOption) {
+      const setvalue = item.props.children[1].props.children[0];
+      onChange(setvalue);
+      setstate(setvalue);
+    } else {
+      onChange(item);
+      setstate(item);
+    }
+
     if (!others.disableCloseOnSelect || false) {
       setOpenChoices(false);
     }
@@ -69,14 +76,14 @@ function SelectInput({
     )
       setOpenChoices(false);
   };
-
+  console.log(others.renderOption);
   document.addEventListener('mousedown', checkIfClickedOutside);
   const handleClearInput = () => {
     onChange('');
     setstate('');
   };
   return (
-    <Box>
+    <>
       <Wrapper
         margin={others.margin || ''}
         borderRadius={others.borderRadius}
@@ -147,24 +154,27 @@ function SelectInput({
             openChoices={openChoices}
           >
             {others.renderOption.map((item: any, index: number) => (
-              <Button
-                textAlign="start"
-                fontSize={fontSize}
-                isActive={state === item}
-                type="button"
-                key={index}
-                onClick={() => {
-                  handleClickChoice(item);
-                }}
-              >
-                {item}
-              </Button>
+              <>
+                {console.log(item, 'item')}
+                <Button
+                  textAlign="start"
+                  fontSize={fontSize}
+                  isActive={state === item}
+                  type="button"
+                  key={index}
+                  onClick={() => {
+                    handleClickChoice(item);
+                  }}
+                >
+                  {item}
+                </Button>
+              </>
             ))}
           </ChoicesWrapper>
         )}
       </Wrapper>
       <TextError error={others.error}>{others.error || ''}</TextError>
-    </Box>
+    </>
   );
 }
 
