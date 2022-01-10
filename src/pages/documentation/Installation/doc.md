@@ -10,13 +10,26 @@
 **<h2 id='features' >Features</h2>**
 <br />
 
-#### * A set of high-quality React components out of the box.
-#### * Powerful theme customization in every detail.
-#### * Written in TypeScript with predictable static types.
-#### * The value must be chosen from a predefined set of allowed values..
+- A set of high-quality React components out of the box.
+- Powerful theme customization in every detail.
+- Written in TypeScript with predictable static types.
+- The value must be chosen from a predefined set of allowed values..
 <br />
-<br />
-<br />
+
+
+## Technologies
+
+- Styled Components
+
+- React Router
+
+- React
+
+- Typescript
+
+- Markdown Library
+
+- Sandbox CLI 
 
 **<h3 id='quick-start' >Quick start</h3>**
 
@@ -43,20 +56,5 @@
 
 
 
-<br />
-
-## Technologies
-
-[ ]- Styled Components
-
-[ ]- React Router
-
-[ ]- React
-
-[ ]- Typescript
-
-[ ]- Markdown Library
-
-[ ]- Sandbox CLI 
 
 <br />
