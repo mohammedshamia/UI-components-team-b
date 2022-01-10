@@ -4,10 +4,10 @@ import {
   SizeRatingExample,
   CustomizationRating,
 } from './RatingExamples';
-
 import ratingDoc from './doc';
 import { EditPage } from '../../../components/layoutComponent/Container';
-// import TableProps from '../../../components/layoutComponent/TableProps';
+import TableProps from '../../../components/layoutComponent/TableProps';
+import propsTableData from './propsTableData';
 
 const RatingDocumentation: React.FC<any> = () => {
   return (
@@ -24,7 +24,9 @@ https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/page
           ex3: CustomizationRating,
         }}
       />
-      {/* <TableProps id="api" data={propsTableData} /> */}
+      <div id="api_rating">
+        <TableProps data={propsTableData} />
+      </div>
     </>
   );
 };

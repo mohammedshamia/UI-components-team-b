@@ -19,7 +19,7 @@ export const SimpleRatingExample = () => {
       </WrapperParent>
       <br />
       <WrapperParent display="flex" JC="space-between" item="center">
-        <h3> Readonly</h3>
+        <h3> Disabled</h3>
         <Rating value={value} disabled />
       </WrapperParent>
     </InfoContainer>

@@ -1,7 +1,8 @@
 import React from 'react';
+import InstallationDocumentation from './documentation/Installation';
 
 export const InstallPage = () => {
-  return <div>installation page addd md hre</div>;
+  return <InstallationDocumentation />;
 };
 
 export default InstallPage;
