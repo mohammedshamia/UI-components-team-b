@@ -21,17 +21,17 @@
 ## Technologies
 <br />
 
-- Styled Components
+  - Styled Components
 
-- React Router
+  - React Router
 
-- React
+  - React
 
-- Typescript
+  - Typescript
 
-- Markdown Library
+  - Markdown Library
 
-- Sandbox CLI 
+  - Sandbox CLI 
 
 <br />
 
