@@ -4,7 +4,7 @@ import { Icon } from './styles';
 const SidebarData = [
   {
     title: 'Installation',
-    path: '/getting-started/install',
+    path: '/getting-started/installation',
     icon: (
       <Icon
         focusable="false"

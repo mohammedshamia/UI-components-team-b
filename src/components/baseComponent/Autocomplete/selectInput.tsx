@@ -1,4 +1,5 @@
 import React, { memo, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   ChoicesWrapper,
   StyledAutoComplete,
@@ -32,12 +33,12 @@ function SelectInput({
   const [state, setstate] = useState<string>(value);
   const [openChoices, setOpenChoices] = useState<boolean>(false);
   const [Choices, setChoices] = useState<any>([...option]);
-
+  const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null);
 
   const handleSearchItem = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && others.search) {
-      // console.log('Enter', e.key);
+      navigate(`/components/${state}`);
     }
   };
   const handleClickChoice = (item: string) => {

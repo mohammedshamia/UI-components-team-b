@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import AutocompletePage from '../pages/Components/AutocompletePage';
 import AvatarsPage from '../pages/Components/AvatarsPage';
 import TypographyPage from '../pages/Components/TypographyPage';
+import InstallationPage from '../pages/Components/installPage';
 import Loadable from './Loading';
 
 const RatingPage = Loadable(
@@ -149,6 +150,24 @@ const paths = [
       },
     ],
     element: <AutocompletePage />,
+  },
+  {
+    path: 'installation',
+    items: [
+      {
+        label: 'Features',
+        toId: '#features',
+      },
+      {
+        label: 'Playground',
+        toId: '#playground',
+      },
+      {
+        label: 'Country select',
+        toId: '#country-select',
+      },
+    ],
+    element: <InstallationPage />,
   },
 ];
 

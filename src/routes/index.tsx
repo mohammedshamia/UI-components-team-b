@@ -19,6 +19,9 @@ const CardPage = Loadable(lazy(() => import('../pages/documentation/Card')));
 const AvatarsPage = Loadable(
   lazy(() => import('../pages/documentation/Avatar')),
 );
+const InstallPage = Loadable(
+  lazy(() => import('../pages/documentation/Installation')),
+);
 const PageNotFound = Loadable(lazy(() => import('../pages/NotFound')));
 
 const AllRoutes = () => {
@@ -31,7 +34,6 @@ const AllRoutes = () => {
       path: '/components',
       element: <MainPage />,
       children: [
-        // { path: '/', element: <Navigate to="components/rating" replace /> },
         { path: 'rating', element: <RatingPage /> },
         { path: 'typography', element: <TypographyPage /> },
         { path: 'avatar', element: <AvatarsPage /> },
@@ -43,9 +45,8 @@ const AllRoutes = () => {
       path: '/getting-started',
       element: <MainPage />,
       children: [
-        // { path: '/', element: <Navigate to="components/rating" replace /> },
         { path: 'about', element: <RatingPage /> },
-        { path: 'install', element: <p>install</p> },
+        { path: 'installation', element: <InstallPage /> },
       ],
     },
     { path: '*', element: <Navigate to="/404" replace /> },
