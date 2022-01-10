@@ -23,16 +23,12 @@ const paths = [
         toId: '#rating-precision',
       },
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
+        label: 'Sizes',
+        toId: '#sizes',
       },
       {
         label: 'Customization',
         toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
       },
       {
         label: 'Accessibility',
@@ -83,28 +79,20 @@ const paths = [
     path: 'typography',
     items: [
       {
-        label: 'Typography',
-        toId: '#Typography',
+        label: 'Accessibility',
+        toId: '#accessibility',
       },
       {
         label: 'Colors',
-        toId: '#Colors',
+        toId: '#colors',
       },
       {
-        label: 'fontSize',
+        label: 'FontSize',
         toId: '#fontSize',
       },
       {
-        label: 'Customization',
-        toId: '#customization',
-      },
-      {
-        label: 'Accessibility',
-        toId: '#Accessibility',
-      },
-      {
         label: 'Theme',
-        toId: '#Theme',
+        toId: '#theme',
       },
     ],
     element: <TypographyPage />,
@@ -113,36 +101,33 @@ const paths = [
     path: 'avatar',
     items: [
       {
+        label: 'Image avatars',
+        toId: '#image',
+      },
+      {
+        label: 'Letter avatars',
+        toId: '#letter-avatars',
+      },
+      {
+        label: 'Sizes',
+        toId: '#avatar-sizes',
+      },
+      {
+        label: 'Variants',
+        toId: '#avatar-variants',
+      },
+      {
         label: 'Avatar Group',
-        toId: '#Avatar Group',
+        toId: '#avatar-group',
       },
       {
-        label: 'Rating precision',
-        toId: '#rating-precision',
+        label: 'Avatar With badge',
+        toId: '#avatar-badge',
       },
+
       {
-        label: 'Hover feedback',
-        toId: '#hover-feedback',
-      },
-      {
-        label: 'Customization',
-        toId: '#customization',
-      },
-      {
-        label: 'Radio group',
-        toId: '#radio-group',
-      },
-      {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'Api props',
+        toId: '#api',
       },
     ],
     element: <AvatarsPage />,

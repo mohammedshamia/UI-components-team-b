@@ -22,13 +22,6 @@ export const ContainerStyle = styled.div<IContainerProps>`
   @media (max-width: 526px) {
     width: 100%;
   }
-  strong {
-    background: ${props => props.theme.background.default};
-    color: ${props => props.theme.text.primary};
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 3.3rem;
-  }
 `;
 
 export const InfoContainerStyle = styled.div<IContainerProps>`

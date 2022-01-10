@@ -3,6 +3,7 @@ import React, { useMemo } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import paths from '../../routes/paths';
 import { handelPath } from '../../utils/handlePath';
+import SidebarLeft from './Sidebar/SidebarLeft';
 import MainLayout, {
   Contents,
   ContentSide,
@@ -18,11 +19,12 @@ const Layout = () => {
     () => handelPath(paths, currrentPath),
     [location.pathname],
   );
-  console.log('rigthSide', rigthSide);
 
   return (
     <MainLayout>
-      <LeftSide>left side</LeftSide>
+      <LeftSide>
+        <SidebarLeft />
+      </LeftSide>
       <ContentSide>
         <Routes>
           <Route index element={() => <p>1111</p>} />

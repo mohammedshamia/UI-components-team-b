@@ -173,7 +173,7 @@ export default `
   ~~~
 <br />
 
-<h2 id='icon' >Validation</h2>
+<h2 id='validation' >Validation</h2>
 
 ### The error prop can then be used to provide feedback to the user about the error.
 
