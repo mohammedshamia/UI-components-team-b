@@ -1,6 +1,7 @@
 import 'reactjs-popup/dist/index.css';
 import { useTheme } from 'styled-components';
 import Popup from 'reactjs-popup';
+import { useEffect, useState } from 'react';
 import { EmbedCode } from '../../../components';
 import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
@@ -14,12 +15,22 @@ import {
   AvatarWithBadge,
 } from './AvatarExamples';
 
-import avatarDoc from './doc';
 import propsTableData from './propsTableData';
 import { ButtonStyle } from '../../../components/layoutComponent/Container/style';
+// @ts-ignore
+// eslint-disable-next-line import/extensions
+import readmePath from './doc.md';
 
 const AvatarDocumentation: React.FC<any> = () => {
   const { background } = useTheme();
+  const [avatarDoc, setAvatarDoc] = useState('');
+
+  useEffect(() => {
+    fetch(readmePath)
+      .then(response => response.text())
+      .then(setAvatarDoc);
+  });
+
   return (
     <>
       <EditPage href="https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Avatar/doc.ts" />
