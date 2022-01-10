@@ -15,9 +15,11 @@
 - Written in TypeScript with predictable static types.
 - The value must be chosen from a predefined set of allowed values..
 <br />
+<br />
 
 
 ## Technologies
+<br />
 
 - Styled Components
 
@@ -30,6 +32,11 @@
 - Markdown Library
 
 - Sandbox CLI 
+
+<br />
+
+<br />
+
 
 **<h3 id='quick-start' >Quick start</h3>**
 
