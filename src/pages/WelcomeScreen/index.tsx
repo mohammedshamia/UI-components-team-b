@@ -113,11 +113,11 @@ export default function Welcome() {
             {/* <TypographyExample2 /> */}
             <SimpleRatingExample />
           </div>
-        </div>
-        <div>
-          <AvatarWithSizes />
-          <CardImg />
-          <CountrySelect />
+          <div>
+            <AvatarWithSizes />
+            <CardImg />
+            <CountrySelect />
+          </div>
         </div>
       </ImageContainer>
     </Wrapper>

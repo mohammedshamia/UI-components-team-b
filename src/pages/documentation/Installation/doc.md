@@ -11,27 +11,26 @@
 <br />
 
 <p> - A set of high-quality React components out of the box.</p>
-- Powerful theme customization in every detail.
-- Written in TypeScript with predictable static types.
-- The value must be chosen from a predefined set of allowed values..
+<p> - Powerful theme customization in every detail.</p>
+<p> - Written in TypeScript with predictable static types.</p>
+<p> - The value must be chosen from a predefined set of allowed values..</p>
 <br />
 <br />
 
 
 ## Technologies
 <br />
-<p>
-  - Styled Components
+<p>  - Styled Components </p>
 
-  - React Router
+<p>  - React Router </p>
 
-  - React
+<p>  - React </p>
 
-  - Typescript
+<p>  - Typescript</p>
 
-  - Markdown Library
+  <p> - Markdown Library</p>
 
-  - Sandbox CLI 
+  <p> - Sandbox CLI </p>
 </p>
 <br />
 

@@ -27,13 +27,14 @@ export const ImageContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 50%;
+  justify-content: center;
   overflow: scroll;
   height: 100%;
   border-bottom-left-radius: 1rem;
   & div {
     border: none;
-    padding: -1px;
-    width: 26rem;
+    padding: 11px;
+    width: 30rem;
     height: auto;
   }
 `;
