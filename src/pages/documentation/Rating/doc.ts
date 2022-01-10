@@ -5,58 +5,18 @@ export default `
 ## Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
 
 <br />
-
-
-<h3 id="radio-group">Basic rating</h3/>
-<br />
-<br />
-<br />
-
-~~~js
-
-
-export const RatingExample = () => (
-
-  <InfoContainer flexDirection="column">
-    <WrapperParent display="flex" JC="space-between" item="center">
-      <h3> Controlled</h3>
-      <Rating value={2} isRow />
-    </WrapperParent>
-  
-    <br />
-  
-    <WrapperParent display="flex" JC="space-between" item="center">
-      <h3> Readonly</h3>
-      <Rating value={2} readonly />
-    </WrapperParent>
-    <br />
-
-    <WrapperParent display="flex" JC="space-between" item="center">
-      <h3> Readonly</h3>
-      <Rating value={2} disabled />
-    </WrapperParent>
-    <br />
-
-    </InfoContainer>
-);
-~~~
-
 <br />
 
 
-
-<h2 id="hover-feedback">Sizes</h3>
-
-#### For larger or smaller ratings use the size prop.
-**larger** , **medium** , **small**
+<h2 id="radio-group">Basic rating</h2/>
 
 <br />
 <br />
+
 
 <ex1></ex1>
 
-<br />
-<br />
+
 
 ~~~js
 
@@ -84,14 +44,15 @@ export const SimpleRatingExample = () => {
 
 
 ~~~
+<br />
+<br />
 
-### Sizes
-#### You can change the size of the avatar with pass size props to the component.
-*Note:* The size of the avatar is not the size of the image.
-<br />
-<br />
+
 
 **<h2 id="sizes">Sizes</h2>**
+
+#### You can change the size of the avatar with pass size props to the component.
+*Note:* The size of the avatar is not the size of the image.
 
 <br />
 
@@ -104,7 +65,7 @@ export const SimpleRatingExample = () => {
 
 <ex2></ex2>
 
-<br />
+
 
 ~~~js
 export const SizeRatingExample = () => (
@@ -134,18 +95,16 @@ export const SizeRatingExample = () => (
 **<h2 id="customization">Customization</h2>**
 
 <br />
-<br />
 
 ### use  speical Maximum rating  alos with  with  you icon as  you want.
 
-<br/>
+
 
 **Note:** The ioon should be  svg  and  form  reac-icon .
 <br />
 <ex3></ex3>
 
-<br />
-<br />
+
 
 
 ~~~js
@@ -171,7 +130,9 @@ export const SizeRatingExample = () => (
 );
 
 ~~~
-
 <br />
+<br />
+<h2 id='api' ></h2>
+
 
 `;

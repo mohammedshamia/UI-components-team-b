@@ -13,7 +13,8 @@ import SelectInput from '../../baseComponent/Autocomplete/selectInput';
 const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const [searchValue, setSearchValue] = useState('');
   const { pathname } = useLocation();
-  const IsMainPage = pathname.includes('components');
+  const currentPath = pathname.split('/')[2];
+  const IsMainPage = pathname.includes('installation');
 
   const handleChangeTheme = () => {
     if (theme.theme === 'light') {
@@ -28,12 +29,12 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
     setSearchValue(newValue);
   };
   return (
-    <NavbarComponent IsMainPage>
+    <NavbarComponent IsMainPage={IsMainPage}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Link to="/">
           <img width="60px" src={logo} alt="logo" />
         </Link>
-        {!IsMainPage && (
+        {currentPath === undefined && (
           <>
             <NavbarLink>Products</NavbarLink>
             <NavbarLink>Docs</NavbarLink>

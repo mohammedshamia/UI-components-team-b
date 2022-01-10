@@ -20,7 +20,7 @@ export default `
 
 <ex1></ex1>
 
-<br />
+
 
 ~~~js
 
@@ -60,7 +60,7 @@ export default `
 
 <br />
 <ex3></ex3>
-<br />
+
 
 
 ~~~js
@@ -101,7 +101,7 @@ export default `
 ### Set *freeSolo* to true so the textbox can contain any arbitrary value.
 <br />
 <ex4></ex4>
-<br />
+
 
 ~~~js
 
@@ -133,14 +133,14 @@ export default `
 ~~~
 <br />
 
-<h2 id='icon'>Icons</h2>
+<h2 id='icons'>Icons</h2>
 
 ### There are multiple ways to display an icon with a text field.
 
 
 <br />
 <ex5></ex5>
-<br />
+
 
 ~~~jsx
 
@@ -180,7 +180,7 @@ export default `
 <br />
 <ex6></ex6>
 
-<br />
+
 
 ~~~jsx
 
@@ -203,6 +203,9 @@ export default `
 
 
   ~~~
+<br />
+<br />
+<h2 id='api' ></h2>
 
 
 `;
