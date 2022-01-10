@@ -10,7 +10,7 @@
 **<h2 id='features' >Features</h2>**
 <br />
 
-- A set of high-quality React components out of the box.
+<p> - A set of high-quality React components out of the box.</p>
 - Powerful theme customization in every detail.
 - Written in TypeScript with predictable static types.
 - The value must be chosen from a predefined set of allowed values..
