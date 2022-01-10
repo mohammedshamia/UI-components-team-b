@@ -54,10 +54,9 @@ export const WrapperParentStart = styled('div')<IWrapperParentStart>`
   ${props =>
     props.disabled &&
     css`
-      cursor: auto;
+      cursor: default;
       opacity: 0.4;
       &:hover {
-        /* padding: 0px 4px; */
         animation: none !important;
         transition: none !important;
       }
@@ -65,9 +64,9 @@ export const WrapperParentStart = styled('div')<IWrapperParentStart>`
   ${props =>
     props.readonly &&
     css`
-      cursor: auto !important;
+      cursor: default;
       &:hover {
-        padding: 0px 4px;
+        /* padding: 0px 4px; */
         animation: none !important;
         transition: none !important;
       }

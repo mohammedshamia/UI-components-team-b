@@ -19,10 +19,6 @@ const paths = [
         toId: '#basic-rating',
       },
       {
-        label: 'Rating precision',
-        toId: '#rating-precision',
-      },
-      {
         label: 'Sizes',
         toId: '#sizes',
       },
@@ -31,16 +27,8 @@ const paths = [
         toId: '#customization',
       },
       {
-        label: 'Accessibility',
-        toId: '#accessibility',
-      },
-      {
-        label: 'ARIA',
-        toId: '#accessibility',
-      },
-      {
-        label: 'keyboard',
-        toId: '#keyboard',
+        label: 'api',
+        toId: '#api_rating',
       },
     ],
     element: <RatingPage />,
