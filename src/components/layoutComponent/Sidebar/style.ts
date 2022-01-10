@@ -5,8 +5,7 @@ import styled, { css } from 'styled-components';
 const MainLayout = styled('div')`
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
-  width: 100vw;
-  height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.5rem;
@@ -37,28 +36,26 @@ export const LinkItem = styled(NavLink)<{ isActive?: boolean }>`
   font-size: 18px;
   color: ${props => props.theme.text.primary};
   font-weight: 500;
-  padding: 20px 0px;
-  display: block;
-  padding: 10px 0px;
-  padding-left: 20px;
+  padding: 10px 0 10px 20px;
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 8px 0px;
   text-decoration: none;
   &:hover {
+    border-left: 1px solid ${props => props.theme.text.disable};
+    color: ${props => props.theme.text.disable};
     ${props =>
       props.isActive &&
       css`
-        border-left: ${`1px solid  ${props.theme.secondary.main}`};
-        color: #0072e5;
+        border-left: ${`1px solid  ${props.theme.primary.dark}`};
+        color: ${props.theme.primary.dark};
       `}
   }
   ${props =>
     props.isActive &&
     css`
-      border-left: ${`1px solid  ${props.theme.secondary.main}`};
-      color: #0072e5;
+      border-left: ${`1px solid  ${props.theme.primary.main}`};
+      color: ${props.theme.primary.main};
     `}
 `;
 
@@ -77,19 +74,20 @@ export const LeftSide = styled('div')`
   }
 `;
 export const ContentSide = styled('div')`
-  /* background: white; */
   grid-column: span 3 / span 3;
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
 `;
 export const RightSide = styled('div')`
+  position: fixed;
+  right: 0;
   grid-column: span 1 / span 1;
   background: ${props => props.theme.background.default};
   color: ${props => props.theme.text.primary};
-  color: #1a2027;
   height: 100%;
   min-width: 240px;
-  /* padding-left: 20px; */
+
+  margin-top: 4em;
 `;
 
 export const HeaderLeft = styled('div')`

@@ -1,13 +1,13 @@
 export default `
-## **Rating**
+<h1 id="radio-group">Rating</h3/>
 <br/>
 <br/>
-## Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own..
+## Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
 
 <br />
 
-### **Basic rating**
-<h3 id="radio-group"></h3/>
+
+<h3 id="radio-group">Basic rating</h3/>
 <br />
 <br />
 
@@ -18,7 +18,7 @@ export default `
 ~~~js
 
 
-export const AvatarExample = () => (
+export const RatingExample = () => (
 
   <InfoContainer flexDirection="column">
     <WrapperParent display="flex" JC="space-between" item="center">
@@ -46,11 +46,12 @@ export const AvatarExample = () => (
 
 <br />
 
-### **Sizes**
 
-<h3 id="hover-feedback"></h3>
-#### For larger or smaller ratings use the **size** prop.
-[ **larger** , **medium** , **small**  ]
+
+<h2 id="hover-feedback">Sizes</h3>
+
+#### For larger or smaller ratings use the size prop.
+**larger** , **medium** , **small**
 
 <br />
 <br />
@@ -75,9 +76,9 @@ export const AvatarExample = () => (
 ~~~
 <br />
 
-### **Sizes**
+### Sizes
 #### You can change the size of the avatar with pass size props to the component.
-**Note:** The size of the avatar is not the size of the image.
+*Note:* The size of the avatar is not the size of the image.
 <br />
 <ex3></ex3>
 <br />
@@ -111,80 +112,5 @@ export const AvatarExample = () => (
 ~~~
 
 <br />
-
-### **Variants**
-#### If you need square or rounded avatars, use the **variant** prop.
-<br />
-<ex4></ex4>
-<br />
-
-~~~js
-
-  import { Avatar, InfoContainer } from '../../../components';
-
-  export const AvatarWithVariant = () => (
-    <InfoContainer>
-      <Avatar
-        src="https://mui.com/static/images/avatar/2.jpg"
-        variant="square"
-      />
-      <Avatar
-        src="https://mui.com/static/images/avatar/2.jpg"
-        variant="square"
-      />
-    </InfoContainer>
-
-~~~
-<br />
-
-### **Avatar Group**
-##### **AvatarGroup** renders its children as a stack. Use the max prop to limit the number of avatars.
-
-<br />
-<ex5></ex5>
-<br />
-
-~~~jsx
-
-export const AvatarGroupExample = () => (
-  <InfoContainer>
-    <AvatarGroup total={20} max={3}>
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-      <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
-    </AvatarGroup>
-  </InfoContainer>
-
-  );
-  ~~~
-<br />
-
-### **Avatar With badge**
-##### **Badge** renders a badge on the avatar at the bottom right corner with color can change by pass badge color props.
-
-<br />
-<ex6></ex6>
-<br />
-
-~~~jsx
-
-export const AvatarWithBadge = () => (
-  <InfoContainer>
-    <Avatar src="https://mui.com/static/images/avatar/2.jpg" badge />
-    <Avatar
-      src="https://mui.com/static/images/avatar/2.jpg"
-      badge
-      badgeColor="#f44336"
-    />
-    <Avatar
-      src="https://mui.com/static/images/avatar/2.jpg"
-      badge
-      badgeColor="orange"
-    />
-  </InfoContainer>
-);
-
-  ~~~
-
 
 `;

@@ -28,7 +28,7 @@ export const SidebarLink = styled(NavLink)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 8px 8px 24px;
+  padding: 13px 8px 8px 24px;
   color: ${props => props.theme.text.primary};
   text-decoration: none;
   font-size: 0.875rem;
@@ -40,7 +40,8 @@ export const SidebarLink = styled(NavLink)`
   letter-spacing: 0;
   box-sizing: border-box;
   &:hover {
-    background-color: ${props => props.theme.background.hover};
+    color: ${props => props.theme.primary.main};
+    background: ${props => props.theme.primary.light};
     cursor: pointer;
   }
   &:active {
@@ -49,14 +50,14 @@ export const SidebarLink = styled(NavLink)`
 `;
 
 export const SidebarLabel = styled.span`
-  margin-left: 16px;
+  margin-left: 4px;
 `;
 
 export const DropdownLink = styled(NavLink)<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 7px 0px 7px 31px;
+  padding: 10px 0px 7px 31px;
   ${props =>
     props.isActive
       ? `color :${props.theme.primary.main};background-color:${props.theme.primary.light}`
@@ -70,13 +71,13 @@ export const DropdownLink = styled(NavLink)<{ isActive: boolean }>`
   text-decoration: none;
   font-weight: 500;
   line-height: 1.5;
-  border-radius: 5px;
+
   width: 100%;
   box-sizing: border-box;
   transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
-    color: ${props => props.theme.text.primary};
+    color: ${props => props.theme.primary.main};
     background: ${props => props.theme.primary.light};
   }
 `;

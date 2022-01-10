@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { InfoContainer } from '../../../components';
 import SelectInput from '../../../components/baseComponent/Autocomplete/selectInput';
-import { Countries } from './dataOption';
+import { Countries, top100Films } from './dataOption';
 
 export const ComboboxExample = () => {
   const [state, setState] = useState<string>('');
@@ -17,7 +17,7 @@ export const ComboboxExample = () => {
         onChange={handeleChange}
         placeholder="select"
         name="combo box"
-        option={['naim', 'mohammed']}
+        option={top100Films.map(item => item.label)}
         value={state}
       />
     </InfoContainer>
@@ -40,7 +40,7 @@ export const Playground = () => {
         onChange={handeleChange}
         placeholder="disableCloseOnSelect"
         name="disableCloseOnSelect"
-        option={[]}
+        option={top100Films.map(item => item.label)}
         value={state}
       />
       <SelectInput
@@ -52,7 +52,7 @@ export const Playground = () => {
         onChange={handeleChange}
         placeholder="disableClearable"
         name="disableClearable"
-        option={[]}
+        option={top100Films.map(item => item.label)}
         value={state}
       />
       <SelectInput
@@ -187,7 +187,7 @@ export const ValidationExample = () => {
         error="Input is Required"
         placeholder="Validation"
         name="Validation"
-        option={[]}
+        option={top100Films.map(item => item.label)}
         value={state}
       />
     </InfoContainer>

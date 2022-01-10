@@ -6,13 +6,13 @@ export default `
 ### The autocomplete is a normal text input enhanced by a panel of suggested options.
 <br />
 
-### 1. The widget is useful for setting the value of a single-line textbox in one of two types of scenarios: The value for the textbox must be chosen from a predefined set of allowed values, e.g., a location field must contain a valid location name: **combo box**.
+#### 1. The widget is useful for setting the value of a single-line textbox in one of two types of scenarios: The value for the textbox must be chosen from a predefined set of allowed values, e.g., a location field must contain a valid location name: <h3>combo box</h3>.
 <br />
 
-### 2. The textbox may contain any arbitrary value, but it is advantageous to suggest possible values to the user, e.g., a search field may suggest similar or previous searches to save the user time: **free solo**.
+#### 2. The textbox may contain any arbitrary value, but it is advantageous to suggest possible values to the user, e.g., a search field may suggest similar or previous searches to save the user time: <h3>free solo</h3>.
 <br />
 
-**<h2 id='combo-box' >Combo box </h2>**
+<h2 id='combo-box' >Combo box </h2>
 <br />
 
 #### The value must be chosen from a predefined set of allowed values..
@@ -42,7 +42,8 @@ export default `
 <br />
 <br />
 
-**<h3 id='playground' >Playground</h3>**
+<h3 id='playground' >Playground</h3>
+<br />
 
 #### Each of the following examples demonstrates one feature of the Autocomplete component.
 <br />
@@ -52,9 +53,10 @@ export default `
 <br />
 <br />
 
-**<h3 id='country-select' >Country select</h3>**
+<h3 id='country-select' >Country select</h3>
+<br />
 
-### Choose one of the countries..
+#### Choose one of the countries..
 
 <br />
 <ex3></ex3>
@@ -94,9 +96,9 @@ export default `
 <br />
 <br />
 
-**<h2 id='free-solo' >Free Solo</h2>**
+<h2 id='free-solo' >Free Solo</h2>
 
-### Set **freeSolo** to true so the textbox can contain any arbitrary value.
+### Set *freeSolo* to true so the textbox can contain any arbitrary value.
 <br />
 <ex4></ex4>
 <br />
@@ -131,8 +133,10 @@ export default `
 ~~~
 <br />
 
-**<h3 id='icon' >Icons</h3>**
-#### There are multiple ways to display an icon with a text field.
+<h2 id='icon'>Icons</h2>
+
+### There are multiple ways to display an icon with a text field.
+
 
 <br />
 <ex5></ex5>
@@ -169,8 +173,9 @@ export default `
   ~~~
 <br />
 
-**<h3 id='icon' >Validation</h3>**
-#### The error prop can then be used to provide feedback to the user about the error.
+<h2 id='icon' >Validation</h2>
+
+### The error prop can then be used to provide feedback to the user about the error.
 
 <br />
 <ex6></ex6>

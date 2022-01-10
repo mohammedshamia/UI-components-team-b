@@ -7,10 +7,8 @@ import {
   NavbarSearchContainer,
   NavbarLinksIcon,
 } from './style';
-import { Avatar } from '../../baseComponent';
 import logo from '../../../assets/logo.png';
 import SelectInput from '../../baseComponent/Autocomplete/selectInput';
-// interface INavbar {}
 
 const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -33,7 +31,7 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
     <NavbarComponent IsMainPage>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Link to="/">
-          <Avatar src={logo} />
+          <img width="60px" src={logo} alt="logo" />
         </Link>
         {!IsMainPage && (
           <>

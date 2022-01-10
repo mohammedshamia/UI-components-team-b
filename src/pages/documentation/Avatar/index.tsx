@@ -54,7 +54,7 @@ const AvatarDocumentation: React.FC<any> = () => {
           }`}
         />
       </Popup>
-      <TableProps data={propsTableData} />{' '}
+      <TableProps data={propsTableData} />
     </>
   );
 };

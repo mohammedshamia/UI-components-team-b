@@ -64,7 +64,8 @@ interface IChoicesWrapperProps {
 }
 
 export const ChoicesWrapper = styled.div<IChoicesWrapperProps>`
-  background: ${props => props.theme.background.default};
+  background: ${props => props.theme.background.paper};
+
   position: absolute;
   width: 100%;
   display: ${props => (!props.openChoices ? 'none' : 'flex')};
@@ -89,6 +90,7 @@ interface IButtonProps {
 export const Button = styled.button<IButtonProps>`
   font-size: ${props => props.fontSize};
   background: none;
+  color: ${props => props.theme.text.primary};
   border: none;
   transition: all 0.1s;
   padding: 10px;
@@ -97,7 +99,7 @@ export const Button = styled.button<IButtonProps>`
   text-align: ${props => props.textAlign || 'center'}
     ${props => props.isActive && 'background-color:#c8c8c8'};
   &:hover {
-    background-color: #e1e1e1;
+    background-color: ${props => props.theme.background.hover};
   }
 `;
 export const Icon = styled.span`
@@ -109,9 +111,6 @@ export const Icon = styled.span`
   border-radius: 30%;
   transition: all 0.5s;
   cursor: pointer;
-  &:hover {
-    background-color: #f0f0f0;
-  }
 `;
 export const ArrowIcon = styled.span`
   position: absolute;
@@ -138,6 +137,6 @@ export const StartIcon = styled.span`
   padding: 7px 10px 7px 10px;
   margin-right: 2px;
   ${Wrapper}:hover & {
-    color: ${props => props.theme.text.secondary};
+    color: ${props => props.theme.text.disable};
   }
 `;

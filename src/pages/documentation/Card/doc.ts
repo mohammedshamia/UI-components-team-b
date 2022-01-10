@@ -175,15 +175,6 @@ You can change the color of the components card with pass color props to the com
 ~~~
 
 <br />
-
-<h2 id="api">API</h2><br />
-
-\\<Card /><br />
-\\<CardHeader /><br />
-\\<CardImg /><br />
-\\<CardContent /><br />
-\\<Avatar /><br />
-\\<Typography /><br />
-\\<CardBtn />
+<br />
 
 `;

@@ -1,12 +1,15 @@
 export default `
 
-<h2 id='Typography'>Typography</h2>
+<h2 id='typography'>Typography</h2>
+<br />
 
 #### The Typography component makes it easy to apply a default set of font weights and sizes in your application.
 <br />
 
 <ex1></ex1>
 
+<br />
+<br />
  
 ~~~jsx
 
@@ -24,6 +27,7 @@ export const TypographyExample = () => (
     <Typography variant="span" children=" span " />
   </InfoContainer>
 );
+<br />
 
 
 ~~~
@@ -45,6 +49,8 @@ export const TypographyExample = () => (
 <br />
 
 <ex2></ex2>
+<br />
+<br />
  
 ~~~jsx
 export const TypographyExample2 = () => (
@@ -56,14 +62,20 @@ export const TypographyExample2 = () => (
 ~~~
 <br />
 
-## **fontSize and bold**
 
-<h2 id='fontSize'>fontSize</h2> 
+<h2 >fontSize and bold</h2> 
+<br />
+
+<h3 id='fontSize'>fontSize</h3> 
+<br />
 
 #### (typically 16px) so visitors can customize their browser defaults as needed.
 <br />
 
 <ex3></ex3>
+<br />
+<br />
+
 ~~~jsx
 export const TypographyExample3 = () => (
   <InfoContainer flexDirection="column">
@@ -80,6 +92,9 @@ export const TypographyExample3 = () => (
 <h2 id='Theme'>Theme</h2>
 
 #### In some situations you might not be able to use the Typography component. Hopefully, you might be able to take advantage of the typography keys of the theme.
+
+<br />
+<br />
 
 
 `;
