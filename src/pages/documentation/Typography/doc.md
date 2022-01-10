@@ -8,8 +8,7 @@
 
 <ex1></ex1>
 
-<br />
-<br />
+
  
 ~~~jsx
 
@@ -48,8 +47,7 @@ export const TypographyExample = () => (
 <br />
 
 <ex2></ex2>
-<br />
-<br />
+
  
 ~~~jsx
 export const TypographyExample2 = () => (
@@ -73,8 +71,7 @@ export const TypographyExample2 = () => (
 <br />
 
 <ex3></ex3>
-<br />
-<br />
+
 
 ~~~jsx
 export const TypographyExample3 = () => (
@@ -93,6 +90,8 @@ export const TypographyExample3 = () => (
 
 <br />
 <br />
+<h2 id='api' ></h2>
+
 
 
  

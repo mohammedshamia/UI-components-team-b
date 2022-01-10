@@ -39,6 +39,7 @@ export const lightTheme: DefaultTheme = {
     paper: '#fefefe',
     default: '#fff',
     hover: 'rgba(0, 0, 0, 0.24)',
+    blur: 'rgba(255,255,255,0.7)',
   },
   text: {
     primary: 'rgba(0, 0, 0, 0.87)',
@@ -73,6 +74,7 @@ export const darkTheme: DefaultTheme = {
     paper: '#232323',
     default: '#1e1e1e',
     hover: 'rgba(255, 255, 255, 0.24)',
+    blur: 'rgba(30,30,30,0.7)',
   },
   text: {
     primary: '#fff',

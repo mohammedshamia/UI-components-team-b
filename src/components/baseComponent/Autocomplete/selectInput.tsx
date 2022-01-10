@@ -41,9 +41,16 @@ function SelectInput({
       navigate(`/components/${state}`);
     }
   };
-  const handleClickChoice = (item: string) => {
-    onChange(item);
-    setstate(item);
+  const handleClickChoice = (item: string | any) => {
+    if (others.renderOption) {
+      const setvalue = item.props.children[1].props.children[0];
+      onChange(setvalue);
+      setstate(setvalue);
+    } else {
+      onChange(item);
+      setstate(item);
+    }
+
     if (!others.disableCloseOnSelect || false) {
       setOpenChoices(false);
     }
@@ -69,7 +76,6 @@ function SelectInput({
     )
       setOpenChoices(false);
   };
-
   document.addEventListener('mousedown', checkIfClickedOutside);
   const handleClearInput = () => {
     onChange('');

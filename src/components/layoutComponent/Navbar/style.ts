@@ -16,7 +16,8 @@ export const NavbarComponent = styled.div<Iprops>`
       ? `0px 0px 1px ${props.theme.text.secondary}`
       : '0px 0px 7px rgba(0, 0, 0, 0.8)'};
   padding: 1rem 9.3%;
-  background: ${props => props.theme.background.default};
+  background: ${props => props.theme.background.blur};
+  backdrop-filter: blur(5px);
   justify-content: space-between;
 `;
 

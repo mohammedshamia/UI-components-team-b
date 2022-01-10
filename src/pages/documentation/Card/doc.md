@@ -9,7 +9,7 @@ Although cards can support multiple actions, UI controls, and an overflow menu, 
 
 <br />
 <ex1></ex1>
-<br />
+
 
 ~~~js
 
@@ -38,7 +38,7 @@ CardImg places an image to the top of the card to reinforce the content.
 
 <br />
 <ex2></ex2>
-<br />
+
 
 ~~~js
 
@@ -74,7 +74,7 @@ You can inside use other components as Avatar and Typography.
 
 <br />
 <ex3></ex3>
-<br />
+
 
 ~~~jsx
 
@@ -123,7 +123,7 @@ Note: The size of the component is. [ small , medium , large]
 
 <br />
 <ex4></ex4>
-<br />
+
 
 ~~~js
 
@@ -152,7 +152,7 @@ You can change the color of the components card with pass color props to the com
 
 <br />
 <ex5></ex5>
-<br />
+
 
 ~~~js
 
@@ -172,8 +172,8 @@ You can change the color of the components card with pass color props to the com
   );
 
 ~~~
-
 <br />
 <br />
+<h2 id='api' ></h2>
 
 

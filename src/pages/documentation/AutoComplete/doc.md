@@ -6,10 +6,10 @@
 ### The autocomplete is a normal text input enhanced by a panel of suggested options.
 <br />
 
-#### 1. The widget is useful for setting the value of a single-line textbox in one of two types of scenarios: The value for the textbox must be chosen from a predefined set of allowed values, e.g., a location field must contain a valid location name: <h3>combo box</h3>.
+#### 1. The widget is useful for setting the value of a single-line textbox in one of two types of scenarios: The value for the textbox must be chosen from a predefined set of allowed values, e.g., a location field must contain a valid location name: **combo box**
 <br />
 
-#### 2. The textbox may contain any arbitrary value, but it is advantageous to suggest possible values to the user, e.g., a search field may suggest similar or previous searches to save the user time: <h3>free solo</h3>.
+#### 2. The textbox may contain any arbitrary value, but it is advantageous to suggest possible values to the user, e.g., a search field may suggest similar or previous searches to save the user time: **free solo**
 <br />
 
 <h2 id='combo-box' >Combo box </h2>
@@ -20,7 +20,7 @@
 
 <ex1></ex1>
 
-<br />
+
 
 ~~~js
 
@@ -60,7 +60,7 @@
 
 <br />
 <ex3></ex3>
-<br />
+
 
 
 ~~~js
@@ -101,7 +101,7 @@
 ### Set *freeSolo* to true so the textbox can contain any arbitrary value.
 <br />
 <ex4></ex4>
-<br />
+
 
 ~~~js
 
@@ -133,14 +133,14 @@
 ~~~
 <br />
 
-<h2 id='icon'>Icons</h2>
+<h2 id='icons'>Icons</h2>
 
 ### There are multiple ways to display an icon with a text field.
 
 
 <br />
 <ex5></ex5>
-<br />
+
 
 ~~~jsx
 
@@ -172,6 +172,7 @@
 
   ~~~
 <br />
+<br />
 
 <h2 id='validation' >Validation</h2>
 
@@ -180,7 +181,7 @@
 <br />
 <ex6></ex6>
 
-<br />
+
 
 ~~~jsx
 
@@ -203,6 +204,9 @@
 
 
   ~~~
+<br />
+<br />
+<h2 id='api' ></h2>
 
 
 

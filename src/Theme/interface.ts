@@ -23,6 +23,7 @@ declare module 'styled-components' {
       paper: string;
       default: string;
       hover: string;
+      blur: string;
     };
     text: {
       primary: string;

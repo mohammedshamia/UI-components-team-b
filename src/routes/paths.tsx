@@ -29,7 +29,7 @@ const paths = [
       },
       {
         label: 'api',
-        toId: '#api_rating',
+        toId: '#api',
       },
     ],
     element: <RatingPage />,
@@ -82,6 +82,10 @@ const paths = [
       {
         label: 'Theme',
         toId: '#theme',
+      },
+      {
+        label: 'Api props',
+        toId: '#api',
       },
     ],
     element: <TypographyPage />,
@@ -148,6 +152,10 @@ const paths = [
         label: 'Validation',
         toId: '#validation',
       },
+      {
+        label: 'Api props',
+        toId: '#api',
+      },
     ],
     element: <AutocompletePage />,
   },
@@ -159,12 +167,8 @@ const paths = [
         toId: '#features',
       },
       {
-        label: 'Playground',
-        toId: '#playground',
-      },
-      {
-        label: 'Country select',
-        toId: '#country-select',
+        label: 'Quick start',
+        toId: '#quick-start',
       },
     ],
     element: <InstallationPage />,
