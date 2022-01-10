@@ -41,7 +41,6 @@
 
 ~~~
 
-![image](https://user-images.githubusercontent.com/44713857/148774207-61d36edc-1f33-4530-adbf-1c14f46cf84f.png)
 
 
 <br />
