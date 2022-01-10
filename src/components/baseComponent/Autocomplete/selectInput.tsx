@@ -76,7 +76,6 @@ function SelectInput({
     )
       setOpenChoices(false);
   };
-  console.log(others.renderOption);
   document.addEventListener('mousedown', checkIfClickedOutside);
   const handleClearInput = () => {
     onChange('');
@@ -154,21 +153,18 @@ function SelectInput({
             openChoices={openChoices}
           >
             {others.renderOption.map((item: any, index: number) => (
-              <>
-                {console.log(item, 'item')}
-                <Button
-                  textAlign="start"
-                  fontSize={fontSize}
-                  isActive={state === item}
-                  type="button"
-                  key={index}
-                  onClick={() => {
-                    handleClickChoice(item);
-                  }}
-                >
-                  {item}
-                </Button>
-              </>
+              <Button
+                textAlign="start"
+                fontSize={fontSize}
+                isActive={state === item}
+                type="button"
+                key={index}
+                onClick={() => {
+                  handleClickChoice(item);
+                }}
+              >
+                {item}
+              </Button>
             ))}
           </ChoicesWrapper>
         )}
