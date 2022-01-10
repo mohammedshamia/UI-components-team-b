@@ -44,4 +44,12 @@
 
 
 <br />
+## Technologies
+[]- Styled Components
+[]- React Router
+[]- React
+[]- Typescript
+[]- Markdown Library
+[]- Sandbox CLI 
+
 <br />
