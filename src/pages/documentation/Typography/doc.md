@@ -1,4 +1,4 @@
-export default `
+ 
 
 <h2 id='typography'>Typography</h2>
 <br />
@@ -94,4 +94,4 @@ export const TypographyExample3 = () => (
 
 
 
-`;
+ 

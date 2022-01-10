@@ -1,4 +1,4 @@
-export default `
+
 **<h1 id='autocomplete' >AutoComplete </h2>**
 
 <br />
@@ -208,4 +208,4 @@ export default `
 <h2 id='api' ></h2>
 
 
-`;
+

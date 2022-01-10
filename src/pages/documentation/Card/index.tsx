@@ -28,7 +28,7 @@ const CardDocumentation: React.FC<any> = () => {
     <>
       <EditPage
         href="
-https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Card/doc.ts"
+https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Card/doc.md"
       />
       <Markdown
         content={avatarDoc}

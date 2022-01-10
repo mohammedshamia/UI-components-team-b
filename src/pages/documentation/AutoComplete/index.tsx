@@ -27,7 +27,7 @@ const AutoComleteDocumentation: React.FC<any> = () => {
     <>
       <EditPage
         href="
-https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/AutoComplete/doc.ts"
+https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/AutoComplete/doc.md"
       />{' '}
       <Markdown
         content={avatarDoc}

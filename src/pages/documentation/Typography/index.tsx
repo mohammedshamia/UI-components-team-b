@@ -24,7 +24,7 @@ const TypographyDocumentation = () => {
     <>
       <EditPage
         href="
-      https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Typography/doc.ts"
+      https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Typography/doc.md"
       />
       <Markdown
         content={avatarDoc}
