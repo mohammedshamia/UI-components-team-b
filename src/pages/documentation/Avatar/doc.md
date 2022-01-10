@@ -1,5 +1,7 @@
 <h2 id="avatar">Avatar</h2>
 
+## Test
+
 ### Avatars are found throughout material design with uses in everything from tables to dialog menus.
 
 <br />
