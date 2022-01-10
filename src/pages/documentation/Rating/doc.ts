@@ -1,6 +1,9 @@
 export default `
-<h2 id="rating">Rating</h2><br/>
-### Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
+<h2 id="rating">Rating</h2>
+<br/>
+<h3>Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.
+</h3>
+
 <br />
 <br />
 <br />
@@ -35,7 +38,7 @@ export const SimpleRatingExample = () => {
       </WrapperParent>
       <br />
       <WrapperParent display="flex" JC="space-between" item="center">
-        <h3> Readonly</h3>
+        <h3> Disabled</h3>
         <Rating value={value} disabled />
       </WrapperParent>
     </InfoContainer>
