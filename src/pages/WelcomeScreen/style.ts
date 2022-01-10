@@ -21,7 +21,7 @@ export const Content = styled.div`
 export const ImageContainer = styled.div`
   box-shadow: 3px 3px 10px 0px ${props => props.theme.primary.light} inset;
   background: ${props => props.theme.background.paper};
-  padding: 20px;
+  padding: 3rem;
   margin-top: 64px;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,7 @@ export const ImageContainer = styled.div`
   & div {
     border: none;
     padding: -1px;
-    width: 20rem;
+    width: 26rem;
     height: auto;
   }
 `;

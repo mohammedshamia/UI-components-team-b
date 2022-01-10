@@ -36,9 +36,9 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
         </Link>
         {currentPath === undefined && (
           <>
-            <NavbarLink>Products</NavbarLink>
-            <NavbarLink>Docs</NavbarLink>
-            <NavbarLink>About us</NavbarLink>
+            <NavbarLink to="/getting-started/installation">Products</NavbarLink>
+            <NavbarLink to="/components">Docs</NavbarLink>
+            <NavbarLink to="/getting-started/installation">About us</NavbarLink>
           </>
         )}
       </div>

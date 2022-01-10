@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface Iprops {
@@ -21,7 +22,7 @@ export const NavbarComponent = styled.div<Iprops>`
   justify-content: space-between;
 `;
 
-export const NavbarLink = styled.li`
+export const NavbarLink = styled(Link)`
   color: ${props => props.theme.text.primary};
   padding: 10px;
   border-radius: 10px;
@@ -31,6 +32,7 @@ export const NavbarLink = styled.li`
   font-size: 0.9rem;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  text-decoration: none;
   cursor: pointer;
   &:hover {
     color: ${props => props.theme.text.secondary}

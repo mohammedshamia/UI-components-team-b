@@ -17,10 +17,7 @@ import {
   CardSimple,
 } from '../documentation/Card/CardExamples';
 import { CountrySelect } from '../documentation/AutoComplete/AutoComplete';
-import {
-  TypographyExample2,
-  TypographyExample3,
-} from '../documentation/Typography/TypographyExamples';
+import { TypographyExample3 } from '../documentation/Typography/TypographyExamples';
 import { SimpleRatingExample } from '../documentation/Rating/RatingExamples';
 
 const data = {
@@ -94,12 +91,12 @@ export default function Welcome() {
             height="56px"
             fontSize="14px"
             onClick={() => {
-              navigator.clipboard.writeText(' $ npm install @mui/material');
+              navigator.clipboard.writeText(' $ coming soon ');
               setState(!state);
             }}
             children={
               <>
-                $ npm install @mui/material
+                $ npm coming soon
                 {state && <i className="fas fa-check" />}
                 {!state && <i className="fas fa-copy" />}
               </>
@@ -113,13 +110,13 @@ export default function Welcome() {
           <CardSimple />
           <div style={{ padding: '0 1rem 0 2rem' }}>
             <TypographyExample3 />
-            <TypographyExample2 />
+            {/* <TypographyExample2 /> */}
+            <SimpleRatingExample />
           </div>
         </div>
         <div>
           <AvatarWithSizes />
           <CardImg />
-          <SimpleRatingExample />
           <CountrySelect />
         </div>
       </ImageContainer>
