@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
 import TableProps from '../../../components/layoutComponent/TableProps';
@@ -9,10 +10,20 @@ import {
   CardColor,
 } from './CardExamples';
 
-import cardDoc from './doc';
 import propsTableData from './props';
 
+// @ts-ignore
+// eslint-disable-next-line import/extensions
+import readmePath from './doc.md';
+
 const CardDocumentation: React.FC<any> = () => {
+  const [avatarDoc, setAvatarDoc] = useState('');
+
+  useEffect(() => {
+    fetch(readmePath)
+      .then(response => response.text())
+      .then(setAvatarDoc);
+  });
   return (
     <>
       <EditPage
@@ -20,7 +31,7 @@ const CardDocumentation: React.FC<any> = () => {
 https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Card/doc.ts"
       />
       <Markdown
-        content={cardDoc}
+        content={avatarDoc}
         examples={{
           ex1: CardSimple,
           ex2: CardImg,

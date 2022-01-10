@@ -1,4 +1,3 @@
-export default `
 <h2 id="avatar">Avatar</h2>
 
 ### Avatars are found throughout material design with uses in everything from tables to dialog menus.
@@ -165,4 +164,4 @@ export const AvatarWithBadge = () => (
   <br />
   <br />
  
-`;
+

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
 import TableProps from '../../../components/layoutComponent/TableProps';
@@ -10,9 +11,18 @@ import {
   ValidationExample,
 } from './AutoComplete';
 import propsTableData from './propsTableData';
-import autoCompleteDoc from './doc';
+// @ts-ignore
+// eslint-disable-next-line import/extensions
+import readmePath from './doc.md';
 
 const AutoComleteDocumentation: React.FC<any> = () => {
+  const [avatarDoc, setAvatarDoc] = useState('');
+
+  useEffect(() => {
+    fetch(readmePath)
+      .then(response => response.text())
+      .then(setAvatarDoc);
+  });
   return (
     <>
       <EditPage
@@ -20,7 +30,7 @@ const AutoComleteDocumentation: React.FC<any> = () => {
 https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/AutoComplete/doc.ts"
       />{' '}
       <Markdown
-        content={autoCompleteDoc}
+        content={avatarDoc}
         examples={{
           ex1: ComboboxExample,
           ex2: Playground,
