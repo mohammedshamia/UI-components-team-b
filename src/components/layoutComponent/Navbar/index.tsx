@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 import {
@@ -16,7 +16,7 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
   const currentPath = pathname.split('/')[2];
   const IsMainPage = pathname.includes('installation');
 
-  const handleChangeTheme = () => {
+  const handleChangeTheme = useCallback(() => {
     if (theme.theme === 'light') {
       setTheme({ theme: 'dark' });
       localStorage.setItem('theme', 'dark');
@@ -24,7 +24,7 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
       setTheme({ theme: 'light' });
       localStorage.setItem('theme', 'light');
     }
-  };
+  }, [theme, setTheme]);
   const handleChangeSearch = (newValue: string) => {
     setSearchValue(newValue);
   };

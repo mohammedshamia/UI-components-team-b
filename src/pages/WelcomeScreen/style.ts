@@ -19,7 +19,8 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  border: 1px solid #e6e6e6;
+  box-shadow: 3px 3px 10px 0px ${props => props.theme.primary.light} inset;
+  background: ${props => props.theme.background.paper};
   padding: 20px;
   margin-top: 64px;
   display: flex;

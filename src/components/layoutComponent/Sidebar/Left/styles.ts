@@ -14,7 +14,6 @@ export const SidebarNav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  transition: 350ms;
   z-index: 10;
 `;
 
@@ -29,7 +28,6 @@ export const SidebarLink = styled(NavLink)`
   justify-content: space-between;
   align-items: center;
   padding: 13px 8px 8px 24px;
-  color: ${props => props.theme.text.primary};
   text-decoration: none;
   font-size: 0.875rem;
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -39,13 +37,14 @@ export const SidebarLink = styled(NavLink)`
   line-height: 1.5;
   letter-spacing: 0;
   box-sizing: border-box;
+
   &:hover {
     color: ${props => props.theme.primary.main};
     background: ${props => props.theme.primary.light};
     cursor: pointer;
   }
   &:active {
-    color: #1a2027;
+    color: ${props => props.theme.primary.main};
   }
 `;
 
@@ -74,7 +73,7 @@ export const DropdownLink = styled(NavLink)<{ isActive: boolean }>`
 
   width: 100%;
   box-sizing: border-box;
-  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+ 
     background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
     color: ${props => props.theme.primary.main};
