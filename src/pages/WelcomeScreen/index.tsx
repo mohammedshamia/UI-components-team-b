@@ -2,15 +2,26 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ButtonUi from '../../components/layoutComponent/button';
 import Typography from '../../components/baseComponent/Typography';
-import gray from '../../assets/gray.jpg';
+
 import {
   Wrapper,
   Content,
-  ContainerImg,
   ContainerButton,
   contentStyle,
   ImageContainer,
 } from './style';
+import { AvatarWithSizes } from '../documentation/Avatar/AvatarExamples';
+import {
+  CardColor,
+  CardImg,
+  CardSimple,
+} from '../documentation/Card/CardExamples';
+import { CountrySelect } from '../documentation/AutoComplete/AutoComplete';
+import {
+  TypographyExample2,
+  TypographyExample3,
+} from '../documentation/Typography/TypographyExamples';
+import { SimpleRatingExample } from '../documentation/Rating/RatingExamples';
 
 const data = {
   title: ['The React', 'UI library', ' you', 'always wanted'],
@@ -97,7 +108,20 @@ export default function Welcome() {
         </ContainerButton>
       </Content>
       <ImageContainer>
-        <ContainerImg src={gray} alt="pictures" />
+        <div>
+          <CardColor />
+          <CardSimple />
+          <div style={{ padding: '0 1rem 0 2rem' }}>
+            <TypographyExample3 />
+            <TypographyExample2 />
+          </div>
+        </div>
+        <div>
+          <AvatarWithSizes />
+          <CardImg />
+          <SimpleRatingExample />
+          <CountrySelect />
+        </div>
       </ImageContainer>
     </Wrapper>
   );
