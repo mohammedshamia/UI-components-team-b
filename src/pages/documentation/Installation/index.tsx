@@ -20,7 +20,7 @@ const InstallationDocumentation: React.FC<any> = () => {
         href="
         https://github.com/mohammedshamia/UI-components-team-b/blob/development/src/pages/documentation/Installation/doc.md"
       />
-      <Markdown content={avatarDoc} />;
+      <Markdown content={avatarDoc} />
     </>
   );
 };

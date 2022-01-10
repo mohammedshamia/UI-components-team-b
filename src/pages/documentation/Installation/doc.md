@@ -1,4 +1,4 @@
-export default `
+
 **<h1 id='intro' >Ui Library of React </h2>**
 
 <br />
@@ -43,6 +43,3 @@ export default `
 
 <br />
 <br />
-
-
-`;
