@@ -1,10 +1,10 @@
+import 'reactjs-popup/dist/index.css';
 import { useTheme } from 'styled-components';
 import Popup from 'reactjs-popup';
 import { EmbedCode } from '../../../components';
 import { EditPage } from '../../../components/layoutComponent/Container';
 import Markdown from '../../../components/layoutComponent/Markdown';
 import TableProps from '../../../components/layoutComponent/TableProps';
-import 'reactjs-popup/dist/index.css';
 import {
   AvatarExample,
   LetterAvatar,
