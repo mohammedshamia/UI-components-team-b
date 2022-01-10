@@ -51,7 +51,7 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
           name="search"
           placeholder="search..."
           onChange={handleChangeSearch}
-          option={[]}
+          option={Component.map(item => item.title)}
           startAdornment={<i className="fas fa-search" />}
         />
         <NavbarLinksIcon
@@ -64,3 +64,29 @@ const Navbar: React.FC<any> = ({ theme, setTheme }) => {
 };
 
 export default Navbar;
+interface IsubNav {
+  title: string;
+  path: string;
+}
+const Component: IsubNav[] = [
+  {
+    title: 'autocomplete',
+    path: '/components/autocomplete',
+  },
+  {
+    title: 'avatar',
+    path: '/components/avatar',
+  },
+  {
+    title: 'card',
+    path: '/components/card',
+  },
+  {
+    title: 'rating',
+    path: '/components/rating',
+  },
+  {
+    title: 'typography',
+    path: '/components/typography',
+  },
+];
