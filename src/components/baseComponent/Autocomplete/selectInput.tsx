@@ -82,7 +82,7 @@ function SelectInput({
     setstate('');
   };
   return (
-    <>
+    <Box>
       <Wrapper
         margin={others.margin || ''}
         borderRadius={others.borderRadius}
@@ -170,7 +170,7 @@ function SelectInput({
         )}
       </Wrapper>
       <TextError error={others.error}>{others.error || ''}</TextError>
-    </>
+    </Box>
   );
 }
 
