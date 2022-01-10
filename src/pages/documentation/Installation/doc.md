@@ -20,7 +20,7 @@
 
 ## Technologies
 <br />
-
+<p>
   - Styled Components
 
   - React Router
@@ -32,7 +32,7 @@
   - Markdown Library
 
   - Sandbox CLI 
-
+</p>
 <br />
 
 <br />
